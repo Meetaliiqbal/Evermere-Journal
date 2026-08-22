@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+  name="referrer"
+  content="no-referrer"
+>
+
+<title>Quiet Weekend Getaways — Evermere Journal</title>
+
+<meta
+  name="description"
+  content="Ideas for leaving the usual routine behind and finding a little breathing room in a beautiful place."
+>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F2F0E9;
+  --sage:#7D8174;
+  --clay:#9B806B;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--paper);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.article-hero{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+
+.article-hero-inner{
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+  color:var(--clay);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.article-category::before,
+.article-category::after{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--clay);
+}
+
+.article-hero h1{
+  max-width:850px;
+  margin:auto;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(48px,6.5vw,78px);
+  font-weight:400;
+  line-height:1.03;
+  letter-spacing:-1.5px;
+}
+
+.article-intro{
+  max-width:650px;
+  margin:25px auto 0;
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.article-meta span{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.article-meta span:not(:last-child)::after{
+  content:"•";
+  color:var(--clay);
+}
+
+
+/* =====================================================
+   ARTICLE
+===================================================== */
+
+.article-wrap{
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+}
+
+.article-body{
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+}
+
+.article-body p{
+  margin-bottom:27px;
+}
+
+.article-body .lead{
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.55;
+  margin-bottom:38px;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+  color:var(--dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-body h3{
+  margin:38px 0 13px;
+  color:var(--dark);
+  font-size:15px;
+  font-weight:600;
+}
+
+
+/* =====================================================
+   TRAVEL IDEAS BOX
+===================================================== */
+
+.travel-list{
+  margin:38px 0 45px;
+  padding:30px 32px;
+  background:var(--cream);
+  border:1px solid var(--line);
+}
+
+.travel-list-title{
+  margin-bottom:18px;
+  color:var(--dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.travel-list ul{
+  margin:0 0 0 18px;
+}
+
+.travel-list li{
+  margin-bottom:10px;
+  padding-left:5px;
+  color:var(--body);
+  font-size:12px;
+  line-height:1.8;
+}
+
+.travel-list li:last-child{
+  margin-bottom:0;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.article-cta{
+  position:relative;
+  overflow:hidden;
+  margin:42px 0 58px;
+  padding:48px 45px;
+  background:#34332E;
+  color:#F7F4EC;
+  text-align:center;
+}
+
+.article-cta::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-70px;
+  top:-100px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.article-cta::after{
+  content:"";
+  position:absolute;
+  width:140px;
+  height:140px;
+  left:-55px;
+  bottom:-70px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.cta-label{
+  position:relative;
+  z-index:2;
+  margin-bottom:13px;
+  color:#B7B9AA;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.article-cta h2{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+  margin:auto;
+  color:#F7F4EC;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(30px,4vw,43px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-cta p{
+  position:relative;
+  z-index:2;
+  max-width:530px;
+  margin:15px auto 25px;
+  color:#C6C4BC;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.cta-button{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:45px;
+  padding:0 25px;
+  background:#F2EFE7;
+  color:#34332E;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  background:#FFFFFF;
+}
+
+.cta-button span{
+  font-size:14px;
+  line-height:1;
+}
+
+
+/* =====================================================
+   TRAVEL NOTE
+===================================================== */
+
+.article-tip{
+  position:relative;
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+  background:#F0EEE7;
+  border-left:3px solid var(--sage);
+}
+
+.article-tip::before{
+  content:"“";
+  position:absolute;
+  left:14px;
+  top:20px;
+  color:rgba(125,129,116,.45);
+  font-family:Georgia,serif;
+  font-size:40px;
+}
+
+.article-tip p{
+  margin:0;
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:20px;
+  line-height:1.5;
+}
+
+
+/* =====================================================
+   BACK LINK
+===================================================== */
+
+.back-link{
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+}
+
+.back-link a{
+  color:var(--sage);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.back-link a:hover{
+  color:var(--dark);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+  }
+
+  .article-category{
+    margin-bottom:19px;
+  }
+
+  .article-hero h1{
+    font-size:46px;
+    line-height:1.04;
+    letter-spacing:-1px;
+  }
+
+  .article-intro{
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .article-meta{
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+  }
+
+  .article-wrap{
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+  }
+
+  .article-body{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-body .lead{
+    font-size:22px;
+    line-height:1.5;
+  }
+
+  .article-body h2{
+    margin-top:45px;
+    font-size:32px;
+  }
+
+  .travel-list{
+    padding:25px 22px;
+  }
+
+  .travel-list li{
+    font-size:11.5px;
+  }
+
+  .article-tip{
+    padding:28px 24px 28px 40px;
+  }
+
+  .article-tip p{
+    font-size:18px;
+  }
+
+  .article-cta{
+    margin:38px 0 48px;
+    padding:40px 22px;
+  }
+
+  .article-cta h2{
+    font-size:31px;
+  }
+
+  .article-cta p{
+    font-size:10.5px;
+  }
+
+  .cta-button{
+    width:100%;
+  }
+
+}
+
+
+@media(max-width:375px){
+
+  .article-hero h1{
+    font-size:41px;
+  }
+
+}
+
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta-button{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SHARED HEADER
+===================================================== -->
+
+<div id="header"></div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Travel &amp; Places
+    </div>
+
+
+    <h1>
+      Quiet Weekend
+      Getaways
+    </h1>
+
+
+    <p class="article-intro">
+
+      Ideas for leaving the usual routine behind
+      and finding a little breathing room in a
+      beautiful place.
+
+    </p>
+
+
+    <div class="article-meta">
+
+      <span>
+        Travel
+      </span>
+
+      <span>
+        7 min read
+      </span>
+
+      <span>
+        Evermere Journal
+      </span>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     ARTICLE
+===================================================== -->
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+
+      <p class="lead">
+
+        A weekend away does not have to involve a
+        packed itinerary or a long list of places to
+        visit. Sometimes the best escape is simply
+        finding somewhere peaceful enough to let the
+        usual rhythm slow down.
+
+      </p>
+
+
+      <p>
+
+        Quiet getaways can be surprisingly simple.
+        A small town, a coastal stay, a countryside
+        guesthouse, or a comfortable room overlooking
+        a different landscape can be enough to create
+        a sense of distance from everyday routines.
+
+      </p>
+
+
+      <p>
+
+        The idea is not necessarily to see everything.
+        Instead, it is about creating a little space
+        between one weekend and the next, with enough
+        time to sleep well, wander slowly, and enjoy
+        your surroundings.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 01
+      ================================================== -->
+
+      <h2>
+
+        Choose a slower destination
+
+      </h2>
+
+
+      <p>
+
+        When planning a peaceful weekend, the destination
+        matters less than the atmosphere. Look for places
+        where the surroundings naturally encourage a
+        slower pace.
+
+      </p>
+
+
+      <p>
+
+        A walkable town centre, a quiet coastline, open
+        countryside, or a property surrounded by trees
+        can all create that feeling of stepping away
+        without requiring an elaborate plan.
+
+      </p>
+
+
+      <div class="travel-list">
+
+        <div class="travel-list-title">
+          Places to consider
+        </div>
+
+        <ul>
+
+          <li>
+            Small towns with cafés and independent shops.
+          </li>
+
+          <li>
+            Coastal areas where mornings begin slowly.
+          </li>
+
+          <li>
+            Countryside stays surrounded by open scenery.
+          </li>
+
+          <li>
+            Peaceful neighbourhoods close to nature.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- =================================================
+           SECTION 02
+      ================================================== -->
+
+      <h2>
+
+        Give yourself less to do
+
+      </h2>
+
+
+      <p>
+
+        One of the easiest ways to make a weekend feel
+        restorative is to resist the temptation to fill
+        every hour. Leave room for an unplanned breakfast,
+        a long walk, or simply sitting somewhere pleasant
+        with no particular destination in mind.
+
+      </p>
+
+
+      <p>
+
+        Instead of building a detailed schedule, choose
+        one or two things you genuinely want to experience
+        and let everything else remain optional.
+
+      </p>
+
+
+      <p>
+
+        That extra breathing room can often become the
+        most memorable part of the trip.
+
+      </p>
+
+
+
+      <!-- =================================================
+           CTA — END OF SECTION 02
+      ================================================== -->
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          Plan Your Next Escape
+        </div>
+
+
+        <h2>
+          Find a stay that
+          fits the weekend.
+        </h2>
+
+
+        <p>
+
+          When you're ready to get away, explore
+          available travel options and find a place
+          that suits your plans.
+
+        </p>
+
+
+        <a
+          href="travelidea.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+
+          Explore Travel Options
+
+          <span>→</span>
+
+        </a>
+
+      </aside>
+
+
+
+      <!-- =================================================
+           SECTION 03
+      ================================================== -->
+
+      <h2>
+
+        Make the journey part of it
+
+      </h2>
+
+
+      <p>
+
+        The feeling of a getaway can begin before you
+        arrive. If possible, choose a route that gives
+        you time to enjoy the scenery instead of treating
+        the journey as something to rush through.
+
+      </p>
+
+
+      <p>
+
+        A scenic drive, an easy train journey, or even
+        a relaxed stop for coffee can make the transition
+        from everyday life to weekend mode feel more
+        natural.
+
+      </p>
+
+
+
+      <!-- =================================================
+           TRAVEL NOTE
+      ================================================== -->
+
+      <div class="article-tip">
+
+        <p>
+
+          The best weekend plans often leave enough
+          empty space for something unexpected to
+          become part of the experience.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- =================================================
+           SECTION 04
+      ================================================== -->
+
+      <h2>
+
+        Find a comfortable base
+
+      </h2>
+
+
+      <p>
+
+        Where you stay can shape the entire mood of a
+        short trip. For a quiet weekend, comfort and
+        convenience are often more valuable than having
+        a long list of amenities.
+
+      </p>
+
+
+      <p>
+
+        A welcoming room, a pleasant view, a comfortable
+        bed, and easy access to the places you want to
+        explore can make a short stay feel considerably
+        more relaxed.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 05
+      ================================================== -->
+
+      <h2>
+
+        Leave room for ordinary moments
+
+      </h2>
+
+
+      <p>
+
+        There is no rule saying every moment of a trip
+        needs to feel extraordinary. Some of the nicest
+        memories can come from ordinary things: finding
+        a bakery in the morning, reading near a window,
+        watching the evening light, or taking a quiet
+        walk after dinner.
+
+      </p>
+
+
+      <p>
+
+        These small moments are often exactly what makes
+        a weekend feel different from the usual routine.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 06
+      ================================================== -->
+
+      <h2>
+
+        Return feeling refreshed
+
+      </h2>
+
+
+      <p>
+
+        A good weekend getaway does not need to transform
+        your entire life. Sometimes it only needs to give
+        you enough distance to return with a clearer head
+        and a little more energy.
+
+      </p>
+
+
+      <p>
+
+        Whether you travel somewhere completely new or
+        choose a familiar place nearby, the goal can be
+        wonderfully simple: slow down, notice where you
+        are, and give yourself permission not to rush.
+
+      </p>
+
+
+
+      <!-- =================================================
+           CONCLUSION
+      ================================================== -->
+
+      <h2>
+
+        Keep the weekend simple
+
+      </h2>
+
+
+      <p>
+
+        The most relaxing escapes are often the ones
+        without too many expectations. Pick somewhere
+        appealing, leave some space in the schedule,
+        and let the destination set the pace.
+
+      </p>
+
+
+      <p>
+
+        Sometimes a couple of quiet days are all it takes
+        to make the familiar routine feel a little
+        different when you return.
+
+      </p>
+
+
+
+      <!-- =================================================
+           BACK TO TRAVEL
+      ================================================== -->
+
+      <div class="back-link">
+
+        <a href="travel.html">
+          ← Back to Travel
+        </a>
+
+      </div>
+
+
+    </article>
+
+  </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     SHARED FOOTER
+===================================================== -->
+
+<div id="footer"></div>
+
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

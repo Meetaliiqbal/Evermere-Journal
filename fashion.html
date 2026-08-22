@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+
+<meta
+name="description"
+content="Explore thoughtful fashion stories, timeless style ideas, seasonal wardrobe inspiration, effortless outfits, and modern personal style with Evermere Journal."
+
+>
+
+  <meta name="theme-color" content="#F3F0EC">
+
+  <title>Fashion — Evermere Journal</title>
+
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%23252725'/%3E%3Cpath d='M68 17C49 21 34 33 30 50c-4 17 4 28 18 34 1-16 7-30 20-42-8 11-12 22-12 37 14-7 22-19 22-37 0-10-3-19-10-25z' fill='%23e5e5dc'/%3E%3C/svg%3E"
+  >
+
+  <style>
+
+    @import url(
+      'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap'
+    );
+
+
+    /* =====================================================
+       ROOT
+    ===================================================== */
+
+    :root {
+
+      --dark: #302D2A;
+      --soft-dark: #504B47;
+
+      --ivory: #F3F0EC;
+      --paper: #FBFAF8;
+
+      --clay: #8B7668;
+      --dust: #A99B90;
+
+      --body: #756F6A;
+      --muted: #9A9691;
+
+      --linen: #D9D1C8;
+
+      --line: rgba(48,45,42,.11);
+
+    }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: var(--paper);
+
+      color: var(--dark);
+
+      font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+      -webkit-font-smoothing: antialiased;
+
+      overflow-x: hidden;
+
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .fashion-hero {
+
+      position: relative;
+
+      overflow: hidden;
+
+      background: var(--ivory);
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .fashion-hero-inner {
+
+      width:
+        min(1220px, calc(100% - 50px));
+
+      min-height: 525px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        1.05fr .95fr;
+
+      align-items: center;
+
+      gap: 75px;
+
+      padding: 80px 0;
+
+    }
+
+
+    .fashion-hero-copy {
+      max-width: 670px;
+    }
+
+
+    .fashion-eyebrow {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin-bottom: 24px;
+
+      color: var(--clay);
+
+      font-size: 9px;
+
+      font-weight: 600;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .fashion-eyebrow::before {
+
+      content: "";
+
+      width: 30px;
+
+      height: 1px;
+
+      background: var(--clay);
+
+    }
+
+
+    .fashion-hero h1 {
+
+      max-width: 720px;
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(58px, 7vw, 92px);
+
+      font-weight: 400;
+
+      line-height: .94;
+
+      letter-spacing: -2px;
+
+    }
+
+
+    .fashion-hero h1 em {
+
+      color: var(--clay);
+
+      font-weight: 400;
+
+    }
+
+
+    .fashion-hero-text {
+
+      max-width: 550px;
+
+      margin-top: 28px;
+
+      color: var(--body);
+
+      font-size: 14px;
+
+      line-height: 1.9;
+
+    }
+
+
+    /* =====================================================
+       HERO ART
+    ===================================================== */
+
+    .fashion-hero-art {
+
+      position: relative;
+
+      min-height: 360px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+    .fashion-circle {
+
+      position: relative;
+
+      width:
+        min(340px, 75vw);
+
+      aspect-ratio: 1;
+
+      border-radius: 50%;
+
+      background: #DED7D0;
+
+      box-shadow:
+        0 28px 70px rgba(48,45,42,.09);
+
+    }
+
+
+    .fashion-circle::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 12%;
+
+      border:
+        1px solid rgba(48,45,42,.14);
+
+      border-radius: 50%;
+
+    }
+
+
+    .fashion-circle::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 47%;
+
+      height: 47%;
+
+      left: 26.5%;
+
+      top: 26.5%;
+
+      border:
+        1px solid rgba(48,45,42,.11);
+
+      border-radius: 50%;
+
+    }
+
+
+    .fashion-word {
+
+      position: absolute;
+
+      inset: 0;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: rgba(48,45,42,.42);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 46px;
+
+      font-style: italic;
+
+    }
+
+
+    .fashion-floating-note {
+
+      position: absolute;
+
+      right: 2%;
+
+      bottom: 9%;
+
+      width: 158px;
+
+      padding: 19px;
+
+      background:
+        rgba(251,250,248,.96);
+
+      border:
+        1px solid rgba(48,45,42,.08);
+
+      box-shadow:
+        0 15px 35px rgba(48,45,42,.09);
+
+    }
+
+
+    .fashion-floating-note span {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: var(--clay);
+
+      font-size: 7px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .fashion-floating-note strong {
+
+      color: var(--dark);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 19px;
+
+      font-weight: 400;
+
+      line-height: 1.15;
+
+    }
+
+
+    /* =====================================================
+       CONTENT
+    ===================================================== */
+
+    .fashion-content {
+
+      width:
+        min(1220px, calc(100% - 50px));
+
+      margin: auto;
+
+      padding:
+        95px 0 115px;
+
+    }
+
+
+    .fashion-section-heading {
+
+      display: flex;
+
+      align-items: flex-end;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 45px;
+
+    }
+
+
+    .fashion-section-heading h2 {
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 45px;
+
+      font-weight: 400;
+
+      line-height: 1;
+
+    }
+
+
+    .fashion-section-heading p {
+
+      max-width: 410px;
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 1.7;
+
+      text-align: right;
+
+    }
+
+
+    /* =====================================================
+       ARTICLE GRID
+    ===================================================== */
+
+    .fashion-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+
+    }
+
+
+    /* =====================================================
+       ARTICLE CARD
+    ===================================================== */
+
+    .fashion-card {
+
+      display: flex;
+
+      flex-direction: column;
+
+      min-width: 0;
+
+      background: #F8F6F3;
+
+      border:
+        1px solid rgba(48,45,42,.08);
+
+      transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+    }
+
+
+    .fashion-card:hover {
+
+      transform:
+        translateY(-6px);
+
+      box-shadow:
+        0 18px 45px rgba(48,45,42,.08);
+
+    }
+
+
+    /* =====================================================
+       CARD VISUAL
+    ===================================================== */
+
+    .fashion-card-visual {
+
+      position: relative;
+
+      height: 235px;
+
+      overflow: hidden;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      cursor: pointer;
+
+    }
+
+
+    .fashion-card:nth-child(1)
+    .fashion-card-visual {
+      background: #DED7CF;
+    }
+
+
+    .fashion-card:nth-child(2)
+    .fashion-card-visual {
+      background: #D8D5CF;
+    }
+
+
+    .fashion-card:nth-child(3)
+    .fashion-card-visual {
+      background: #DDD2C9;
+    }
+
+
+    .fashion-card:nth-child(4)
+    .fashion-card-visual {
+      background: #D4D7D3;
+    }
+
+
+    .fashion-card:nth-child(5)
+    .fashion-card-visual {
+      background: #DAD1C7;
+    }
+
+
+    .fashion-card:nth-child(6)
+    .fashion-card-visual {
+      background: #D5D5D0;
+    }
+
+
+    .fashion-card-visual::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 145px;
+
+      height: 145px;
+
+      border:
+        1px solid rgba(48,45,42,.14);
+
+      border-radius: 50%;
+
+      transition:
+        transform .5s ease;
+
+    }
+
+
+    .fashion-card-visual::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 90px;
+
+      height: 90px;
+
+      border:
+        1px solid rgba(48,45,42,.10);
+
+      border-radius: 50%;
+
+      transition:
+        transform .5s ease;
+
+    }
+
+
+    .fashion-card:hover
+    .fashion-card-visual::before {
+
+      transform:
+        scale(1.08);
+
+    }
+
+
+    .fashion-card:hover
+    .fashion-card-visual::after {
+
+      transform:
+        scale(.92);
+
+    }
+
+
+    .fashion-card-number {
+
+      position: absolute;
+
+      top: 18px;
+
+      left: 19px;
+
+      z-index: 2;
+
+      color: rgba(48,45,42,.5);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+    }
+
+
+    .fashion-card-category {
+
+      position: absolute;
+
+      top: 18px;
+
+      right: 18px;
+
+      z-index: 2;
+
+      color: rgba(48,45,42,.55);
+
+      font-size: 7px;
+
+      font-weight: 600;
+
+      letter-spacing: 1.8px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .fashion-card-icon {
+
+      position: relative;
+
+      z-index: 2;
+
+      color: rgba(48,45,42,.42);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 28px;
+
+      font-style: italic;
+
+    }
+
+
+    /* =====================================================
+       CARD BODY
+    ===================================================== */
+
+    .fashion-card-body {
+
+      min-height: 235px;
+
+      padding:
+        27px 27px 29px;
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+
+    .fashion-card-title {
+
+      display: block;
+
+      margin-bottom: 13px;
+
+      color: var(--dark);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 27px;
+
+      font-weight: 400;
+
+      line-height: 1.12;
+
+      text-decoration: none;
+
+      transition:
+        color .25s ease;
+
+    }
+
+
+    .fashion-card-title:hover {
+
+      color: var(--clay);
+
+    }
+
+
+    .fashion-card-body p {
+
+      color: var(--body);
+
+      font-size: 11px;
+
+      line-height: 1.8;
+
+    }
+
+
+    .fashion-card-link {
+
+      display: inline-block;
+
+      margin-top: auto;
+
+      padding-top: 22px;
+
+      color: var(--clay);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .fashion-card-link span {
+
+      display: inline-block;
+
+      margin-left: 6px;
+
+      transition:
+        transform .25s ease;
+
+    }
+
+
+    .fashion-card-link:hover span {
+
+      transform:
+        translateX(5px);
+
+    }
+
+
+    /* =====================================================
+       EDITORIAL NOTE
+    ===================================================== */
+
+    .fashion-note {
+
+      margin-top: 80px;
+
+      padding:
+        55px 60px;
+
+      background: var(--ivory);
+
+      border:
+        1px solid var(--line);
+
+      text-align: center;
+
+    }
+
+
+    .fashion-note-label {
+
+      margin-bottom: 17px;
+
+      color: var(--clay);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .fashion-note h2 {
+
+      max-width: 720px;
+
+      margin: auto;
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(30px, 4vw, 46px);
+
+      font-weight: 400;
+
+      line-height: 1.15;
+
+    }
+
+
+    .fashion-note p {
+
+      max-width: 580px;
+
+      margin: 18px auto 0;
+
+      color: var(--body);
+
+      font-size: 12px;
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .fashion-hero-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding:
+          70px 0 80px;
+
+      }
+
+
+      .fashion-hero-copy {
+        max-width: 700px;
+      }
+
+
+      .fashion-hero-art {
+        min-height: 300px;
+      }
+
+
+      .fashion-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 600px) {
+
+      .fashion-hero-inner {
+
+        width:
+          calc(100% - 30px);
+
+        padding:
+          58px 0 65px;
+
+      }
+
+
+      .fashion-eyebrow {
+
+        margin-bottom: 19px;
+
+      }
+
+
+      .fashion-hero h1 {
+
+        font-size: 57px;
+
+        letter-spacing: -1.5px;
+
+      }
+
+
+      .fashion-hero-text {
+
+        margin-top: 22px;
+
+        font-size: 13px;
+
+        line-height: 1.8;
+
+      }
+
+
+      .fashion-hero-art {
+
+        min-height: 260px;
+
+      }
+
+
+      .fashion-circle {
+
+        width: 250px;
+
+      }
+
+
+      .fashion-word {
+
+        font-size: 38px;
+
+      }
+
+
+      .fashion-floating-note {
+
+        right: 0;
+
+        bottom: 0;
+
+        width: 125px;
+
+        padding: 14px;
+
+      }
+
+
+      .fashion-floating-note strong {
+
+        font-size: 16px;
+
+      }
+
+
+      .fashion-content {
+
+        width:
+          calc(100% - 30px);
+
+        padding:
+          65px 0 80px;
+
+      }
+
+
+      .fashion-section-heading {
+
+        display: block;
+
+        margin-bottom: 30px;
+
+      }
+
+
+      .fashion-section-heading h2 {
+
+        font-size: 38px;
+
+      }
+
+
+      .fashion-section-heading p {
+
+        margin-top: 14px;
+
+        text-align: left;
+
+        font-size: 10.5px;
+
+      }
+
+
+      .fashion-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+      }
+
+
+      .fashion-card-visual {
+
+        height: 220px;
+
+      }
+
+
+      .fashion-card-body {
+
+        min-height: 215px;
+
+        padding: 24px;
+
+      }
+
+
+      .fashion-card-title {
+
+        font-size: 25px;
+
+      }
+
+
+      .fashion-card-body p {
+
+        font-size: 11px;
+
+      }
+
+
+      .fashion-note {
+
+        margin-top: 55px;
+
+        padding:
+          40px 22px;
+
+      }
+
+
+      .fashion-note h2 {
+
+        font-size: 31px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       SMALL PHONES
+    ===================================================== */
+
+    @media (max-width: 375px) {
+
+      .fashion-hero-inner,
+      .fashion-content {
+
+        width:
+          calc(100% - 26px);
+
+      }
+
+
+      .fashion-hero h1 {
+
+        font-size: 51px;
+
+      }
+
+
+      .fashion-circle {
+
+        width: 225px;
+
+      }
+
+
+      .fashion-floating-note {
+
+        width: 115px;
+
+      }
+
+
+      .fashion-card-body {
+
+        padding: 22px;
+
+      }
+
+
+      .fashion-card-title {
+
+        font-size: 24px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       REDUCED MOTION
+    ===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .fashion-card,
+      .fashion-card-title,
+      .fashion-card-link span,
+      .fashion-card-visual::before,
+      .fashion-card-visual::after {
+
+        transition: none;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
+  <div id="header"></div>
+
+  <!-- =====================================================
+       MAIN
+  ===================================================== -->
+
+  <main>
+
+
+<!-- ===================================================
+     HERO
+=================================================== -->
+
+<section class="fashion-hero">
+
+  <div class="fashion-hero-inner">
+
+
+    <div class="fashion-hero-copy">
+
+      <div class="fashion-eyebrow">
+        The Fashion Journal
+      </div>
+
+
+      <h1>
+        Style that feels
+        <em>like you.</em>
+      </h1>
+
+
+      <p class="fashion-hero-text">
+        Discover thoughtful style ideas, timeless
+        wardrobe inspiration, seasonal looks, and
+        simple ways to make everyday dressing feel
+        more personal.
+      </p>
+
+    </div>
+
+
+    <div class="fashion-hero-art">
+
+      <div class="fashion-circle">
+
+        <span class="fashion-word">
+          Effortless
+        </span>
+
+      </div>
+
+
+      <div class="fashion-floating-note">
+
+        <span>
+          Style note
+        </span>
+
+        <strong>
+          Less noise.
+          More character.
+        </strong>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- ===================================================
+     ARTICLES
+=================================================== -->
+
+<section class="fashion-content">
+
+
+  <div class="fashion-section-heading">
+
+    <h2>
+      Style &amp; wardrobe
+    </h2>
+
+
+    <p>
+      Stories about personal style, thoughtful wardrobes,
+      seasonal dressing, and the small details that
+      make an outfit feel distinctly yours.
+    </p>
+
+  </div>
+
+
+  <div class="fashion-grid">
+
+
+    <!-- =================================================
+         ARTICLE 01
+    ================================================= -->
+
+    <article class="fashion-card">
+
+      <a
+        href="timeless-wardrobe-essentials.html"
+        class="fashion-card-visual"
+        aria-label="Read Building a Timeless Wardrobe"
+      >
+
+        <span class="fashion-card-number">
+          01
+        </span>
+
+        <span class="fashion-card-category">
+          Wardrobe
+        </span>
+
+        <span class="fashion-card-icon">
+          Timeless
+        </span>
+
+      </a>
+
+
+      <div class="fashion-card-body">
+
+        <a
+          href="timeless-wardrobe-essentials.html"
+          class="fashion-card-title"
+        >
+          Building a Timeless Wardrobe
+        </a>
+
+
+        <p>
+          A thoughtful approach to choosing pieces
+          that can stay useful season after season
+          without feeling predictable.
+        </p>
+
+
+        <a
+          href="timeless-wardrobe-essentials.html"
+          class="fashion-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 02
+    ================================================= -->
+
+    <article class="fashion-card">
+
+      <a
+        href="effortless-everyday-outfits.html"
+        class="fashion-card-visual"
+        aria-label="Read Effortless Everyday Outfit Ideas"
+      >
+
+        <span class="fashion-card-number">
+          02
+        </span>
+
+        <span class="fashion-card-category">
+          Everyday
+        </span>
+
+        <span class="fashion-card-icon">
+          Ease
+        </span>
+
+      </a>
+
+
+      <div class="fashion-card-body">
+
+        <a
+          href="effortless-everyday-outfits.html"
+          class="fashion-card-title"
+        >
+          Effortless Everyday Outfit Ideas
+        </a>
+
+
+        <p>
+          Simple combinations and styling thoughts for
+          getting dressed beautifully without spending
+          too much time thinking about it.
+        </p>
+
+
+        <a
+          href="effortless-everyday-outfits.html"
+          class="fashion-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 03
+    ================================================= -->
+
+    <article class="fashion-card">
+
+      <a
+        href="seasonal-style-guide.html"
+        class="fashion-card-visual"
+        aria-label="Read Dressing With the Seasons"
+      >
+
+        <span class="fashion-card-number">
+          03
+        </span>
+
+        <span class="fashion-card-category">
+          Seasonal
+        </span>
+
+        <span class="fashion-card-icon">
+          Rhythm
+        </span>
+
+      </a>
+
+
+      <div class="fashion-card-body">
+
+        <a
+          href="seasonal-style-guide.html"
+          class="fashion-card-title"
+        >
+          Dressing With the Seasons
+        </a>
+
+
+        <p>
+          How changing temperatures, textures, and
+          colours can naturally shape a wardrobe
+          throughout the year.
+        </p>
+
+
+        <a
+          href="seasonal-style-guide.html"
+          class="fashion-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 04
+    ================================================= -->
+
+    <article class="fashion-card">
+
+      <a
+        href="neutral-outfit-ideas.html"
+        class="fashion-card-visual"
+        aria-label="Read The Quiet Power of Neutral Dressing"
+      >
+
+        <span class="fashion-card-number">
+          04
+        </span>
+
+        <span class="fashion-card-category">
+          Colour
+        </span>
+
+        <span class="fashion-card-icon">
+          Neutral
+        </span>
+
+      </a>
+
+
+      <div class="fashion-card-body">
+
+        <a
+          href="neutral-outfit-ideas.html"
+          class="fashion-card-title"
+        >
+          The Quiet Power of Neutral Dressing
+        </a>
+
+
+        <p>
+          Why soft neutrals can create a wardrobe that
+          feels calm, flexible, refined, and surprisingly
+          expressive.
+        </p>
+
+
+        <a
+          href="neutral-outfit-ideas.html"
+          class="fashion-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 05
+    ================================================= -->
+
+    <article class="fashion-card">
+
+      <a
+        href="personal-style-details.html"
+        class="fashion-card-visual"
+        aria-label="Read The Details That Define Personal Style"
+      >
+
+        <span class="fashion-card-number">
+          05
+        </span>
+
+        <span class="fashion-card-category">
+          Personal Style
+        </span>
+
+        <span class="fashion-card-icon">
+          Character
+        </span>
+
+      </a>
+
+
+      <div class="fashion-card-body">
+
+        <a
+          href="personal-style-details.html"
+          class="fashion-card-title"
+        >
+          The Details That Define Personal Style
+        </a>
+
+
+        <p>
+          Sometimes personal style is found in the
+          smallest choices: a texture, silhouette,
+          accessory, or familiar favourite.
+        </p>
+
+
+        <a
+          href="personal-style-details.html"
+          class="fashion-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 06
+    ================================================= -->
+
+    <article class="fashion-card">
+
+      <a
+        href="simple-closet-refresh.html"
+        class="fashion-card-visual"
+        aria-label="Read A Simple Closet Refresh"
+      >
+
+        <span class="fashion-card-number">
+          06
+        </span>
+
+        <span class="fashion-card-category">
+          Refresh
+        </span>
+
+        <span class="fashion-card-icon">
+          Renew
+        </span>
+
+      </a>
+
+
+      <div class="fashion-card-body">
+
+        <a
+          href="simple-closet-refresh.html"
+          class="fashion-card-title"
+        >
+          A Simple Closet Refresh
+        </a>
+
+
+        <p>
+          A calm way to rethink what you already own,
+          rediscover forgotten pieces, and make everyday
+          dressing feel fresh again.
+        </p>
+
+
+        <a
+          href="simple-closet-refresh.html"
+          class="fashion-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+
+  <!-- =================================================
+       EDITORIAL NOTE
+  ================================================= -->
+
+  <div class="fashion-note">
+
+    <div class="fashion-note-label">
+      Evermere Perspective
+    </div>
+
+
+    <h2>
+      Good style does not need
+      to ask for attention.
+    </h2>
+
+
+    <p>
+      The most memorable personal style often feels
+      natural rather than complicated — a reflection
+      of what you like, what feels comfortable, and
+      what feels genuinely yours.
+    </p>
+
+  </div>
+
+
+</section>
+
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+
+  <div id="footer"></div>
+
+  <!-- =====================================================
+       HEADER + FOOTER
+  ===================================================== -->
+
+  <script src="header.js"></script>
+
+  <script src="footer.js"></script>
+
+</body>
+</html>

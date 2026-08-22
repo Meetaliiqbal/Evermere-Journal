@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta name="referrer" content="no-referrer">
+
+<title>The Quiet Beauty of a Morning Outside — Evermere Journal</title>
+
+<meta
+  name="description"
+  content="There is something grounding about beginning the day outdoors, before the world becomes busy and loud."
+>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F0F1E9;
+  --sage:#7D8174;
+  --clay:#93846F;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--paper);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.article-hero{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+
+.article-hero-inner{
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+  color:var(--sage);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.article-category::before,
+.article-category::after{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--sage);
+}
+
+.article-hero h1{
+  max-width:900px;
+  margin:auto;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(46px,6vw,74px);
+  font-weight:400;
+  line-height:1.04;
+  letter-spacing:-1.4px;
+}
+
+.article-intro{
+  max-width:650px;
+  margin:25px auto 0;
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.article-meta span{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.article-meta span:not(:last-child)::after{
+  content:"•";
+  color:var(--sage);
+}
+
+
+/* =====================================================
+   ARTICLE
+===================================================== */
+
+.article-wrap{
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+}
+
+.article-body{
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+}
+
+.article-body p{
+  margin-bottom:27px;
+}
+
+.article-body .lead{
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.55;
+  margin-bottom:38px;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+  color:var(--dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+
+/* =====================================================
+   NATURE LIST
+===================================================== */
+
+.nature-list{
+  margin:38px 0 45px;
+  padding:30px 32px;
+  background:var(--cream);
+  border:1px solid var(--line);
+}
+
+.nature-list-title{
+  margin-bottom:18px;
+  color:var(--dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.nature-list ul{
+  margin-left:18px;
+}
+
+.nature-list li{
+  margin-bottom:10px;
+  padding-left:5px;
+  color:var(--body);
+  font-size:12px;
+  line-height:1.8;
+}
+
+.nature-list li:last-child{
+  margin-bottom:0;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.article-cta{
+  position:relative;
+  overflow:hidden;
+  margin:42px 0 58px;
+  padding:48px 45px;
+  background:#34332E;
+  color:#F7F4EC;
+  text-align:center;
+}
+
+.article-cta::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-70px;
+  top:-100px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.article-cta::after{
+  content:"";
+  position:absolute;
+  width:140px;
+  height:140px;
+  left:-55px;
+  bottom:-70px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.cta-label{
+  position:relative;
+  z-index:2;
+  margin-bottom:13px;
+  color:#B8BCAC;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.article-cta h2{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+  margin:auto;
+  color:#F7F4EC;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(30px,4vw,43px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-cta p{
+  position:relative;
+  z-index:2;
+  max-width:530px;
+  margin:15px auto 25px;
+  color:#C6C4BC;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.cta-button{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:45px;
+  padding:0 25px;
+  background:#F2EFE7;
+  color:#34332E;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  transition:transform .25s ease,background .25s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  background:#fff;
+}
+
+.cta-button span{
+  font-size:14px;
+}
+
+
+/* =====================================================
+   NATURE NOTE
+===================================================== */
+
+.article-tip{
+  position:relative;
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+  background:#EEF0E8;
+  border-left:3px solid var(--sage);
+}
+
+.article-tip::before{
+  content:"“";
+  position:absolute;
+  left:14px;
+  top:20px;
+  color:rgba(125,129,116,.45);
+  font-family:Georgia,serif;
+  font-size:40px;
+}
+
+.article-tip p{
+  margin:0;
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:20px;
+  line-height:1.5;
+}
+
+
+/* =====================================================
+   BACK LINK
+===================================================== */
+
+.back-link{
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+}
+
+.back-link a{
+  color:var(--sage);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.back-link a:hover{
+  color:var(--dark);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+  }
+
+  .article-category{
+    margin-bottom:19px;
+  }
+
+  .article-hero h1{
+    font-size:44px;
+    line-height:1.05;
+    letter-spacing:-1px;
+  }
+
+  .article-intro{
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .article-meta{
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+  }
+
+  .article-wrap{
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+  }
+
+  .article-body{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-body .lead{
+    font-size:22px;
+    line-height:1.5;
+  }
+
+  .article-body h2{
+    margin-top:45px;
+    font-size:32px;
+  }
+
+  .nature-list{
+    padding:25px 22px;
+  }
+
+  .nature-list li{
+    font-size:11.5px;
+  }
+
+  .article-tip{
+    padding:28px 24px 28px 40px;
+  }
+
+  .article-tip p{
+    font-size:18px;
+  }
+
+  .article-cta{
+    margin:38px 0 48px;
+    padding:40px 22px;
+  }
+
+  .article-cta h2{
+    font-size:31px;
+  }
+
+  .article-cta p{
+    font-size:10.5px;
+  }
+
+  .cta-button{
+    width:100%;
+  }
+
+}
+
+@media(max-width:375px){
+
+  .article-hero h1{
+    font-size:39px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta-button{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SHARED HEADER
+===================================================== -->
+
+<div id="header"></div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Nature &amp; Outdoors
+    </div>
+
+
+    <h1>
+      The Quiet Beauty
+      of a Morning Outside
+    </h1>
+
+
+    <p class="article-intro">
+
+      There is something grounding about beginning
+      the day outdoors, before the world becomes
+      busy and loud.
+
+    </p>
+
+
+    <div class="article-meta">
+
+      <span>
+        Nature
+      </span>
+
+      <span>
+        6 min read
+      </span>
+
+      <span>
+        Evermere Journal
+      </span>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     ARTICLE
+===================================================== -->
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+
+      <p class="lead">
+
+        Before the messages begin, the roads become
+        crowded, and the day's responsibilities start
+        asking for attention, there is a quieter version
+        of the morning waiting outside.
+
+      </p>
+
+
+      <p>
+
+        It might be a garden, a balcony, a nearby trail,
+        a quiet street lined with trees, or simply an
+        open window facing the morning sky. The setting
+        does not have to be dramatic to make a difference.
+
+      </p>
+
+
+      <p>
+
+        Spending even a little time outdoors early in
+        the day can create a gentle transition between
+        sleep and everything that follows.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 01
+      ================================================== -->
+
+      <h2>
+        Step outside before the rush
+      </h2>
+
+
+      <p>
+
+        Mornings often become busy almost immediately.
+        There is breakfast to prepare, messages to answer,
+        and somewhere to be. Stepping outside before all
+        of that begins creates a small pause.
+
+      </p>
+
+
+      <p>
+
+        You do not need a long walk or a carefully planned
+        routine. A few quiet minutes can be enough to
+        notice the temperature, listen to birds, watch
+        the changing light, or simply breathe fresh air.
+
+      </p>
+
+
+      <div class="nature-list">
+
+        <div class="nature-list-title">
+          Simple ways to begin outdoors
+        </div>
+
+        <ul>
+
+          <li>
+            Take your first cup of tea or coffee outside.
+          </li>
+
+          <li>
+            Walk around the garden or nearby streets.
+          </li>
+
+          <li>
+            Sit somewhere with an open view of the sky.
+          </li>
+
+          <li>
+            Leave your phone behind for a few minutes.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- =================================================
+           SECTION 02
+      ================================================== -->
+
+      <h2>
+        Notice what changes overnight
+      </h2>
+
+
+      <p>
+
+        Morning is a time when familiar places can look
+        surprisingly different. Light falls at a different
+        angle, the air may feel cooler, and sounds that
+        disappear later in the day become easier to notice.
+
+      </p>
+
+
+      <p>
+
+        Leaves moving gently in the breeze, distant birds,
+        the smell of damp earth, or sunlight appearing
+        between buildings can all become small reminders
+        that the world has already been awake for a while.
+
+      </p>
+
+
+      <p>
+
+        Paying attention to these details does not require
+        anything complicated. It is simply a way of being
+        present before the day becomes demanding.
+
+      </p>
+
+
+
+      <!-- =================================================
+           CTA — END OF SECTION 02
+      ================================================== -->
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          A Little Time Outdoors
+        </div>
+
+
+        <h2>
+          Find your next
+          place to wander.
+        </h2>
+
+
+        <p>
+
+          Discover ideas for spending more time outside
+          and finding peaceful places to slow down,
+          explore, and reconnect with your surroundings.
+
+        </p>
+
+
+        <a
+          href="natureidea.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+
+          Explore Nature Ideas
+
+          <span>→</span>
+
+        </a>
+
+      </aside>
+
+
+
+      <!-- =================================================
+           SECTION 03
+      ================================================== -->
+
+      <h2>
+        Let the morning light in
+      </h2>
+
+
+      <p>
+
+        Natural light can completely change the feeling
+        of a morning. Open the curtains, step onto a
+        balcony, or find a comfortable place outside
+        where the first light reaches you.
+
+      </p>
+
+
+      <p>
+
+        There is no need to photograph it or turn it
+        into an activity. Sometimes simply noticing the
+        gradual change from cool morning shadows to warm
+        sunlight is enough.
+
+      </p>
+
+
+
+      <!-- =================================================
+           NATURE NOTE
+      ================================================== -->
+
+      <div class="article-tip">
+
+        <p>
+
+          You do not need to travel somewhere beautiful
+          to experience nature. Sometimes the quietest
+          moments are waiting just beyond your front door.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- =================================================
+           SECTION 04
+      ================================================== -->
+
+      <h2>
+        Walk without a destination
+      </h2>
+
+
+      <p>
+
+        A morning walk can feel different when there is
+        nowhere specific to reach. Instead of focusing
+        on distance or speed, allow yourself to notice
+        what is around you.
+
+      </p>
+
+
+      <p>
+
+        Look at the trees, changing shadows, gardens,
+        birds, clouds, and small details that are easy
+        to pass without noticing.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 05
+      ================================================== -->
+
+      <h2>
+        Keep the quiet with you
+      </h2>
+
+
+      <p>
+
+        The challenge is often not finding a quiet
+        morning, but carrying some of that feeling into
+        the rest of the day.
+
+      </p>
+
+
+      <p>
+
+        You might keep breakfast simple, delay checking
+        notifications, or take another short outdoor
+        pause later in the morning. Small choices can
+        help preserve the slower beginning.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 06
+      ================================================== -->
+
+      <h2>
+        Make it a gentle habit
+      </h2>
+
+
+      <p>
+
+        There is no need to make an outdoor morning
+        routine perfect. Some days it may be a long walk.
+        On others, it may only be five minutes beside an
+        open window or on a doorstep.
+
+      </p>
+
+
+      <p>
+
+        What matters is creating a recurring moment when
+        you can step away from screens, schedules, and
+        noise and notice the world around you.
+
+      </p>
+
+
+
+      <!-- =================================================
+           CONCLUSION
+      ================================================== -->
+
+      <h2>
+        Begin slowly
+      </h2>
+
+
+      <p>
+
+        A morning outside does not have to be productive.
+        It does not need a goal, a destination, or a
+        perfect setting.
+
+      </p>
+
+
+      <p>
+
+        Sometimes the simple act of stepping outside,
+        noticing the light, and listening to the world
+        before it becomes busy is enough to change the
+        feeling of an entire day.
+
+      </p>
+
+
+
+      <!-- =================================================
+           BACK LINK
+      ================================================== -->
+
+      <div class="back-link">
+
+        <a href="nature.html">
+          ← Back to Nature
+        </a>
+
+      </div>
+
+
+    </article>
+
+  </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     SHARED FOOTER
+===================================================== -->
+
+<div id="footer"></div>
+
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

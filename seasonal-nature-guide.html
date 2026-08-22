@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>Learning to Notice the Seasons — Evermere Journal</title>
+
+<meta
+  name="description"
+  content="From the first warm breeze to the changing colour of leaves, nature gives us countless quiet signs of time passing."
+>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F0F1E9;
+  --sage:#7D8174;
+  --sage-dark:#656A5E;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--paper);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.article-hero{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+
+.article-hero-inner{
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+  color:var(--sage-dark);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.article-category::before,
+.article-category::after{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--sage);
+}
+
+.article-hero h1{
+  max-width:850px;
+  margin:auto;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(47px,6vw,76px);
+  font-weight:400;
+  line-height:1.04;
+  letter-spacing:-1.4px;
+}
+
+.article-intro{
+  max-width:650px;
+  margin:25px auto 0;
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.article-meta span{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.article-meta span:not(:last-child)::after{
+  content:"•";
+  color:var(--sage);
+}
+
+
+/* =====================================================
+   ARTICLE
+===================================================== */
+
+.article-wrap{
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+}
+
+.article-body{
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+}
+
+.article-body p{
+  margin-bottom:27px;
+}
+
+.article-body .lead{
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.55;
+  margin-bottom:38px;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+  color:var(--dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+
+/* =====================================================
+   SEASONAL LIST
+===================================================== */
+
+.season-list{
+  margin:38px 0 45px;
+  padding:30px 32px;
+  background:var(--cream);
+  border:1px solid var(--line);
+}
+
+.season-list-title{
+  margin-bottom:18px;
+  color:var(--dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.season-list ul{
+  margin-left:18px;
+}
+
+.season-list li{
+  margin-bottom:10px;
+  padding-left:5px;
+  color:var(--body);
+  font-size:12px;
+  line-height:1.8;
+}
+
+.season-list li:last-child{
+  margin-bottom:0;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.article-cta{
+  position:relative;
+  overflow:hidden;
+  margin:42px 0 58px;
+  padding:48px 45px;
+  background:#34332E;
+  color:#F7F4EC;
+  text-align:center;
+}
+
+.article-cta::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-70px;
+  top:-100px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.article-cta::after{
+  content:"";
+  position:absolute;
+  width:140px;
+  height:140px;
+  left:-55px;
+  bottom:-70px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.cta-label{
+  position:relative;
+  z-index:2;
+  margin-bottom:13px;
+  color:#B8BCAC;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.article-cta h2{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+  margin:auto;
+  color:#F7F4EC;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(30px,4vw,43px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-cta p{
+  position:relative;
+  z-index:2;
+  max-width:530px;
+  margin:15px auto 25px;
+  color:#C6C4BC;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.cta-button{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:45px;
+  padding:0 25px;
+  background:#F2EFE7;
+  color:#34332E;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  background:#fff;
+}
+
+.cta-button span{
+  font-size:14px;
+}
+
+
+/* =====================================================
+   QUOTE / NOTE
+===================================================== */
+
+.article-tip{
+  position:relative;
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+  background:#EEF0E8;
+  border-left:3px solid var(--sage);
+}
+
+.article-tip::before{
+  content:"“";
+  position:absolute;
+  left:14px;
+  top:20px;
+  color:rgba(125,129,116,.45);
+  font-family:Georgia,serif;
+  font-size:40px;
+}
+
+.article-tip p{
+  margin:0;
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:20px;
+  line-height:1.5;
+}
+
+
+/* =====================================================
+   BACK LINK
+===================================================== */
+
+.back-link{
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+}
+
+.back-link a{
+  color:var(--sage);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.back-link a:hover{
+  color:var(--dark);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+  }
+
+  .article-category{
+    margin-bottom:19px;
+  }
+
+  .article-hero h1{
+    font-size:44px;
+    line-height:1.05;
+    letter-spacing:-1px;
+  }
+
+  .article-intro{
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .article-meta{
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+  }
+
+  .article-wrap{
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+  }
+
+  .article-body{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-body .lead{
+    font-size:22px;
+    line-height:1.5;
+  }
+
+  .article-body h2{
+    margin-top:45px;
+    font-size:32px;
+  }
+
+  .season-list{
+    padding:25px 22px;
+  }
+
+  .season-list li{
+    font-size:11.5px;
+  }
+
+  .article-tip{
+    padding:28px 24px 28px 40px;
+  }
+
+  .article-tip p{
+    font-size:18px;
+  }
+
+  .article-cta{
+    margin:38px 0 48px;
+    padding:40px 22px;
+  }
+
+  .article-cta h2{
+    font-size:31px;
+  }
+
+  .article-cta p{
+    font-size:10.5px;
+  }
+
+  .cta-button{
+    width:100%;
+  }
+
+}
+
+@media(max-width:375px){
+
+  .article-hero h1{
+    font-size:39px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta-button{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SHARED HEADER
+===================================================== -->
+
+<div id="header"></div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Nature &amp; Outdoors
+    </div>
+
+
+    <h1>
+      Learning to Notice
+      the Seasons
+    </h1>
+
+
+    <p class="article-intro">
+
+      From the first warm breeze to the changing
+      colour of leaves, nature gives us countless
+      quiet signs of time passing.
+
+    </p>
+
+
+    <div class="article-meta">
+
+      <span>
+        Nature
+      </span>
+
+      <span>
+        7 min read
+      </span>
+
+      <span>
+        Evermere Journal
+      </span>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     ARTICLE
+===================================================== -->
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+
+      <p class="lead">
+
+        The seasons rarely arrive all at once. They
+        announce themselves gradually through changes
+        in light, temperature, colour, sound, and the
+        small details of everyday life outdoors.
+
+      </p>
+
+
+      <p>
+
+        The first signs can be almost impossible to
+        notice when life is moving quickly. A warmer
+        breeze passes through an open window. A tree
+        begins to develop tiny new leaves. Morning
+        light stays a little longer.
+
+      </p>
+
+
+      <p>
+
+        Paying attention to these changes can make
+        ordinary days feel more connected to the
+        natural world.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 01
+      ================================================== -->
+
+      <h2>
+        Look for the first small changes
+      </h2>
+
+
+      <p>
+
+        Seasonal change is often easier to notice when
+        you stop looking for dramatic differences.
+        Instead, pay attention to small shifts that
+        appear almost quietly.
+
+      </p>
+
+
+      <p>
+
+        The colour of the sky, the temperature of
+        the morning air, the sound of birds, and the
+        appearance of new flowers can all become
+        gentle markers of time.
+
+      </p>
+
+
+      <div class="season-list">
+
+        <div class="season-list-title">
+          Small signs worth noticing
+        </div>
+
+        <ul>
+
+          <li>
+            The first noticeably warmer or cooler breeze.
+          </li>
+
+          <li>
+            New leaves appearing on familiar trees.
+          </li>
+
+          <li>
+            Changes in the length and quality of daylight.
+          </li>
+
+          <li>
+            Different birds, flowers, or sounds outdoors.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- =================================================
+           SECTION 02
+      ================================================== -->
+
+      <h2>
+        Let familiar places change
+      </h2>
+
+
+      <p>
+
+        One of the easiest ways to notice the seasons
+        is to return to the same outdoor places.
+        A neighbourhood park, garden, walking route,
+        or even a single tree can become a quiet
+        calendar of natural change.
+
+      </p>
+
+
+      <p>
+
+        Visit the same place at different points
+        throughout the year and the differences
+        begin to reveal themselves. What looked bare
+        months ago may become full and green, while
+        later the same branches may carry warm autumn
+        colours.
+
+      </p>
+
+
+      <p>
+
+        Familiarity makes these changes easier to see.
+        You already know the shape of the place, so
+        even subtle differences stand out.
+
+      </p>
+
+
+
+      <!-- =================================================
+           CTA — END OF SECTION 02
+      ================================================== -->
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          Make Time for a Change of Scene
+        </div>
+
+
+        <h2>
+          Sometimes a new
+          view is all you need.
+        </h2>
+
+
+        <p>
+
+          If you're ready to step outside your usual
+          surroundings, explore available travel stays
+          and options for your next change of scenery.
+
+        </p>
+
+
+        <a
+          href="natureidea.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+
+          Discover a New Stay
+
+          <span>→</span>
+
+        </a>
+
+      </aside>
+
+
+
+      <!-- =================================================
+           SECTION 03
+      ================================================== -->
+
+      <h2>
+        Follow the changing light
+      </h2>
+
+
+      <p>
+
+        Light is one of the most noticeable signs of
+        the seasons once you begin paying attention.
+        The angle of the morning sun, the length of
+        an afternoon, and the colour of evening skies
+        all shift throughout the year.
+
+      </p>
+
+
+      <p>
+
+        Even the same window can frame a completely
+        different scene depending on the season.
+        Watching these changes can bring a slower
+        rhythm to ordinary mornings and evenings.
+
+      </p>
+
+
+
+      <!-- =================================================
+           NOTE
+      ================================================== -->
+
+      <div class="article-tip">
+
+        <p>
+
+          Nature does not rush from one season to the
+          next. Its changes happen gradually, giving us
+          plenty of quiet moments to notice them.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- =================================================
+           SECTION 04
+      ================================================== -->
+
+      <h2>
+        Notice seasonal sounds
+      </h2>
+
+
+      <p>
+
+        Not every seasonal change is something you can
+        see. Sounds shift too. Some mornings may bring
+        different birdsong, stronger wind, rain against
+        leaves, or the quieter atmosphere of a colder day.
+
+      </p>
+
+
+      <p>
+
+        Taking a short walk without headphones can make
+        these details much easier to notice. What first
+        seems like silence often contains layers of
+        small sounds.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 05
+      ================================================== -->
+
+      <h2>
+        Let food mark the year
+      </h2>
+
+
+      <p>
+
+        Seasonal change also appears at the table.
+        Fresh fruit, vegetables, herbs, and other foods
+        naturally become associated with different
+        times of the year.
+
+      </p>
+
+
+      <p>
+
+        Paying attention to what is fresh and available
+        can be another simple way to stay connected
+        with the rhythm outside.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 06
+      ================================================== -->
+
+      <h2>
+        Create your own seasonal rituals
+      </h2>
+
+
+      <p>
+
+        A seasonal ritual does not have to be elaborate.
+        It might be an annual walk through the same
+        park, an early morning coffee outdoors, or a
+        habit of photographing the same tree throughout
+        the year.
+
+      </p>
+
+
+      <p>
+
+        These small traditions create a personal record
+        of time passing. They also encourage you to
+        look more closely at changes that might otherwise
+        disappear into the background.
+
+      </p>
+
+
+
+      <!-- =================================================
+           CONCLUSION
+      ================================================== -->
+
+      <h2>
+        Stay close to the rhythm
+      </h2>
+
+
+      <p>
+
+        The seasons are always changing, whether we
+        notice them or not. Taking time to observe
+        their quieter signs can make everyday life
+        feel a little more grounded.
+
+      </p>
+
+
+      <p>
+
+        A warm breeze, a new leaf, a longer evening,
+        or the first hint of autumn colour may seem
+        like a small thing. But together, these moments
+        remind us that time is moving and nature is
+        changing alongside us.
+
+      </p>
+
+
+
+      <!-- =================================================
+           BACK LINK
+      ================================================== -->
+
+      <div class="back-link">
+
+        <a href="nature.html">
+          ← Back to Nature
+        </a>
+
+      </div>
+
+
+    </article>
+
+  </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     SHARED FOOTER
+===================================================== -->
+
+<div id="footer"></div>
+
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

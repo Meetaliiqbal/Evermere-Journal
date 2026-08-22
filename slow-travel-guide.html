@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>The Art of Slow Travel — Evermere Journal</title>
+
+<meta name="description"
+      content="A different way to experience a destination, with more time for local streets, quiet mornings, and unexpected discoveries.">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F2F0E9;
+  --sage:#7D8174;
+  --clay:#9B806B;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--paper);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.article-hero{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+
+.article-hero-inner{
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+  color:var(--clay);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.article-category::before,
+.article-category::after{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--clay);
+}
+
+.article-hero h1{
+  max-width:850px;
+  margin:auto;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(48px,6.5vw,78px);
+  font-weight:400;
+  line-height:1.03;
+  letter-spacing:-1.5px;
+}
+
+.article-intro{
+  max-width:650px;
+  margin:25px auto 0;
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.article-meta span{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.article-meta span:not(:last-child)::after{
+  content:"•";
+  color:var(--clay);
+}
+
+
+/* =====================================================
+   ARTICLE
+===================================================== */
+
+.article-wrap{
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+}
+
+.article-body{
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+}
+
+.article-body p{
+  margin-bottom:27px;
+}
+
+.article-body .lead{
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.55;
+  margin-bottom:38px;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+  color:var(--dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+
+/* =====================================================
+   TRAVEL BOX
+===================================================== */
+
+.travel-list{
+  margin:38px 0 45px;
+  padding:30px 32px;
+  background:var(--cream);
+  border:1px solid var(--line);
+}
+
+.travel-list-title{
+  margin-bottom:18px;
+  color:var(--dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.travel-list ul{
+  margin-left:18px;
+}
+
+.travel-list li{
+  margin-bottom:10px;
+  padding-left:5px;
+  color:var(--body);
+  font-size:12px;
+  line-height:1.8;
+}
+
+.travel-list li:last-child{
+  margin-bottom:0;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.article-cta{
+  position:relative;
+  overflow:hidden;
+  margin:42px 0 58px;
+  padding:48px 45px;
+  background:#34332E;
+  color:#F7F4EC;
+  text-align:center;
+}
+
+.article-cta::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-70px;
+  top:-100px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.article-cta::after{
+  content:"";
+  position:absolute;
+  width:140px;
+  height:140px;
+  left:-55px;
+  bottom:-70px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.cta-label{
+  position:relative;
+  z-index:2;
+  margin-bottom:13px;
+  color:#B7B9AA;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.article-cta h2{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+  margin:auto;
+  color:#F7F4EC;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(30px,4vw,43px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-cta p{
+  position:relative;
+  z-index:2;
+  max-width:530px;
+  margin:15px auto 25px;
+  color:#C6C4BC;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.cta-button{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:45px;
+  padding:0 25px;
+  background:#F2EFE7;
+  color:#34332E;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  transition:transform .25s ease,background .25s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  background:#fff;
+}
+
+.cta-button span{
+  font-size:14px;
+}
+
+
+/* =====================================================
+   NOTE
+===================================================== */
+
+.article-tip{
+  position:relative;
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+  background:#F0EEE7;
+  border-left:3px solid var(--sage);
+}
+
+.article-tip::before{
+  content:"“";
+  position:absolute;
+  left:14px;
+  top:20px;
+  color:rgba(125,129,116,.45);
+  font-family:Georgia,serif;
+  font-size:40px;
+}
+
+.article-tip p{
+  margin:0;
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:20px;
+  line-height:1.5;
+}
+
+
+/* =====================================================
+   BACK
+===================================================== */
+
+.back-link{
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+}
+
+.back-link a{
+  color:var(--sage);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.back-link a:hover{
+  color:var(--dark);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+  }
+
+  .article-category{
+    margin-bottom:19px;
+  }
+
+  .article-hero h1{
+    font-size:46px;
+    line-height:1.04;
+    letter-spacing:-1px;
+  }
+
+  .article-intro{
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .article-meta{
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+  }
+
+  .article-wrap{
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+  }
+
+  .article-body{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-body .lead{
+    font-size:22px;
+    line-height:1.5;
+  }
+
+  .article-body h2{
+    margin-top:45px;
+    font-size:32px;
+  }
+
+  .travel-list{
+    padding:25px 22px;
+  }
+
+  .travel-list li{
+    font-size:11.5px;
+  }
+
+  .article-tip{
+    padding:28px 24px 28px 40px;
+  }
+
+  .article-tip p{
+    font-size:18px;
+  }
+
+  .article-cta{
+    margin:38px 0 48px;
+    padding:40px 22px;
+  }
+
+  .article-cta h2{
+    font-size:31px;
+  }
+
+  .article-cta p{
+    font-size:10.5px;
+  }
+
+  .cta-button{
+    width:100%;
+  }
+
+}
+
+@media(max-width:375px){
+
+  .article-hero h1{
+    font-size:41px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta-button{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SHARED HEADER
+===================================================== -->
+
+<div id="header"></div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Travel &amp; Places
+    </div>
+
+    <h1>
+      The Art of
+      Slow Travel
+    </h1>
+
+    <p class="article-intro">
+
+      A different way to experience a destination,
+      with more time for local streets, quiet mornings,
+      and unexpected discoveries.
+
+    </p>
+
+    <div class="article-meta">
+
+      <span>Travel</span>
+
+      <span>7 min read</span>
+
+      <span>Evermere Journal</span>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     ARTICLE
+===================================================== -->
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+
+      <p class="lead">
+
+        Travel does not always need to be about seeing
+        as much as possible. Sometimes a destination
+        becomes more meaningful when there is enough
+        time to simply be there.
+
+      </p>
+
+
+      <p>
+
+        Slow travel is less about how far you go and
+        more about how you experience a place. Instead
+        of moving quickly between attractions, it gives
+        you permission to notice the details that are
+        easy to miss.
+
+      </p>
+
+
+      <p>
+
+        A quiet street in the early morning, a small
+        café opening for the day, or an unexpected view
+        around a corner can become just as memorable
+        as the famous sights.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 01
+      ================================================== -->
+
+      <h2>
+        Begin with fewer plans
+      </h2>
+
+
+      <p>
+
+        One of the simplest ways to travel more slowly
+        is to resist filling every part of the itinerary.
+        Choose a few things that genuinely interest you
+        and leave the rest of the day open.
+
+      </p>
+
+
+      <p>
+
+        Having fewer fixed plans creates room for
+        curiosity. You might discover a neighbourhood
+        you had not expected to visit or spend an extra
+        hour somewhere because the atmosphere feels right.
+
+      </p>
+
+
+      <div class="travel-list">
+
+        <div class="travel-list-title">
+          Slow travel essentials
+        </div>
+
+        <ul>
+
+          <li>
+            Leave gaps between planned activities.
+          </li>
+
+          <li>
+            Explore one neighbourhood at a time.
+          </li>
+
+          <li>
+            Choose walking routes whenever practical.
+          </li>
+
+          <li>
+            Keep part of each day completely open.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- =================================================
+           SECTION 02
+      ================================================== -->
+
+      <h2>
+        Notice the everyday details
+      </h2>
+
+
+      <p>
+
+        A destination is more than its landmarks.
+        Pay attention to the details that make the
+        place feel like itself: the architecture, local
+        shops, morning routines, public gardens, markets,
+        and the way people move through their day.
+
+      </p>
+
+
+      <p>
+
+        Walking without constantly checking the map
+        can make a familiar-looking street feel new.
+        Sometimes the best discoveries happen when
+        there is no particular destination in mind.
+
+      </p>
+
+
+      <p>
+
+        Give yourself permission to stop. Sit somewhere
+        comfortable, order something simple, and watch
+        the surroundings for a while.
+
+      </p>
+
+
+
+      <!-- =================================================
+           CTA — END OF SECTION 02
+      ================================================== -->
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          A Place To Begin
+        </div>
+
+
+        <h2>
+          Let the destination
+          set the pace.
+        </h2>
+
+
+        <p>
+
+          When you're ready to plan your next escape,
+          explore available stays and travel options
+          for a more comfortable journey.
+
+        </p>
+
+
+        <a
+          href="travelidea.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+
+          Browse Travel Stays
+
+          <span>→</span>
+
+        </a>
+
+      </aside>
+
+
+
+      <!-- =================================================
+           SECTION 03
+      ================================================== -->
+
+      <h2>
+        Stay long enough to settle in
+      </h2>
+
+
+      <p>
+
+        Short trips can still feel spacious when you
+        give yourself time to settle into your surroundings.
+        Rather than changing hotels every night, consider
+        spending the entire stay in one comfortable place.
+
+      </p>
+
+
+      <p>
+
+        Returning to the same room after a day of walking
+        can create a sense of familiarity, even when
+        everything outside is completely new.
+
+      </p>
+
+
+
+      <!-- =================================================
+           NOTE
+      ================================================== -->
+
+      <div class="article-tip">
+
+        <p>
+
+          You do not have to experience everything a
+          destination has to offer. Leaving something
+          unexplored gives you a reason to return.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- =================================================
+           SECTION 04
+      ================================================== -->
+
+      <h2>
+        Take the local route
+      </h2>
+
+
+      <p>
+
+        Whenever practical, choose routes that allow
+        you to see more of the surroundings. Walking,
+        local transport, and slower journeys can reveal
+        parts of a destination that are invisible from
+        a quick transfer between major attractions.
+
+      </p>
+
+
+      <p>
+
+        A slightly longer walk through residential
+        streets or a local market can sometimes tell
+        you more about a place than a crowded tourist
+        attraction.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 05
+      ================================================== -->
+
+      <h2>
+        Make mornings quieter
+      </h2>
+
+
+      <p>
+
+        Early mornings offer a different version of
+        almost every destination. Streets are quieter,
+        cafés are beginning to open, and familiar places
+        can suddenly feel completely different.
+
+      </p>
+
+
+      <p>
+
+        Instead of rushing toward the first attraction,
+        start slowly. Have breakfast nearby, walk without
+        a strict destination, and allow the day to unfold.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 06
+      ================================================== -->
+
+      <h2>
+        Leave space for surprise
+      </h2>
+
+
+      <p>
+
+        Some of the most enjoyable travel memories are
+        rarely planned. A conversation with someone
+        local, a small independent shop, an unexpected
+        viewpoint, or a quiet garden can become the
+        highlight of an entire trip.
+
+      </p>
+
+
+      <p>
+
+        Slow travel creates the space for these moments
+        to happen. When every hour is already assigned,
+        there is little room for anything unexpected.
+
+      </p>
+
+
+
+      <!-- =================================================
+           CONCLUSION
+      ================================================== -->
+
+      <h2>
+        Travel with attention
+      </h2>
+
+
+      <p>
+
+        The art of slow travel is ultimately about
+        attention. Notice where you are, how the place
+        sounds in the morning, what people eat, which
+        streets feel inviting, and which moments make
+        you want to stay a little longer.
+
+      </p>
+
+
+      <p>
+
+        You may return having seen fewer landmarks,
+        but with a stronger sense of the destination
+        itself. And sometimes that is the difference
+        between simply visiting somewhere and actually
+        experiencing it.
+
+      </p>
+
+
+
+      <!-- =================================================
+           BACK
+      ================================================== -->
+
+      <div class="back-link">
+
+        <a href="travel.html">
+          ← Back to Travel
+        </a>
+
+      </div>
+
+
+    </article>
+
+  </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     SHARED FOOTER
+===================================================== -->
+
+<div id="footer"></div>
+
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

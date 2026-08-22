@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+
+<meta
+name="description"
+content="Explore thoughtful travel stories, quiet destinations, scenic escapes, slow journeys, and inspiring travel ideas with Evermere Journal."
+
+>
+
+  <meta name="theme-color" content="#F3F1EB">
+
+  <title>Travel — Evermere Journal</title>
+
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%23252725'/%3E%3Cpath d='M68 17C49 21 34 33 30 50c-4 17 4 28 18 34 1-16 7-30 20-42-8 11-12 22-12 37 14-7 22-19 22-37 0-10-3-19-10-25z' fill='%23e5e5dc'/%3E%3C/svg%3E"
+  >
+
+  <style>
+
+    @import url(
+      'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap'
+    );
+
+
+    /* =====================================================
+       ROOT
+    ===================================================== */
+
+    :root {
+
+      --dark: #292D2A;
+      --soft-dark: #424943;
+
+      --ivory: #F3F1EB;
+      --paper: #FBFAF7;
+
+      --sage: #748276;
+      --soft-sage: #A5AEA4;
+
+      --body: #707670;
+      --muted: #979D97;
+
+      --sand: #D9D0BE;
+
+      --line: rgba(41,45,42,.11);
+
+    }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: var(--paper);
+
+      color: var(--dark);
+
+      font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+      -webkit-font-smoothing: antialiased;
+
+      overflow-x: hidden;
+
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .travel-hero {
+
+      position: relative;
+
+      overflow: hidden;
+
+      background: var(--ivory);
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .travel-hero-inner {
+
+      width:
+        min(1220px, calc(100% - 50px));
+
+      min-height: 525px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        1.05fr .95fr;
+
+      align-items: center;
+
+      gap: 75px;
+
+      padding: 80px 0;
+
+    }
+
+
+    .travel-hero-copy {
+      max-width: 650px;
+    }
+
+
+    .travel-eyebrow {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin-bottom: 24px;
+
+      color: var(--sage);
+
+      font-size: 9px;
+
+      font-weight: 600;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .travel-eyebrow::before {
+
+      content: "";
+
+      width: 30px;
+
+      height: 1px;
+
+      background: var(--sage);
+
+    }
+
+
+    .travel-hero h1 {
+
+      max-width: 700px;
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(58px, 7vw, 92px);
+
+      font-weight: 400;
+
+      line-height: .94;
+
+      letter-spacing: -2px;
+
+    }
+
+
+    .travel-hero h1 em {
+
+      color: var(--sage);
+
+      font-weight: 400;
+
+    }
+
+
+    .travel-hero-text {
+
+      max-width: 535px;
+
+      margin-top: 28px;
+
+      color: var(--body);
+
+      font-size: 14px;
+
+      line-height: 1.9;
+
+    }
+
+
+    /* =====================================================
+       HERO ART
+    ===================================================== */
+
+    .travel-hero-art {
+
+      position: relative;
+
+      min-height: 360px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+    .travel-orbit {
+
+      position: relative;
+
+      width:
+        min(340px, 75vw);
+
+      aspect-ratio: 1;
+
+      border-radius: 50%;
+
+      background: #D7D6C9;
+
+      box-shadow:
+        0 28px 70px rgba(41,45,42,.09);
+
+    }
+
+
+    .travel-orbit::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 12%;
+
+      border:
+        1px solid rgba(41,45,42,.15);
+
+      border-radius: 50%;
+
+    }
+
+
+    .travel-orbit::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 48%;
+
+      height: 48%;
+
+      top: 26%;
+
+      left: 26%;
+
+      border:
+        1px solid rgba(41,45,42,.12);
+
+      border-radius: 50%;
+
+    }
+
+
+    .travel-direction {
+
+      position: absolute;
+
+      top: 50%;
+
+      left: 50%;
+
+      transform:
+        translate(-50%, -50%);
+
+      color: rgba(41,45,42,.42);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 47px;
+
+      font-style: italic;
+
+    }
+
+
+    .travel-floating-note {
+
+      position: absolute;
+
+      right: 2%;
+
+      bottom: 9%;
+
+      width: 155px;
+
+      padding: 19px;
+
+      background:
+        rgba(251,250,247,.95);
+
+      border:
+        1px solid rgba(41,45,42,.08);
+
+      box-shadow:
+        0 15px 35px rgba(41,45,42,.09);
+
+    }
+
+
+    .travel-floating-note span {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: var(--sage);
+
+      font-size: 7px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .travel-floating-note strong {
+
+      color: var(--dark);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 19px;
+
+      font-weight: 400;
+
+      line-height: 1.15;
+
+    }
+
+
+    /* =====================================================
+       CONTENT
+    ===================================================== */
+
+    .travel-content {
+
+      width:
+        min(1220px, calc(100% - 50px));
+
+      margin: auto;
+
+      padding:
+        95px 0 115px;
+
+    }
+
+
+    .travel-section-heading {
+
+      display: flex;
+
+      align-items: flex-end;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 45px;
+
+    }
+
+
+    .travel-section-heading h2 {
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 45px;
+
+      font-weight: 400;
+
+      line-height: 1;
+
+    }
+
+
+    .travel-section-heading p {
+
+      max-width: 400px;
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 1.7;
+
+      text-align: right;
+
+    }
+
+
+    /* =====================================================
+       ARTICLE GRID
+    ===================================================== */
+
+    .travel-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+
+    }
+
+
+    /* =====================================================
+       ARTICLE CARD
+    ===================================================== */
+
+    .travel-card {
+
+      display: flex;
+
+      flex-direction: column;
+
+      min-width: 0;
+
+      background: #F7F6F1;
+
+      border:
+        1px solid rgba(41,45,42,.08);
+
+      transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+    }
+
+
+    .travel-card:hover {
+
+      transform:
+        translateY(-6px);
+
+      box-shadow:
+        0 18px 45px rgba(41,45,42,.08);
+
+    }
+
+
+    /* =====================================================
+       CARD VISUAL
+    ===================================================== */
+
+    .travel-card-visual {
+
+      position: relative;
+
+      height: 235px;
+
+      overflow: hidden;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      cursor: pointer;
+
+    }
+
+
+    .travel-card:nth-child(1)
+    .travel-card-visual {
+      background: #D8D4C7;
+    }
+
+
+    .travel-card:nth-child(2)
+    .travel-card-visual {
+      background: #D3D9D2;
+    }
+
+
+    .travel-card:nth-child(3)
+    .travel-card-visual {
+      background: #D9D0C2;
+    }
+
+
+    .travel-card:nth-child(4)
+    .travel-card-visual {
+      background: #CDD5D1;
+    }
+
+
+    .travel-card:nth-child(5)
+    .travel-card-visual {
+      background: #DCD6C8;
+    }
+
+
+    .travel-card:nth-child(6)
+    .travel-card-visual {
+      background: #D1D5D4;
+    }
+
+
+    .travel-card-visual::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 145px;
+
+      height: 145px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(41,45,42,.14);
+
+      transition:
+        transform .5s ease;
+
+    }
+
+
+    .travel-card-visual::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 88px;
+
+      height: 88px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(41,45,42,.10);
+
+      transition:
+        transform .5s ease;
+
+    }
+
+
+    .travel-card:hover
+    .travel-card-visual::before {
+
+      transform: scale(1.08);
+
+    }
+
+
+    .travel-card:hover
+    .travel-card-visual::after {
+
+      transform: scale(.92);
+
+    }
+
+
+    .travel-card-number {
+
+      position: absolute;
+
+      top: 18px;
+
+      left: 19px;
+
+      z-index: 2;
+
+      color: rgba(41,45,42,.5);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+    }
+
+
+    .travel-card-category {
+
+      position: absolute;
+
+      right: 18px;
+
+      top: 18px;
+
+      z-index: 2;
+
+      color: rgba(41,45,42,.55);
+
+      font-size: 7px;
+
+      font-weight: 600;
+
+      letter-spacing: 1.8px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .travel-card-icon {
+
+      position: relative;
+
+      z-index: 2;
+
+      color: rgba(41,45,42,.42);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 28px;
+
+      font-style: italic;
+
+    }
+
+
+    /* =====================================================
+       CARD BODY
+    ===================================================== */
+
+    .travel-card-body {
+
+      min-height: 235px;
+
+      padding:
+        27px 27px 29px;
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+
+    .travel-card-title {
+
+      display: block;
+
+      margin-bottom: 13px;
+
+      color: var(--dark);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 27px;
+
+      font-weight: 400;
+
+      line-height: 1.12;
+
+      text-decoration: none;
+
+      transition:
+        color .25s ease;
+
+    }
+
+
+    .travel-card-title:hover {
+
+      color: var(--sage);
+
+    }
+
+
+    .travel-card-body p {
+
+      color: var(--body);
+
+      font-size: 11px;
+
+      line-height: 1.8;
+
+    }
+
+
+    .travel-card-link {
+
+      display: inline-block;
+
+      margin-top: auto;
+
+      padding-top: 22px;
+
+      color: var(--sage);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .travel-card-link span {
+
+      display: inline-block;
+
+      margin-left: 6px;
+
+      transition:
+        transform .25s ease;
+
+    }
+
+
+    .travel-card-link:hover span {
+
+      transform:
+        translateX(5px);
+
+    }
+
+
+    /* =====================================================
+       EDITORIAL NOTE
+    ===================================================== */
+
+    .travel-note {
+
+      margin-top: 80px;
+
+      padding:
+        55px 60px;
+
+      background: var(--ivory);
+
+      border:
+        1px solid var(--line);
+
+      text-align: center;
+
+    }
+
+
+    .travel-note-label {
+
+      margin-bottom: 17px;
+
+      color: var(--sage);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .travel-note h2 {
+
+      max-width: 700px;
+
+      margin: auto;
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(30px, 4vw, 46px);
+
+      font-weight: 400;
+
+      line-height: 1.15;
+
+    }
+
+
+    .travel-note p {
+
+      max-width: 575px;
+
+      margin: 18px auto 0;
+
+      color: var(--body);
+
+      font-size: 12px;
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .travel-hero-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding:
+          70px 0 80px;
+
+      }
+
+
+      .travel-hero-copy {
+        max-width: 700px;
+      }
+
+
+      .travel-hero-art {
+        min-height: 300px;
+      }
+
+
+      .travel-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 600px) {
+
+      .travel-hero-inner {
+
+        width:
+          calc(100% - 30px);
+
+        padding:
+          58px 0 65px;
+
+      }
+
+
+      .travel-eyebrow {
+
+        margin-bottom: 19px;
+
+      }
+
+
+      .travel-hero h1 {
+
+        font-size: 57px;
+
+        letter-spacing: -1.5px;
+
+      }
+
+
+      .travel-hero-text {
+
+        margin-top: 22px;
+
+        font-size: 13px;
+
+        line-height: 1.8;
+
+      }
+
+
+      .travel-hero-art {
+
+        min-height: 260px;
+
+      }
+
+
+      .travel-orbit {
+
+        width: 250px;
+
+      }
+
+
+      .travel-direction {
+
+        font-size: 39px;
+
+      }
+
+
+      .travel-floating-note {
+
+        right: 0;
+
+        bottom: 0;
+
+        width: 125px;
+
+        padding: 14px;
+
+      }
+
+
+      .travel-floating-note strong {
+
+        font-size: 16px;
+
+      }
+
+
+      .travel-content {
+
+        width:
+          calc(100% - 30px);
+
+        padding:
+          65px 0 80px;
+
+      }
+
+
+      .travel-section-heading {
+
+        display: block;
+
+        margin-bottom: 30px;
+
+      }
+
+
+      .travel-section-heading h2 {
+
+        font-size: 38px;
+
+      }
+
+
+      .travel-section-heading p {
+
+        margin-top: 14px;
+
+        text-align: left;
+
+        font-size: 10.5px;
+
+      }
+
+
+      .travel-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+      }
+
+
+      .travel-card-visual {
+
+        height: 220px;
+
+      }
+
+
+      .travel-card-body {
+
+        min-height: 215px;
+
+        padding: 24px;
+
+      }
+
+
+      .travel-card-title {
+
+        font-size: 25px;
+
+      }
+
+
+      .travel-card-body p {
+
+        font-size: 11px;
+
+      }
+
+
+      .travel-note {
+
+        margin-top: 55px;
+
+        padding:
+          40px 22px;
+
+      }
+
+
+      .travel-note h2 {
+
+        font-size: 31px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       SMALL PHONES
+    ===================================================== */
+
+    @media (max-width: 375px) {
+
+      .travel-hero-inner,
+      .travel-content {
+
+        width:
+          calc(100% - 26px);
+
+      }
+
+
+      .travel-hero h1 {
+
+        font-size: 51px;
+
+      }
+
+
+      .travel-orbit {
+
+        width: 225px;
+
+      }
+
+
+      .travel-floating-note {
+
+        width: 115px;
+
+      }
+
+
+      .travel-card-body {
+
+        padding: 22px;
+
+      }
+
+
+      .travel-card-title {
+
+        font-size: 24px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       REDUCED MOTION
+    ===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .travel-card,
+      .travel-card-title,
+      .travel-card-link span,
+      .travel-card-visual::before,
+      .travel-card-visual::after {
+
+        transition: none;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
+  <div id="header"></div>
+
+  <!-- =====================================================
+       MAIN
+  ===================================================== -->
+
+  <main>
+
+
+<!-- ===================================================
+     HERO
+=================================================== -->
+
+<section class="travel-hero">
+
+  <div class="travel-hero-inner">
+
+
+    <div class="travel-hero-copy">
+
+      <div class="travel-eyebrow">
+        The Travel Journal
+      </div>
+
+
+      <h1>
+        Go somewhere,
+        <em>slowly.</em>
+      </h1>
+
+
+      <p class="travel-hero-text">
+        Discover thoughtful destinations, scenic escapes,
+        quiet places, and simple travel ideas for journeys
+        that feel as memorable as the places themselves.
+      </p>
+
+    </div>
+
+
+    <div class="travel-hero-art">
+
+      <div class="travel-orbit">
+
+        <span class="travel-direction">
+          Away
+        </span>
+
+      </div>
+
+
+      <div class="travel-floating-note">
+
+        <span>
+          Travel note
+        </span>
+
+        <strong>
+          Leave room
+          for discovery.
+        </strong>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- ===================================================
+     ARTICLES
+=================================================== -->
+
+<section class="travel-content">
+
+
+  <div class="travel-section-heading">
+
+    <h2>
+      Places &amp; journeys
+    </h2>
+
+
+    <p>
+      Stories about destinations, thoughtful escapes,
+      beautiful landscapes, and the little details
+      that make travelling worthwhile.
+    </p>
+
+  </div>
+
+
+  <div class="travel-grid">
+
+
+    <!-- =================================================
+         ARTICLE 01
+    ================================================= -->
+
+    <article class="travel-card">
+
+      <a
+        href="quiet-weekend-getaways.html"
+        class="travel-card-visual"
+        aria-label="Read Quiet Weekend Getaways"
+      >
+
+        <span class="travel-card-number">
+          01
+        </span>
+
+        <span class="travel-card-category">
+          Escapes
+        </span>
+
+        <span class="travel-card-icon">
+          Weekend
+        </span>
+
+      </a>
+
+
+      <div class="travel-card-body">
+
+        <a
+          href="quiet-weekend-getaways.html"
+          class="travel-card-title"
+        >
+          Quiet Weekend Getaways
+        </a>
+
+
+        <p>
+          Ideas for leaving the usual routine behind
+          and finding a little breathing room in a
+          beautiful place.
+        </p>
+
+
+        <a
+          href="quiet-weekend-getaways.html"
+          class="travel-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 02
+    ================================================= -->
+
+    <article class="travel-card">
+
+      <a
+        href="slow-travel-guide.html"
+        class="travel-card-visual"
+        aria-label="Read The Art of Slow Travel"
+      >
+
+        <span class="travel-card-number">
+          02
+        </span>
+
+        <span class="travel-card-category">
+          Slow Travel
+        </span>
+
+        <span class="travel-card-icon">
+          Unhurried
+        </span>
+
+      </a>
+
+
+      <div class="travel-card-body">
+
+        <a
+          href="slow-travel-guide.html"
+          class="travel-card-title"
+        >
+          The Art of Slow Travel
+        </a>
+
+
+        <p>
+          A different way to experience a destination,
+          with more time for local streets, quiet
+          mornings, and unexpected discoveries.
+        </p>
+
+
+        <a
+          href="slow-travel-guide.html"
+          class="travel-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 03
+    ================================================= -->
+
+    <article class="travel-card">
+
+      <a
+        href="coastal-escape-ideas.html"
+        class="travel-card-visual"
+        aria-label="Read A Day by the Coast"
+      >
+
+        <span class="travel-card-number">
+          03
+        </span>
+
+        <span class="travel-card-category">
+          Coastal
+        </span>
+
+        <span class="travel-card-icon">
+          Seaside
+        </span>
+
+      </a>
+
+
+      <div class="travel-card-body">
+
+        <a
+          href="coastal-escape-ideas.html"
+          class="travel-card-title"
+        >
+          A Day by the Coast
+        </a>
+
+
+        <p>
+          From early walks to long lunches, simple
+          ideas for making a coastal day feel
+          relaxed and memorable.
+        </p>
+
+
+        <a
+          href="coastal-escape-ideas.html"
+          class="travel-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 04
+    ================================================= -->
+
+    <article class="travel-card">
+
+      <a
+        href="mountain-escape-guide.html"
+        class="travel-card-visual"
+        aria-label="Read Finding Stillness in the Mountains"
+      >
+
+        <span class="travel-card-number">
+          04
+        </span>
+
+        <span class="travel-card-category">
+          Mountains
+        </span>
+
+        <span class="travel-card-icon">
+          Stillness
+        </span>
+
+      </a>
+
+
+      <div class="travel-card-body">
+
+        <a
+          href="mountain-escape-guide.html"
+          class="travel-card-title"
+        >
+          Finding Stillness in the Mountains
+        </a>
+
+
+        <p>
+          Why mountain landscapes invite us to slow
+          down, look around, and reconnect with the
+          quieter side of travel.
+        </p>
+
+
+        <a
+          href="mountain-escape-guide.html"
+          class="travel-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 05
+    ================================================= -->
+
+    <article class="travel-card">
+
+      <a
+        href="city-walk-travel-guide.html"
+        class="travel-card-visual"
+        aria-label="Read The Joy of Wandering a City"
+      >
+
+        <span class="travel-card-number">
+          05
+        </span>
+
+        <span class="travel-card-category">
+          City
+        </span>
+
+        <span class="travel-card-icon">
+          Wander
+        </span>
+
+      </a>
+
+
+      <div class="travel-card-body">
+
+        <a
+          href="city-walk-travel-guide.html"
+          class="travel-card-title"
+        >
+          The Joy of Wandering a City
+        </a>
+
+
+        <p>
+          Forget the checklist for a while and discover
+          a city through its neighbourhoods, cafés,
+          corners, and everyday rhythm.
+        </p>
+
+
+        <a
+          href="city-walk-travel-guide.html"
+          class="travel-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 06
+    ================================================= -->
+
+    <article class="travel-card">
+
+      <a
+        href="travel-packing-essentials.html"
+        class="travel-card-visual"
+        aria-label="Read Packing Light for Better Journeys"
+      >
+
+        <span class="travel-card-number">
+          06
+        </span>
+
+        <span class="travel-card-category">
+          Essentials
+        </span>
+
+        <span class="travel-card-icon">
+          Lightly
+        </span>
+
+      </a>
+
+
+      <div class="travel-card-body">
+
+        <a
+          href="travel-packing-essentials.html"
+          class="travel-card-title"
+        >
+          Packing Light for Better Journeys
+        </a>
+
+
+        <p>
+          A calmer approach to packing that leaves
+          more room for movement, spontaneity,
+          and the experience itself.
+        </p>
+
+
+        <a
+          href="travel-packing-essentials.html"
+          class="travel-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+
+  <!-- =================================================
+       EDITORIAL NOTE
+  ================================================= -->
+
+  <div class="travel-note">
+
+    <div class="travel-note-label">
+      Evermere Perspective
+    </div>
+
+
+    <h2>
+      Sometimes the best destination
+      is simply somewhere new.
+    </h2>
+
+
+    <p>
+      Travel does not always have to be far away.
+      A different street, a quiet landscape, or an
+      unfamiliar morning can be enough to make
+      everyday life feel fresh again.
+    </p>
+
+  </div>
+
+
+</section>
+
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+
+  <div id="footer"></div>
+
+  <!-- =====================================================
+       HEADER + FOOTER
+  ===================================================== -->
+
+  <script src="header.js"></script>
+
+  <script src="footer.js"></script>
+
+</body>
+</html>

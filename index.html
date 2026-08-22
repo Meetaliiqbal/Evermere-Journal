@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="referrer" content="no-referrer">
+
+  <meta
+    name="description"
+    content="Evermere Journal — modern inspiration across food, travel, nature, fashion, quotes, and home decor."
+  >
+
+  <meta name="theme-color" content="#F5F3EE">
+
+  <title>Evermere Journal — The Art of Everyday Living</title>
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%23252725'/%3E%3Cpath d='M68 17C49 21 34 33 30 50c-4 17 4 28 18 34 1-16 7-30 20-42-8 11-12 22-12 37 14-7 22-19 22-37 0-10-3-19-10-25z' fill='%23e5e5dc'/%3E%3C/svg%3E"
+  >
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap');
+
+    :root {
+      --charcoal: #252725;
+      --charcoal-soft: #414640;
+
+      --ivory: #F5F3EE;
+      --paper: #FCFBF8;
+
+      --sage: #78816F;
+      --sage-light: #B9C3B5;
+
+      --stone: #858982;
+      --body: #6F746F;
+
+      --line: rgba(37, 39, 37, .12);
+
+      --serif: "DM Serif Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+
+      --shadow: 0 25px 70px rgba(35, 38, 35, .08);
+      --shadow-hover: 0 35px 90px rgba(35, 38, 35, .14);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+
+      background: var(--ivory);
+      color: var(--charcoal);
+
+      font-family: var(--sans);
+      line-height: 1.7;
+
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    ::selection {
+      background: var(--charcoal);
+      color: #fff;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+      position: relative;
+
+      min-height: 780px;
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 12% 20%,
+          rgba(185, 195, 181, .35),
+          transparent 27%
+        ),
+        radial-gradient(
+          circle at 88% 78%,
+          rgba(120, 129, 111, .10),
+          transparent 30%
+        ),
+        var(--ivory);
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 620px;
+      height: 620px;
+
+      right: -240px;
+      top: -280px;
+
+      border: 1px solid rgba(37, 39, 37, .09);
+      border-radius: 50%;
+
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 390px;
+      height: 390px;
+
+      left: -260px;
+      bottom: -260px;
+
+      border: 1px solid rgba(37, 39, 37, .07);
+      border-radius: 50%;
+
+      pointer-events: none;
+    }
+
+    .hero-wrap {
+      position: relative;
+      z-index: 2;
+
+      width: min(1220px, calc(100% - 50px));
+
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 58% 42%;
+
+      align-items: center;
+    }
+
+    .hero-content {
+      padding-right: 40px;
+    }
+
+    .hero-kicker {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+
+      margin-bottom: 30px;
+
+      color: var(--stone);
+
+      font-size: 10px;
+      font-weight: 600;
+
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero-kicker::before {
+      content: "";
+
+      width: 34px;
+      height: 1px;
+
+      background: var(--stone);
+    }
+
+    .hero h1 {
+      max-width: 800px;
+
+      color: var(--charcoal);
+
+      font-family: var(--serif);
+
+      font-size: clamp(65px, 9vw, 116px);
+
+      font-weight: 400;
+
+      line-height: .9;
+
+      letter-spacing: -5px;
+    }
+
+    .hero h1 .italic {
+      display: block;
+
+      padding-left: 72px;
+
+      color: var(--sage);
+
+      font-style: italic;
+    }
+
+    .hero-description {
+      max-width: 535px;
+
+      margin: 40px 0 0 4px;
+
+      color: var(--body);
+
+      font-size: 16px;
+
+      line-height: 1.9;
+    }
+
+    .hero-action {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 17px;
+
+      margin-top: 35px;
+      margin-left: 4px;
+
+      color: var(--charcoal);
+
+      font-size: 10px;
+      font-weight: 600;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero-action span {
+      width: 44px;
+      height: 44px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid var(--charcoal);
+
+      border-radius: 50%;
+
+      font-size: 15px;
+
+      transition:
+        background .35s ease,
+        color .35s ease,
+        transform .35s ease;
+    }
+
+    .hero-action:hover span {
+      background: var(--charcoal);
+      color: white;
+
+      transform: translateY(4px);
+    }
+
+
+    /* =====================================================
+       HERO ART
+    ===================================================== */
+
+    .hero-art {
+      position: relative;
+
+      height: 590px;
+    }
+
+    .hero-art-main {
+      position: absolute;
+
+      width: 400px;
+      height: 520px;
+
+      right: 40px;
+      top: 20px;
+
+      overflow: hidden;
+
+      border-radius: 220px 220px 25px 25px;
+
+      background:
+        radial-gradient(
+          ellipse at 45% 25%,
+          rgba(255,255,255,.75),
+          transparent 30%
+        ),
+        linear-gradient(
+          155deg,
+          #DDE2DA,
+          #B8C1B7
+        );
+
+      transform: rotate(4deg);
+
+      box-shadow: var(--shadow);
+    }
+
+    .hero-art-main::before {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      left: -110px;
+      bottom: -60px;
+
+      border: 1px solid rgba(37,39,37,.10);
+
+      border-radius: 50%;
+    }
+
+    .hero-art-main::after {
+      content: "";
+
+      position: absolute;
+
+      width: 180px;
+      height: 180px;
+
+      right: -50px;
+      top: 80px;
+
+      border: 1px solid rgba(255,255,255,.55);
+
+      border-radius: 50%;
+    }
+
+    .hero-art-word {
+      position: absolute;
+
+      inset: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: rgba(37, 39, 37, .58);
+
+      font-family: var(--serif);
+
+      font-size: 78px;
+
+      font-style: italic;
+
+      transform: rotate(-4deg);
+
+      user-select: none;
+    }
+
+    .hero-note {
+      position: absolute;
+
+      width: 180px;
+
+      right: -5px;
+      bottom: 35px;
+
+      z-index: 5;
+
+      padding: 20px;
+
+      background: rgba(252,251,248,.88);
+
+      border: 1px solid var(--line);
+
+      box-shadow: var(--shadow);
+
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+    }
+
+    .hero-note small {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: var(--stone);
+
+      font-size: 9px;
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+    .hero-note p {
+      color: var(--charcoal-soft);
+
+      font-family: var(--serif);
+
+      font-size: 19px;
+
+      line-height: 1.25;
+    }
+
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .intro {
+      padding: 145px 0;
+
+      background: var(--paper);
+
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .intro-wrap {
+      width: min(1000px, calc(100% - 50px));
+
+      margin: auto;
+
+      text-align: center;
+    }
+
+    .intro-label {
+      margin-bottom: 25px;
+
+      color: var(--stone);
+
+      font-size: 10px;
+      font-weight: 600;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+    }
+
+    .intro h2 {
+      color: var(--charcoal);
+
+      font-family: var(--serif);
+
+      font-size: clamp(45px, 6vw, 72px);
+
+      font-weight: 400;
+
+      line-height: 1.08;
+    }
+
+    .intro h2 em {
+      color: var(--sage);
+
+      font-style: italic;
+    }
+
+    .intro p {
+      max-width: 650px;
+
+      margin: 30px auto 0;
+
+      color: var(--body);
+
+      font-size: 15px;
+
+      line-height: 1.9;
+    }
+
+
+    /* =====================================================
+       COLLECTIONS
+    ===================================================== */
+
+    .collections {
+      padding: 135px 0;
+
+      background: var(--ivory);
+    }
+
+    .collections-wrap {
+      width: min(1220px, calc(100% - 50px));
+
+      margin: auto;
+    }
+
+    .collections-heading {
+      display: grid;
+
+      grid-template-columns: 1fr 360px;
+
+      align-items: end;
+
+      gap: 60px;
+
+      margin-bottom: 55px;
+    }
+
+    .collections-heading h2 {
+      color: var(--charcoal);
+
+      font-family: var(--serif);
+
+      font-size: clamp(48px, 6vw, 76px);
+
+      font-weight: 400;
+
+      line-height: .95;
+
+      letter-spacing: -1px;
+    }
+
+    .collections-heading p {
+      color: var(--body);
+
+      font-size: 14px;
+
+      line-height: 1.8;
+    }
+
+    .collection-grid {
+      display: grid;
+
+      grid-template-columns: repeat(12, 1fr);
+
+      gap: 18px;
+    }
+
+    .collection {
+      position: relative;
+
+      min-height: 380px;
+
+      overflow: hidden;
+
+      padding: 30px;
+
+      border: 1px solid var(--line);
+
+      background: var(--paper);
+
+      transition:
+        transform .5s cubic-bezier(.2,.8,.2,1),
+        box-shadow .5s ease;
+    }
+
+    .collection:hover {
+      transform: translateY(-9px);
+
+      box-shadow: var(--shadow-hover);
+    }
+
+    .collection:nth-child(1) {
+      grid-column: span 7;
+    }
+
+    .collection:nth-child(2) {
+      grid-column: span 5;
+    }
+
+    .collection:nth-child(3),
+    .collection:nth-child(4),
+    .collection:nth-child(5) {
+      grid-column: span 4;
+    }
+
+    .collection:nth-child(6) {
+      grid-column: 3 / span 8;
+
+      min-height: 320px;
+    }
+
+    .collection::after {
+      content: "";
+
+      position: absolute;
+
+      width: 210px;
+      height: 210px;
+
+      right: -75px;
+      bottom: -80px;
+
+      border: 1px solid rgba(37,39,37,.09);
+
+      border-radius: 50%;
+
+      transition: transform .5s ease;
+    }
+
+    .collection:hover::after {
+      transform: scale(1.25);
+    }
+
+    .collection-number {
+      color: var(--stone);
+
+      font-size: 9px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+    }
+
+    .collection-icon {
+      position: absolute;
+
+      top: 26px;
+      right: 28px;
+
+      width: 55px;
+      height: 55px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid var(--line);
+
+      border-radius: 50%;
+
+      color: var(--charcoal-soft);
+
+      font-family: var(--serif);
+
+      font-size: 24px;
+
+      transition:
+        background .4s ease,
+        color .4s ease,
+        transform .4s ease;
+    }
+
+    .collection:hover .collection-icon {
+      background: var(--charcoal);
+
+      color: white;
+
+      transform: rotate(15deg);
+    }
+
+    .collection h3 {
+      position: absolute;
+
+      left: 30px;
+      bottom: 90px;
+
+      color: var(--charcoal);
+
+      font-family: var(--serif);
+
+      font-size: clamp(39px, 4vw, 54px);
+
+      font-weight: 400;
+
+      line-height: 1;
+
+      letter-spacing: -.5px;
+    }
+
+    .collection p {
+      position: absolute;
+
+      left: 30px;
+      right: 30px;
+      bottom: 32px;
+
+      max-width: 390px;
+
+      color: var(--body);
+
+      font-size: 13px;
+
+      line-height: 1.55;
+    }
+
+
+    /* =====================================================
+       CARD COLORS
+    ===================================================== */
+
+    .food {
+      background:
+        radial-gradient(
+          circle at 75% 65%,
+          rgba(198,184,164,.22),
+          transparent 31%
+        ),
+        var(--paper);
+    }
+
+    .travel {
+      background:
+        radial-gradient(
+          circle at 75% 25%,
+          rgba(185,198,187,.42),
+          transparent 35%
+        ),
+        var(--paper);
+    }
+
+    .nature {
+      background:
+        radial-gradient(
+          circle at 20% 75%,
+          rgba(169,184,166,.30),
+          transparent 35%
+        ),
+        var(--paper);
+    }
+
+    .fashion {
+      background:
+        radial-gradient(
+          circle at 80% 70%,
+          rgba(204,198,187,.32),
+          transparent 33%
+        ),
+        var(--paper);
+    }
+
+    .quotes {
+      background:
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(194,201,193,.32),
+          transparent 34%
+        ),
+        var(--paper);
+    }
+
+    .home {
+      background:
+        radial-gradient(
+          circle at 80% 30%,
+          rgba(198,184,164,.20),
+          transparent 35%
+        ),
+        var(--paper);
+    }
+
+
+    /* =====================================================
+       EDITORIAL DARK SECTION
+    ===================================================== */
+
+    .editorial {
+      position: relative;
+
+      padding: 145px 0;
+
+      overflow: hidden;
+
+      background: #292C29;
+
+      color: #F3F1EA;
+    }
+
+    .editorial::before {
+      content: "";
+
+      position: absolute;
+
+      width: 650px;
+      height: 650px;
+
+      left: -310px;
+      top: -350px;
+
+      border: 1px solid rgba(255,255,255,.07);
+
+      border-radius: 50%;
+
+      pointer-events: none;
+    }
+
+    .editorial::after {
+      content: "";
+
+      position: absolute;
+
+      width: 500px;
+      height: 500px;
+
+      right: -250px;
+      bottom: -330px;
+
+      border: 1px solid rgba(255,255,255,.06);
+
+      border-radius: 50%;
+
+      pointer-events: none;
+    }
+
+    .editorial-wrap {
+      position: relative;
+
+      z-index: 2;
+
+      width: min(900px, calc(100% - 50px));
+
+      margin: auto;
+
+      text-align: center;
+    }
+
+    .editorial-label {
+      color: #AEB6AD;
+
+      font-size: 9px;
+
+      font-weight: 600;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+    }
+
+    .editorial h2 {
+      margin-top: 28px;
+
+      color: #F3F1EA;
+
+      font-family: var(--serif);
+
+      font-size: clamp(48px, 7vw, 82px);
+
+      font-weight: 400;
+
+      line-height: 1.05;
+    }
+
+    .editorial h2 em {
+      color: #B9C3B5;
+
+      font-style: italic;
+    }
+
+    .editorial p {
+      max-width: 620px;
+
+      margin: 30px auto 0;
+
+      color: #B7BDB7;
+
+      font-size: 15px;
+
+      line-height: 1.9;
+    }
+
+
+    /* =====================================================
+       FINAL
+    ===================================================== */
+
+    .final {
+      padding: 135px 0;
+
+      background: var(--paper);
+
+      text-align: center;
+    }
+
+    .final-wrap {
+      width: min(850px, calc(100% - 50px));
+
+      margin: auto;
+    }
+
+    .final h2 {
+      color: var(--charcoal);
+
+      font-family: var(--serif);
+
+      font-size: clamp(50px, 6vw, 76px);
+
+      font-weight: 400;
+
+      line-height: 1;
+    }
+
+    .final h2 em {
+      color: var(--sage);
+
+      font-style: italic;
+    }
+
+    .final p {
+      max-width: 560px;
+
+      margin: 27px auto 0;
+
+      color: var(--body);
+
+      font-size: 15px;
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .hero {
+        padding: 95px 0;
+      }
+
+      .hero-wrap {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+      }
+
+      .hero-content {
+        padding-right: 0;
+      }
+
+      .hero-art {
+        width: 100%;
+        max-width: 550px;
+
+        margin: auto;
+      }
+
+      .collection:nth-child(1),
+      .collection:nth-child(2),
+      .collection:nth-child(3),
+      .collection:nth-child(4),
+      .collection:nth-child(5) {
+        grid-column: span 6;
+      }
+
+      .collection:nth-child(6) {
+        grid-column: span 12;
+      }
+    }
+
+
+    /* =====================================================
+       MOBILE — MAIN
+    ===================================================== */
+
+    @media (max-width: 767px) {
+
+      body {
+        font-size: 14px;
+      }
+
+      .hero-wrap,
+      .collections-wrap,
+      .intro-wrap,
+      .editorial-wrap,
+      .final-wrap {
+        width: min(100% - 32px, 560px);
+      }
+
+
+      /* HERO */
+
+      .hero {
+        min-height: auto;
+
+        padding: 62px 0 72px;
+      }
+
+      .hero-wrap {
+        display: flex;
+        flex-direction: column;
+
+        gap: 48px;
+      }
+
+      .hero-content {
+        width: 100%;
+
+        padding: 0;
+      }
+
+      .hero-kicker {
+        margin-bottom: 23px;
+
+        gap: 10px;
+
+        font-size: 9px;
+        letter-spacing: 2.4px;
+      }
+
+      .hero-kicker::before {
+        width: 27px;
+      }
+
+      .hero h1 {
+        max-width: 100%;
+
+        font-size: clamp(52px, 16vw, 68px);
+
+        line-height: .91;
+
+        letter-spacing: -2.8px;
+      }
+
+      .hero h1 .italic {
+        padding-left: 28px;
+      }
+
+      .hero-description {
+        max-width: 470px;
+
+        margin: 27px 0 0;
+
+        font-size: 14px;
+
+        line-height: 1.8;
+      }
+
+      .hero-action {
+        margin: 28px 0 0;
+
+        gap: 13px;
+
+        font-size: 9px;
+
+        letter-spacing: 1.8px;
+      }
+
+      .hero-action span {
+        width: 42px;
+        height: 42px;
+      }
+
+
+      /* HERO ART */
+
+      .hero-art {
+        width: 100%;
+
+        height: min(112vw, 425px);
+
+        margin: 0;
+
+        overflow: visible;
+      }
+
+      .hero-art-main {
+        width: min(72vw, 300px);
+        height: min(94vw, 380px);
+
+        right: 5%;
+        top: 0;
+
+        border-radius: 170px 170px 20px 20px;
+
+        transform: rotate(3deg);
+      }
+
+      .hero-art-word {
+        font-size: clamp(40px, 12vw, 58px);
+      }
+
+      .hero-note {
+        width: 145px;
+
+        right: 0;
+        bottom: 0;
+
+        padding: 16px;
+
+        box-shadow:
+          0 18px 45px rgba(35, 38, 35, .10);
+      }
+
+      .hero-note small {
+        margin-bottom: 6px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.6px;
+      }
+
+      .hero-note p {
+        font-size: 17px;
+
+        line-height: 1.2;
+      }
+
+
+      /* INTRO */
+
+      .intro {
+        padding: 82px 0;
+      }
+
+      .intro-label {
+        margin-bottom: 19px;
+
+        font-size: 9px;
+
+        letter-spacing: 2.4px;
+      }
+
+      .intro h2 {
+        font-size: clamp(40px, 11.5vw, 53px);
+
+        line-height: 1.06;
+
+        letter-spacing: -.8px;
+      }
+
+      .intro p {
+        max-width: 500px;
+
+        margin-top: 23px;
+
+        font-size: 14px;
+
+        line-height: 1.8;
+      }
+
+
+      /* COLLECTIONS */
+
+      .collections {
+        padding: 82px 0;
+      }
+
+      .collections-heading {
+        display: block;
+
+        margin-bottom: 34px;
+      }
+
+      .collections-heading h2 {
+        margin-bottom: 20px;
+
+        font-size: clamp(45px, 13vw, 58px);
+
+        line-height: .94;
+
+        letter-spacing: -1.5px;
+      }
+
+      .collections-heading p {
+        max-width: 500px;
+
+        font-size: 13px;
+
+        line-height: 1.75;
+      }
+
+
+      /* COLLECTION GRID */
+
+      .collection-grid {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 13px;
+      }
+
+      .collection,
+      .collection:nth-child(n),
+      .collection:nth-child(6) {
+        width: 100%;
+
+        min-height: 305px;
+
+        grid-column: auto;
+
+        padding: 24px;
+      }
+
+      .collection:nth-child(1) {
+        min-height: 335px;
+      }
+
+      .collection:nth-child(6) {
+        min-height: 315px;
+      }
+
+      .collection-number {
+        font-size: 8px;
+
+        letter-spacing: 1.8px;
+      }
+
+      .collection-icon {
+        top: 20px;
+        right: 20px;
+
+        width: 48px;
+        height: 48px;
+
+        font-size: 21px;
+      }
+
+      .collection h3 {
+        left: 24px;
+        bottom: 77px;
+
+        font-size: clamp(39px, 12vw, 52px);
+
+        letter-spacing: -.8px;
+      }
+
+      .collection p {
+        left: 24px;
+        right: 24px;
+        bottom: 24px;
+
+        max-width: none;
+
+        font-size: 12.5px;
+
+        line-height: 1.55;
+      }
+
+
+      /* TOUCH BEHAVIOR */
+
+      .collection:hover {
+        transform: none;
+
+        box-shadow: none;
+      }
+
+      .collection:active {
+        transform: scale(.985);
+      }
+
+      .collection:hover .collection-icon {
+        background: transparent;
+
+        color: var(--charcoal-soft);
+
+        transform: none;
+      }
+
+
+      /* EDITORIAL */
+
+      .editorial {
+        padding: 90px 0;
+      }
+
+      .editorial-label {
+        font-size: 8px;
+
+        letter-spacing: 2.3px;
+      }
+
+      .editorial h2 {
+        margin-top: 22px;
+
+        font-size: clamp(42px, 12vw, 56px);
+
+        line-height: 1.04;
+
+        letter-spacing: -.7px;
+      }
+
+      .editorial p {
+        max-width: 500px;
+
+        margin-top: 23px;
+
+        font-size: 13.5px;
+
+        line-height: 1.8;
+      }
+
+
+      /* FINAL */
+
+      .final {
+        padding: 88px 0;
+      }
+
+      .final h2 {
+        font-size: clamp(43px, 12vw, 57px);
+
+        line-height: 1.02;
+
+        letter-spacing: -.8px;
+      }
+
+      .final p {
+        max-width: 470px;
+
+        margin-top: 22px;
+
+        font-size: 13.5px;
+
+        line-height: 1.8;
+      }
+    }
+
+
+    /* =====================================================
+       SMALL PHONES — 375px AND BELOW
+    ===================================================== */
+
+    @media (max-width: 375px) {
+
+      .hero {
+        padding-top: 52px;
+      }
+
+      .hero-wrap,
+      .collections-wrap,
+      .intro-wrap,
+      .editorial-wrap,
+      .final-wrap {
+        width: calc(100% - 26px);
+      }
+
+      .hero h1 {
+        font-size: 51px;
+
+        letter-spacing: -2.3px;
+      }
+
+      .hero h1 .italic {
+        padding-left: 22px;
+      }
+
+      .hero-description {
+        font-size: 13.5px;
+      }
+
+      .hero-art {
+        height: 355px;
+      }
+
+      .hero-art-main {
+        width: 245px;
+        height: 320px;
+      }
+
+      .hero-art-word {
+        font-size: 39px;
+      }
+
+      .hero-note {
+        width: 132px;
+
+        padding: 14px;
+      }
+
+      .hero-note p {
+        font-size: 15px;
+      }
+
+      .intro {
+        padding: 72px 0;
+      }
+
+      .intro h2 {
+        font-size: 39px;
+      }
+
+      .collections {
+        padding: 72px 0;
+      }
+
+      .collections-heading h2 {
+        font-size: 45px;
+      }
+
+      .collection,
+      .collection:nth-child(n) {
+        min-height: 285px;
+
+        padding: 21px;
+      }
+
+      .collection h3 {
+        left: 21px;
+        bottom: 72px;
+
+        font-size: 40px;
+      }
+
+      .collection p {
+        left: 21px;
+        right: 21px;
+        bottom: 21px;
+      }
+
+      .editorial {
+        padding: 78px 0;
+      }
+
+      .editorial h2 {
+        font-size: 41px;
+      }
+
+      .final {
+        padding: 75px 0;
+      }
+
+      .final h2 {
+        font-size: 42px;
+      }
+    }
+
+
+    /* =====================================================
+       VERY SMALL PHONES — 320px
+    ===================================================== */
+
+    @media (max-width: 340px) {
+
+      .hero h1 {
+        font-size: 47px;
+      }
+
+      .hero-art {
+        height: 325px;
+      }
+
+      .hero-art-main {
+        width: 220px;
+        height: 295px;
+      }
+
+      .hero-note {
+        width: 120px;
+      }
+
+      .collection h3 {
+        font-size: 36px;
+      }
+    }
+
+
+    /* =====================================================
+       REDUCED MOTION
+    ===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =====================================================
+       HEADER
+       Header is injected by header.js
+  ====================================================== -->
+
+  <div id="header"></div>
+
+
+  <main>
+
+
+    <!-- ===================================================
+         HERO
+    ==================================================== -->
+
+    <section class="hero">
+
+      <div class="hero-wrap">
+
+        <div class="hero-content">
+
+          <div class="hero-kicker">
+            Evermere Journal
+          </div>
+
+          <h1>
+            The art of
+            <span class="italic">
+              living well.
+            </span>
+          </h1>
+
+          <p class="hero-description">
+            A modern journal for the things that make everyday
+            life worth noticing — beautiful food, inspiring
+            places, natural moments, personal style, thoughtful
+            words, and spaces that feel like home.
+          </p>
+
+          <a href="#collections" class="hero-action">
+            Discover Evermere
+            <span>↓</span>
+          </a>
+
+        </div>
+
+
+        <div class="hero-art">
+
+          <div class="hero-art-main">
+
+            <div class="hero-art-word">
+              evermere
+            </div>
+
+          </div>
+
+          <div class="hero-note">
+
+            <small>
+              Journal note
+            </small>
+
+            <p>
+              Slow down.<br>
+              Look closer.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         INTRO
+    ==================================================== -->
+
+    <section class="intro">
+
+      <div class="intro-wrap">
+
+        <div class="intro-label">
+          A considered collection
+        </div>
+
+        <h2>
+          For curious minds
+          <em>and beautiful days.</em>
+        </h2>
+
+        <p>
+          Evermere brings together stories and ideas inspired by
+          everyday living. Nothing complicated. Just thoughtful
+          things worth discovering, saving, and coming back to.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         COLLECTIONS
+    ==================================================== -->
+
+    <section class="collections" id="collections">
+
+      <div class="collections-wrap">
+
+        <div class="collections-heading">
+
+          <h2>
+            Explore<br>
+            the journal.
+          </h2>
+
+          <p>
+            Six carefully chosen collections, each with its own
+            perspective on the places, things, and moments that
+            shape everyday life.
+          </p>
+
+        </div>
+
+
+        <div class="collection-grid">
+
+
+          <!-- FOOD -->
+
+          <a href="food.html" class="collection food">
+
+            <span class="collection-number">
+              01 / FOOD
+            </span>
+
+            <span class="collection-icon">
+              ✦
+            </span>
+
+            <h3>
+              Food
+            </h3>
+
+            <p>
+              Recipes, flavors, table moments,
+              and simple pleasures worth savoring.
+            </p>
+
+          </a>
+
+
+          <!-- TRAVEL -->
+
+          <a href="travel.html" class="collection travel">
+
+            <span class="collection-number">
+              02 / TRAVEL
+            </span>
+
+            <span class="collection-icon">
+              ◌
+            </span>
+
+            <h3>
+              Travel
+            </h3>
+
+            <p>
+              Destinations and journeys that make
+              you want to take the long way there.
+            </p>
+
+          </a>
+
+
+          <!-- NATURE -->
+
+          <a href="nature.html" class="collection nature">
+
+            <span class="collection-number">
+              03 / NATURE
+            </span>
+
+            <span class="collection-icon">
+              ❧
+            </span>
+
+            <h3>
+              Nature
+            </h3>
+
+            <p>
+              Seasons, landscapes, quiet mornings,
+              and the world outside.
+            </p>
+
+          </a>
+
+
+          <!-- FASHION -->
+
+          <a href="fashion.html" class="collection fashion">
+
+            <span class="collection-number">
+              04 / FASHION
+            </span>
+
+            <span class="collection-icon">
+              ◇
+            </span>
+
+            <h3>
+              Fashion
+            </h3>
+
+            <p>
+              Personal style, effortless outfits,
+              and timeless wardrobe inspiration.
+            </p>
+
+          </a>
+
+
+          <!-- QUOTES -->
+
+          <a href="quotes.html" class="collection quotes">
+
+            <span class="collection-number">
+              05 / QUOTES
+            </span>
+
+            <span class="collection-icon">
+              “
+            </span>
+
+            <h3>
+              Quotes
+            </h3>
+
+            <p>
+              Words that stay with you,
+              encourage reflection, and inspire.
+            </p>
+
+          </a>
+
+
+          <!-- HOME DECOR -->
+
+          <a href="home-decor.html" class="collection home">
+
+            <span class="collection-number">
+              06 / HOME DECOR
+            </span>
+
+            <span class="collection-icon">
+              ⌂
+            </span>
+
+            <h3>
+              Home Decor
+            </h3>
+
+            <p>
+              Warm interiors, natural textures,
+              and rooms made for living.
+            </p>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         EDITORIAL STATEMENT
+    ==================================================== -->
+
+    <section class="editorial">
+
+      <div class="editorial-wrap">
+
+        <div class="editorial-label">
+          The Evermere point of view
+        </div>
+
+        <h2>
+          Beautiful living
+          begins with <em>attention.</em>
+        </h2>
+
+        <p>
+          The best moments are often the quiet ones — a meal
+          shared around a table, a path through the trees,
+          a well-loved piece of clothing, a sentence that
+          changes your perspective, or the feeling of coming
+          home to a space that is truly yours.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         FINAL
+    ==================================================== -->
+
+    <section class="final">
+
+      <div class="final-wrap">
+
+        <h2>
+          Keep looking.<br>
+          <em>There is always more.</em>
+        </h2>
+
+        <p>
+          Wander through Evermere Journal and find something
+          that belongs in your everyday.
+        </p>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       Footer is injected by footer.js
+  ====================================================== -->
+
+  <div id="footer"></div>
+
+
+  <!-- =====================================================
+       SHARED COMPONENTS
+  ====================================================== -->
+
+  <script src="header.js"></script>
+  <script src="footer.js"></script>
+
+</body>
+</html>

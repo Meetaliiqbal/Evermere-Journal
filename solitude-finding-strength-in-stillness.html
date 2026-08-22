@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+  name="referrer"
+  content="no-referrer"
+>
+
+<title>Solitude — Finding Strength in Stillness | Evermere Journal</title>
+
+<meta
+  name="description"
+  content="Quiet time alone can create space for reflection, clarity, and a deeper understanding of what actually matters."
+>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap');
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F2EFEA;
+  --warm:#ECE8E1;
+  --clay:#9A806E;
+  --clay-dark:#806756;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--paper);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.article-hero{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+
+.article-hero-inner{
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+  color:var(--clay-dark);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.article-category::before,
+.article-category::after{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--clay);
+}
+
+.article-hero h1{
+  max-width:850px;
+  margin:auto;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(46px,6vw,74px);
+  font-weight:400;
+  line-height:1.05;
+  letter-spacing:-1.3px;
+}
+
+.article-intro{
+  max-width:650px;
+  margin:25px auto 0;
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.article-meta span{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.article-meta span:not(:last-child)::after{
+  content:"•";
+  color:var(--clay);
+}
+
+
+/* =====================================================
+   ARTICLE
+===================================================== */
+
+.article-wrap{
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+}
+
+.article-body{
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+}
+
+.article-body p{
+  margin-bottom:27px;
+}
+
+.article-body .lead{
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.55;
+  margin-bottom:38px;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+  color:var(--dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+
+/* =====================================================
+   REFLECTION LIST
+===================================================== */
+
+.reflection-list{
+  margin:38px 0 45px;
+  padding:30px 32px;
+  background:var(--warm);
+  border:1px solid var(--line);
+}
+
+.reflection-list-title{
+  margin-bottom:18px;
+  color:var(--dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.reflection-list ul{
+  margin-left:18px;
+}
+
+.reflection-list li{
+  margin-bottom:10px;
+  padding-left:5px;
+  color:var(--body);
+  font-size:12px;
+  line-height:1.8;
+}
+
+.reflection-list li:last-child{
+  margin-bottom:0;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.article-cta{
+  position:relative;
+  overflow:hidden;
+  margin:42px 0 58px;
+  padding:48px 45px;
+  background:#34332E;
+  color:#F7F4EC;
+  text-align:center;
+}
+
+.article-cta::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-70px;
+  top:-100px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.article-cta::after{
+  content:"";
+  position:absolute;
+  width:140px;
+  height:140px;
+  left:-55px;
+  bottom:-70px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.cta-label{
+  position:relative;
+  z-index:2;
+  margin-bottom:13px;
+  color:#C2B3A6;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.article-cta h2{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+  margin:auto;
+  color:#F7F4EC;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(30px,4vw,43px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-cta p{
+  position:relative;
+  z-index:2;
+  max-width:530px;
+  margin:15px auto 25px;
+  color:#C6C4BC;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.cta-button{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:45px;
+  padding:0 25px;
+  background:#F2EFE7;
+  color:#34332E;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  background:#fff;
+}
+
+.cta-button span{
+  font-size:14px;
+}
+
+
+/* =====================================================
+   REFLECTION QUOTE
+===================================================== */
+
+.article-tip{
+  position:relative;
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+  background:#F1EEE8;
+  border-left:3px solid var(--clay);
+}
+
+.article-tip::before{
+  content:"“";
+  position:absolute;
+  left:14px;
+  top:20px;
+  color:rgba(154,128,110,.45);
+  font-family:Georgia,serif;
+  font-size:40px;
+}
+
+.article-tip p{
+  margin:0;
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:20px;
+  line-height:1.5;
+}
+
+
+/* =====================================================
+   BACK LINK
+===================================================== */
+
+.back-link{
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+}
+
+.back-link a{
+  color:var(--clay-dark);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.back-link a:hover{
+  color:var(--dark);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+  }
+
+  .article-category{
+    margin-bottom:19px;
+  }
+
+  .article-hero h1{
+    font-size:43px;
+    line-height:1.06;
+    letter-spacing:-1px;
+  }
+
+  .article-intro{
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .article-meta{
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+  }
+
+  .article-wrap{
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+  }
+
+  .article-body{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-body .lead{
+    font-size:22px;
+    line-height:1.5;
+  }
+
+  .article-body h2{
+    margin-top:45px;
+    font-size:32px;
+  }
+
+  .reflection-list{
+    padding:25px 22px;
+  }
+
+  .reflection-list li{
+    font-size:11.5px;
+  }
+
+  .article-tip{
+    padding:28px 24px 28px 40px;
+  }
+
+  .article-tip p{
+    font-size:18px;
+  }
+
+  .article-cta{
+    margin:38px 0 48px;
+    padding:40px 22px;
+  }
+
+  .article-cta h2{
+    font-size:31px;
+  }
+
+  .article-cta p{
+    font-size:10.5px;
+  }
+
+  .cta-button{
+    width:100%;
+  }
+
+}
+
+@media(max-width:375px){
+
+  .article-hero h1{
+    font-size:38px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta-button{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SHARED HEADER
+===================================================== -->
+
+<div id="header"></div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Quotes &amp; Wisdom
+    </div>
+
+
+    <h1>
+      Solitude —
+      Finding Strength in Stillness
+    </h1>
+
+
+    <p class="article-intro">
+
+      Quiet time alone can create space for reflection,
+      clarity, and a deeper understanding of what
+      actually matters.
+
+    </p>
+
+
+    <div class="article-meta">
+
+      <span>
+        Quotes
+      </span>
+
+      <span>
+        7 min read
+      </span>
+
+      <span>
+        Evermere Journal
+      </span>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     ARTICLE
+===================================================== -->
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+
+      <p class="lead">
+
+        Being alone and feeling lonely are not always
+        the same thing. Solitude can be a deliberate
+        pause — a quiet space where the mind can settle
+        enough to hear its own thoughts again.
+
+      </p>
+
+
+      <p>
+
+        Everyday life rarely leaves much room for
+        stillness. There are messages to answer,
+        responsibilities to manage, places to be, and
+        endless information competing for attention.
+
+      </p>
+
+
+      <p>
+
+        Stepping away from that noise for a little while
+        can create a different kind of space. Nothing
+        needs to be solved immediately. There is simply
+        time to notice what has been happening within us.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 01
+      ================================================== -->
+
+      <h2>
+        Solitude is not emptiness
+      </h2>
+
+
+      <p>
+
+        Quiet moments can initially feel strange,
+        especially when we are accustomed to filling
+        every pause with a screen, conversation, or
+        another task.
+
+      </p>
+
+
+      <p>
+
+        But silence is not necessarily a lack of
+        something. It can be an environment where
+        thoughts become easier to recognise and feelings
+        have room to settle naturally.
+
+      </p>
+
+
+      <div class="reflection-list">
+
+        <div class="reflection-list-title">
+          Gentle moments of solitude
+        </div>
+
+        <ul>
+
+          <li>
+            Taking a quiet walk without constantly
+            checking your phone.
+          </li>
+
+          <li>
+            Sitting with a cup of tea before beginning
+            the day's responsibilities.
+          </li>
+
+          <li>
+            Reading a few pages without trying to
+            multitask.
+          </li>
+
+          <li>
+            Spending a few minutes outside simply
+            observing what is around you.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- =================================================
+           SECTION 02
+      ================================================== -->
+
+      <h2>
+        Making space for reflection
+      </h2>
+
+
+      <p>
+
+        Reflection does not require a complicated
+        practice. Sometimes it begins with a simple
+        question: How have I actually been feeling
+        lately?
+
+      </p>
+
+
+      <p>
+
+        Without the usual distractions, small thoughts
+        that have been pushed aside can become easier
+        to notice. A concern, a hope, a decision, or
+        even a simple realisation may finally have
+        enough room to surface.
+
+      </p>
+
+
+      <p>
+
+        The purpose is not to analyse every thought.
+        It is simply to give yourself permission to
+        listen before moving on to the next thing.
+
+      </p>
+
+
+
+      <!-- =================================================
+           CTA — END OF SECTION 02
+      ================================================== -->
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          Explore A Selected Opportunity
+        </div>
+
+
+        <h2>
+          A quiet moment can
+          lead somewhere unexpected.
+        </h2>
+
+
+        <p>
+
+          If you would like to explore another option,
+          take a moment to review the information
+          provided on the independent partner page.
+
+        </p>
+
+
+        <a
+          href="quoteidea.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+
+          View Available Details
+
+          <span>→</span>
+
+        </a>
+
+      </aside>
+
+
+
+      <!-- =================================================
+           SECTION 03
+      ================================================== -->
+
+      <h2>
+        Learning to enjoy your own company
+      </h2>
+
+
+      <p>
+
+        Solitude can become more comfortable when it is
+        not treated as something that needs to be escaped.
+        There is value in discovering which activities
+        make you feel most at ease when nobody else is
+        around.
+
+      </p>
+
+
+      <p>
+
+        For one person it may be reading. For another,
+        it may be cooking, walking, writing, listening
+        to music, or simply sitting near a window.
+
+      </p>
+
+
+
+      <!-- =================================================
+           REFLECTION QUOTE
+      ================================================== -->
+
+      <div class="article-tip">
+
+        <p>
+
+          You do not always need more noise, more advice,
+          or more answers. Sometimes you need enough
+          quiet to hear what you already know.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- =================================================
+           SECTION 04
+      ================================================== -->
+
+      <h2>
+        Stillness can bring clarity
+      </h2>
+
+
+      <p>
+
+        When the mind is constantly occupied, it can be
+        difficult to distinguish between what truly
+        matters and what simply demands attention.
+
+      </p>
+
+
+      <p>
+
+        A little distance can change that. When there
+        is less happening around us, priorities often
+        become easier to see.
+
+      </p>
+
+
+      <p>
+
+        A decision that seemed complicated may become
+        simpler. Something that felt urgent may no
+        longer seem quite so important.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 05
+      ================================================== -->
+
+      <h2>
+        Protecting quiet time
+      </h2>
+
+
+      <p>
+
+        Solitude does not have to mean disappearing from
+        everyday life. Even a short period of intentional
+        quiet can make a difference.
+
+      </p>
+
+
+      <p>
+
+        You might begin with ten minutes in the morning,
+        a short walk after work, or a few quiet moments
+        before going to sleep.
+
+      </p>
+
+
+      <p>
+
+        What matters is consistency rather than length.
+        A small amount of uninterrupted time can become
+        surprisingly valuable when it is given regularly.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 06
+      ================================================== -->
+
+      <h2>
+        Strength does not always look loud
+      </h2>
+
+
+      <p>
+
+        We often associate strength with action,
+        confidence, and constant movement. But there is
+        another kind of strength in knowing when to pause.
+
+      </p>
+
+
+      <p>
+
+        Choosing stillness can be an act of self-trust.
+        It means allowing yourself to step away from
+        outside expectations long enough to understand
+        your own perspective.
+
+      </p>
+
+
+
+      <!-- =================================================
+           CONCLUSION
+      ================================================== -->
+
+      <h2>
+        Finding your way back to yourself
+      </h2>
+
+
+      <p>
+
+        Solitude does not provide instant answers, and
+        it does not need to. Its value is often quieter:
+        it gives us the space to become more familiar
+        with our own thoughts.
+
+      </p>
+
+
+      <p>
+
+        In a world that constantly asks for our attention,
+        choosing a little stillness can feel almost
+        radical.
+
+      </p>
+
+
+      <p>
+
+        Sometimes strength begins not with doing more,
+        but with becoming comfortable enough to pause,
+        listen, and understand what actually matters.
+
+      </p>
+
+
+
+      <!-- =================================================
+           BACK LINK
+      ================================================== -->
+
+      <div class="back-link">
+
+        <a href="quote.html">
+          ← Back to Quotes
+        </a>
+
+      </div>
+
+
+    </article>
+
+  </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     SHARED FOOTER
+===================================================== -->
+
+<div id="footer"></div>
+
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

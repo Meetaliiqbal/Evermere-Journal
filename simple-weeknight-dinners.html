@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+
+<meta
+name="description"
+content="Simple weeknight dinner ideas for comforting evenings when you want delicious food without spending hours in the kitchen."
+
+>
+
+  <meta name="theme-color" content="#F4F1EA">
+
+  <title>Simple Weeknight Dinners — Evermere Journal</title>
+
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%2334332E'/%3E%3Cpath d='M68 17C49 21 34 33 30 50c-4 17 4 28 18 34 1-16 7-30 20-42-8 11-12 22-12 37 14-7 22-19 22-37 0-10-3-19-10-25z' fill='%23E5E3D9'/%3E%3C/svg%3E"
+  >
+
+  <style>
+
+    @import url(
+      'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap'
+    );
+
+
+    :root {
+
+      --dark: #34332E;
+      --soft-dark: #55524B;
+
+      --paper: #FBFAF7;
+      --cream: #F4F1EA;
+
+      --sage: #7D8174;
+      --clay: #9B806B;
+
+      --body: #706D66;
+      --muted: #9A968E;
+
+      --line: rgba(52,51,46,.11);
+
+    }
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: var(--paper);
+
+      color: var(--dark);
+
+      font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+      -webkit-font-smoothing: antialiased;
+
+      overflow-x: hidden;
+
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =====================================================
+       ARTICLE HERO
+    ===================================================== */
+
+    .article-hero {
+
+      background: var(--cream);
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .article-hero-inner {
+
+      width:
+        min(1000px, calc(100% - 40px));
+
+      margin: auto;
+
+      padding:
+        95px 0 85px;
+
+      text-align: center;
+
+    }
+
+
+    .article-category {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-bottom: 24px;
+
+      color: var(--clay);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .article-category::before,
+    .article-category::after {
+
+      content: "";
+
+      width: 25px;
+
+      height: 1px;
+
+      background: var(--clay);
+
+    }
+
+
+    .article-hero h1 {
+
+      max-width: 850px;
+
+      margin: auto;
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(48px, 6.5vw, 78px);
+
+      font-weight: 400;
+
+      line-height: 1;
+
+      letter-spacing: -1.5px;
+
+    }
+
+
+    .article-intro {
+
+      max-width: 650px;
+
+      margin:
+        25px auto 0;
+
+      color: var(--body);
+
+      font-size: 14px;
+
+      line-height: 1.9;
+
+    }
+
+
+    .article-meta {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 18px;
+
+      margin-top: 28px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .article-meta span {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 18px;
+
+    }
+
+
+    .article-meta span:not(:last-child)::after {
+
+      content: "•";
+
+      color: var(--clay);
+
+    }
+
+
+    /* =====================================================
+       ARTICLE WRAPPER
+    ===================================================== */
+
+    .article-wrap {
+
+      width:
+        min(760px, calc(100% - 40px));
+
+      margin: auto;
+
+      padding:
+        75px 0 100px;
+
+    }
+
+
+    /* =====================================================
+       ARTICLE BODY
+    ===================================================== */
+
+    .article-body {
+
+      color: var(--body);
+
+      font-size: 15px;
+
+      line-height: 2;
+
+    }
+
+
+    .article-body p {
+
+      margin-bottom: 27px;
+
+    }
+
+
+    .article-body .lead {
+
+      color: var(--soft-dark);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 25px;
+
+      line-height: 1.55;
+
+      margin-bottom: 38px;
+
+    }
+
+
+    .article-body h2 {
+
+      margin:
+        55px 0 20px;
+
+      color: var(--dark);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 36px;
+
+      font-weight: 400;
+
+      line-height: 1.15;
+
+    }
+
+
+    .article-body h3 {
+
+      margin:
+        38px 0 13px;
+
+      color: var(--dark);
+
+      font-size: 15px;
+
+      font-weight: 600;
+
+    }
+
+
+    .article-body ul {
+
+      margin:
+        0 0 30px 20px;
+
+    }
+
+
+    .article-body li {
+
+      margin-bottom: 10px;
+
+      padding-left: 5px;
+
+    }
+
+
+    /* =====================================================
+       QUICK LIST
+    ===================================================== */
+
+    .quick-list {
+
+      margin:
+        38px 0 45px;
+
+      padding:
+        30px 32px;
+
+      background: var(--cream);
+
+      border:
+        1px solid var(--line);
+
+    }
+
+
+    .quick-list-title {
+
+      margin-bottom: 18px;
+
+      color: var(--dark);
+
+      font-size: 9px;
+
+      font-weight: 600;
+
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .quick-list ul {
+
+      margin:
+        0 0 0 17px;
+
+    }
+
+
+    .quick-list li {
+
+      color: var(--body);
+
+      font-size: 12px;
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =====================================================
+       TIP BOX
+    ===================================================== */
+
+    .article-tip {
+
+      position: relative;
+
+      margin:
+        48px 0;
+
+      padding:
+        35px 38px 35px 45px;
+
+      background: #F0EEE7;
+
+      border-left:
+        3px solid var(--sage);
+
+    }
+
+
+    .article-tip::before {
+
+      content: "“";
+
+      position: absolute;
+
+      left: 14px;
+
+      top: 20px;
+
+      color: rgba(125,129,116,.45);
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size: 40px;
+
+    }
+
+
+    .article-tip p {
+
+      margin: 0;
+
+      color: var(--soft-dark);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 20px;
+
+      line-height: 1.5;
+
+    }
+
+
+    /* =====================================================
+       DOORDASH CTA
+    ===================================================== */
+
+    .article-cta {
+
+      position: relative;
+
+      overflow: hidden;
+
+      margin:
+        42px 0 58px;
+
+      padding:
+        48px 45px;
+
+      background:
+        #34332E;
+
+      color: #F7F4EC;
+
+      text-align: center;
+
+    }
+
+
+    .article-cta::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 220px;
+
+      height: 220px;
+
+      right: -70px;
+
+      top: -100px;
+
+      border:
+        1px solid rgba(255,255,255,.12);
+
+      border-radius: 50%;
+
+    }
+
+
+    .article-cta::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 140px;
+
+      height: 140px;
+
+      left: -55px;
+
+      bottom: -70px;
+
+      border:
+        1px solid rgba(255,255,255,.08);
+
+      border-radius: 50%;
+
+    }
+
+
+    .cta-label {
+
+      position: relative;
+
+      z-index: 2;
+
+      margin-bottom: 13px;
+
+      color: #B7B9AA;
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .article-cta h2 {
+
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 600px;
+
+      margin: auto;
+
+      color: #F7F4EC;
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(30px, 4vw, 43px);
+
+      font-weight: 400;
+
+      line-height: 1.15;
+
+    }
+
+
+    .article-cta p {
+
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 530px;
+
+      margin:
+        15px auto 25px;
+
+      color: #C6C4BC;
+
+      font-size: 11px;
+
+      line-height: 1.8;
+
+    }
+
+
+    .cta-button {
+
+      position: relative;
+
+      z-index: 2;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      min-height: 45px;
+
+      padding:
+        0 25px;
+
+      background: #F2EFE7;
+
+      color: #34332E;
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 1.8px;
+
+      text-transform: uppercase;
+
+      transition:
+        transform .25s ease,
+        background .25s ease;
+
+    }
+
+
+    .cta-button:hover {
+
+      transform:
+        translateY(-2px);
+
+      background: #FFFFFF;
+
+    }
+
+
+    .cta-button span {
+
+      font-size: 14px;
+
+      line-height: 1;
+
+    }
+
+
+    /* =====================================================
+       BACK LINK
+    ===================================================== */
+
+    .back-link {
+
+      display: flex;
+
+      justify-content: center;
+
+      margin-top: 55px;
+
+    }
+
+
+    .back-link a {
+
+      color: var(--sage);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .back-link a:hover {
+
+      color: var(--dark);
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 600px) {
+
+      .article-hero-inner {
+
+        width:
+          calc(100% - 30px);
+
+        padding:
+          65px 0 58px;
+
+      }
+
+
+      .article-category {
+
+        margin-bottom: 19px;
+
+      }
+
+
+      .article-hero h1 {
+
+        font-size: 48px;
+
+        line-height: 1.02;
+
+        letter-spacing: -1px;
+
+      }
+
+
+      .article-intro {
+
+        margin-top: 20px;
+
+        font-size: 12.5px;
+
+        line-height: 1.8;
+
+      }
+
+
+      .article-meta {
+
+        flex-wrap: wrap;
+
+        gap: 8px 14px;
+
+        margin-top: 22px;
+
+        font-size: 8px;
+
+      }
+
+
+      .article-meta span:not(:last-child)::after {
+
+        margin-left: 2px;
+
+      }
+
+
+      .article-wrap {
+
+        width:
+          calc(100% - 30px);
+
+        padding:
+          55px 0 75px;
+
+      }
+
+
+      .article-body {
+
+        font-size: 13px;
+
+        line-height: 1.9;
+
+      }
+
+
+      .article-body .lead {
+
+        font-size: 22px;
+
+        line-height: 1.5;
+
+      }
+
+
+      .article-body h2 {
+
+        margin-top: 45px;
+
+        font-size: 32px;
+
+      }
+
+
+      .quick-list {
+
+        padding:
+          25px 22px;
+
+      }
+
+
+      .quick-list li {
+
+        font-size: 11.5px;
+
+      }
+
+
+      .article-tip {
+
+        padding:
+          28px 24px 28px 40px;
+
+      }
+
+
+      .article-tip p {
+
+        font-size: 18px;
+
+      }
+
+
+      .article-cta {
+
+        margin:
+          38px 0 48px;
+
+        padding:
+          40px 22px;
+
+      }
+
+
+      .article-cta h2 {
+
+        font-size: 31px;
+
+      }
+
+
+      .article-cta p {
+
+        font-size: 10.5px;
+
+      }
+
+
+      .cta-button {
+
+        width: 100%;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       SMALL PHONES
+    ===================================================== */
+
+    @media (max-width: 375px) {
+
+      .article-hero h1 {
+
+        font-size: 43px;
+
+      }
+
+
+      .article-wrap {
+
+        width:
+          calc(100% - 26px);
+
+      }
+
+
+      .article-hero-inner {
+
+        width:
+          calc(100% - 26px);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       REDUCED MOTION
+    ===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .cta-button {
+        transition: none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
+  <div id="header"></div>
+
+  <!-- =====================================================
+       ARTICLE HERO
+  ===================================================== -->
+
+  <header class="article-hero">
+
+
+<div class="article-hero-inner">
+
+  <div class="article-category">
+    Food &amp; Kitchen
+  </div>
+
+
+  <h1>
+    Simple Weeknight Dinners
+  </h1>
+
+
+  <p class="article-intro">
+    Easy meal ideas for evenings when you want
+    something comforting without spending hours
+    in the kitchen.
+  </p>
+
+
+  <div class="article-meta">
+
+    <span>
+      Food
+    </span>
+
+    <span>
+      6 min read
+    </span>
+
+    <span>
+      Evermere Journal
+    </span>
+
+  </div>
+
+</div>
+
+
+  </header>
+
+  <!-- =====================================================
+       MAIN ARTICLE
+  ===================================================== -->
+
+  <main>
+
+
+<div class="article-wrap">
+
+  <article class="article-body">
+
+
+    <!-- INTRO -->
+
+    <p class="lead">
+      Weeknight cooking does not need to become a
+      complicated project. Some of the most satisfying
+      dinners are built around a handful of familiar
+      ingredients, a little seasoning, and enough time
+      to let everything come together.
+    </p>
+
+
+    <p>
+      After a long day, the idea of preparing an
+      elaborate meal can feel like more work than
+      pleasure. That is why simple dinners have a
+      special place in everyday cooking. They are
+      flexible, comforting, and easy enough to make
+      without turning the entire evening into a kitchen
+      session.
+    </p>
+
+
+    <p>
+      The goal is not to follow a complicated recipe.
+      Instead, think about combining a few dependable
+      ingredients in ways that give you plenty of
+      flavour with very little effort.
+    </p>
+
+
+    <!-- =================================================
+         SECTION 01
+    ================================================= -->
+
+    <h2>
+      Start with a simple formula
+    </h2>
+
+
+    <p>
+      One of the easiest ways to make weeknight meals
+      less stressful is to work with a simple formula:
+      choose a protein, add a vegetable, pick a
+      satisfying carbohydrate, and finish everything
+      with a sauce, dressing, or seasoning you enjoy.
+    </p>
+
+
+    <div class="quick-list">
+
+      <div class="quick-list-title">
+        A simple dinner formula
+      </div>
+
+
+      <ul>
+
+        <li>
+          A protein such as chicken, eggs, beans, or
+          tofu
+        </li>
+
+        <li>
+          One or two vegetables for colour and texture
+        </li>
+
+        <li>
+          Rice, pasta, potatoes, bread, or another
+          simple base
+        </li>
+
+        <li>
+          A favourite sauce, herbs, spices, or dressing
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- =================================================
+         SECTION 02
+    ================================================= -->
+
+    <h2>
+      1. One-pan roasted chicken
+    </h2>
+
+
+    <p>
+      A tray of roasted chicken and vegetables is one
+      of the easiest dinners to adapt to whatever is
+      already in the kitchen. Toss everything with a
+      little olive oil, salt, pepper, garlic, and your
+      favourite dried herbs.
+    </p>
+
+
+    <p>
+      Spread the ingredients across a baking tray and
+      let the oven do most of the work. Potatoes,
+      carrots, peppers, onions, zucchini, and broccoli
+      all work beautifully here.
+    </p>
+
+
+    <h3>
+      Make it easier
+    </h3>
+
+
+    <p>
+      Cut vegetables into similar-sized pieces so they
+      cook more evenly. You can also prepare the tray
+      earlier in the day and keep it refrigerated until
+      dinner time.
+    </p>
+
+
+    <!-- =================================================
+         DOORDASH CTA
+         END OF SECTION 02
+         OPENS IN NEW TAB
+    ================================================= -->
+
+    <aside class="article-cta">
+
+      <div class="cta-label">
+        Easy Food Inspiration
+      </div>
+
+
+      <h2>
+        Make your next meal
+        a little easier.
+      </h2>
+
+
+      <p>
+        Discover convenient ways to enjoy meals at home
+        when you want something delicious without adding
+        extra work to your evening.
+      </p>
+
+
+      <a
+        href="foodidea.html"
+        class="cta-button"
+        target="_blank"
+        rel="noopener noreferrer"
+        referrerpolicy="no-referrer"
+      >
+        Explore Food Options
+        <span>→</span>
+      </a>
+
+    </aside>
+
+
+    <!-- =================================================
+         SECTION 03
+    ================================================= -->
+
+    <h2>
+      2. Creamy tomato pasta
+    </h2>
+
+
+    <p>
+      Pasta is a dependable weeknight option because
+      it cooks quickly and works with almost anything.
+      For a simple creamy tomato version, gently cook
+      garlic and tomato paste before adding crushed
+      tomatoes and a little cream.
+    </p>
+
+
+    <p>
+      Toss the finished sauce with pasta and add fresh
+      herbs or grated cheese if you have them. The
+      result feels comforting without requiring a long
+      list of ingredients.
+    </p>
+
+
+    <!-- =================================================
+         TIP
+    ================================================= -->
+
+    <div class="article-tip">
+
+      <p>
+        Keep a few flexible ingredients in your pantry.
+        Pasta, canned tomatoes, rice, beans, and dried
+        herbs can turn an almost-empty kitchen into
+        dinner.
+      </p>
+
+    </div>
+
+
+    <!-- =================================================
+         SECTION 04
+    ================================================= -->
+
+    <h2>
+      3. Quick rice bowls
+    </h2>
+
+
+    <p>
+      Rice bowls are especially useful when everyone at
+      the table likes something slightly different.
+      Start with warm rice and add whatever vegetables,
+      protein, and toppings you already have available.
+    </p>
+
+
+    <p>
+      Try roasted vegetables with a fried egg, chicken
+      with cucumber and a simple dressing, or beans with
+      avocado and fresh herbs. The combinations are
+      practically endless.
+    </p>
+
+
+    <!-- =================================================
+         SECTION 05
+    ================================================= -->
+
+    <h2>
+      4. Sheet-pan vegetables with eggs
+    </h2>
+
+
+    <p>
+      For a lighter dinner, roast a mixture of seasonal
+      vegetables until they begin to caramelize, then
+      serve them with eggs cooked your favourite way.
+    </p>
+
+
+    <p>
+      Toasted bread on the side turns the meal into
+      something substantial while still keeping
+      preparation simple.
+    </p>
+
+
+    <!-- =================================================
+         SECTION 06
+    ================================================= -->
+
+    <h2>
+      5. The easiest way to make dinner feel special
+    </h2>
+
+
+    <p>
+      Sometimes the difference between an ordinary
+      dinner and one that feels special has little to do
+      with the recipe itself.
+    </p>
+
+
+    <p>
+      Put the food on a proper plate, add something
+      fresh on top, dim the lights, and sit down without
+      rushing through the meal. Even a very simple pasta
+      or rice bowl can feel completely different when
+      the atmosphere changes.
+    </p>
+
+
+    <!-- =================================================
+         SECTION 07
+    ================================================= -->
+
+    <h2>
+      Keep weeknight cooking flexible
+    </h2>
+
+
+    <p>
+      The best weeknight meals are not necessarily the
+      ones with the most impressive ingredient lists.
+      They are the meals you can comfortably make again
+      and again.
+    </p>
+
+
+    <p>
+      Keep a few reliable recipes in rotation, but leave
+      enough room to substitute ingredients based on
+      what you already have. That flexibility makes
+      cooking feel much more approachable.
+    </p>
+
+
+    <!-- =================================================
+         BACK TO FOOD
+    ================================================= -->
+
+    <div class="back-link">
+
+      <a href="food.html">
+        ← Back to Food
+      </a>
+
+    </div>
+
+
+  </article>
+
+</div>
+
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+
+  <div id="footer"></div>
+
+  <!-- =====================================================
+       HEADER + FOOTER JS
+  ===================================================== -->
+
+  <script src="header.js"></script>
+
+  <script src="footer.js"></script>
+
+</body>
+</html>

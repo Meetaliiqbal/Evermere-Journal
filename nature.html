@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+
+<meta
+name="description"
+content="Explore thoughtful nature stories, peaceful landscapes, seasonal changes, outdoor inspiration, and simple ways to reconnect with the natural world."
+
+>
+
+  <meta name="theme-color" content="#F1F2EC">
+
+  <title>Nature — Evermere Journal</title>
+
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%23252725'/%3E%3Cpath d='M68 17C49 21 34 33 30 50c-4 17 4 28 18 34 1-16 7-30 20-42-8 11-12 22-12 37 14-7 22-19 22-37 0-10-3-19-10-25z' fill='%23e5e5dc'/%3E%3C/svg%3E"
+  >
+
+  <style>
+
+    @import url(
+      'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap'
+    );
+
+
+    /* =====================================================
+       ROOT
+    ===================================================== */
+
+    :root {
+
+      --dark: #29302B;
+      --soft-dark: #465047;
+
+      --ivory: #F1F2EC;
+      --paper: #FBFBF8;
+
+      --forest: #657566;
+      --moss: #879584;
+
+      --body: #707871;
+      --muted: #989F99;
+
+      --earth: #CFCBBE;
+
+      --line: rgba(41,48,43,.11);
+
+    }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: var(--paper);
+
+      color: var(--dark);
+
+      font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+      -webkit-font-smoothing: antialiased;
+
+      overflow-x: hidden;
+
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .nature-hero {
+
+      position: relative;
+
+      overflow: hidden;
+
+      background: var(--ivory);
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .nature-hero-inner {
+
+      width:
+        min(1220px, calc(100% - 50px));
+
+      min-height: 525px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        1.05fr .95fr;
+
+      align-items: center;
+
+      gap: 75px;
+
+      padding: 80px 0;
+
+    }
+
+
+    .nature-hero-copy {
+      max-width: 660px;
+    }
+
+
+    .nature-eyebrow {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin-bottom: 24px;
+
+      color: var(--forest);
+
+      font-size: 9px;
+
+      font-weight: 600;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .nature-eyebrow::before {
+
+      content: "";
+
+      width: 30px;
+
+      height: 1px;
+
+      background: var(--forest);
+
+    }
+
+
+    .nature-hero h1 {
+
+      max-width: 720px;
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(58px, 7vw, 92px);
+
+      font-weight: 400;
+
+      line-height: .94;
+
+      letter-spacing: -2px;
+
+    }
+
+
+    .nature-hero h1 em {
+
+      color: var(--forest);
+
+      font-weight: 400;
+
+    }
+
+
+    .nature-hero-text {
+
+      max-width: 550px;
+
+      margin-top: 28px;
+
+      color: var(--body);
+
+      font-size: 14px;
+
+      line-height: 1.9;
+
+    }
+
+
+    /* =====================================================
+       HERO ART
+    ===================================================== */
+
+    .nature-hero-art {
+
+      position: relative;
+
+      min-height: 360px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+    .nature-sun {
+
+      position: relative;
+
+      width:
+        min(340px, 75vw);
+
+      aspect-ratio: 1;
+
+      border-radius: 50%;
+
+      background: #D6D8C9;
+
+      box-shadow:
+        0 28px 70px rgba(41,48,43,.09);
+
+    }
+
+
+    .nature-sun::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 12%;
+
+      border:
+        1px solid rgba(41,48,43,.14);
+
+      border-radius: 50%;
+
+    }
+
+
+    .nature-sun::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 47%;
+
+      height: 47%;
+
+      left: 26.5%;
+
+      top: 26.5%;
+
+      border:
+        1px solid rgba(41,48,43,.11);
+
+      border-radius: 50%;
+
+    }
+
+
+    .nature-leaf-word {
+
+      position: absolute;
+
+      inset: 0;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: rgba(41,48,43,.40);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 46px;
+
+      font-style: italic;
+
+    }
+
+
+    .nature-floating-note {
+
+      position: absolute;
+
+      right: 2%;
+
+      bottom: 9%;
+
+      width: 158px;
+
+      padding: 19px;
+
+      background:
+        rgba(251,251,248,.95);
+
+      border:
+        1px solid rgba(41,48,43,.08);
+
+      box-shadow:
+        0 15px 35px rgba(41,48,43,.09);
+
+    }
+
+
+    .nature-floating-note span {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: var(--forest);
+
+      font-size: 7px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .nature-floating-note strong {
+
+      color: var(--dark);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 19px;
+
+      font-weight: 400;
+
+      line-height: 1.15;
+
+    }
+
+
+    /* =====================================================
+       CONTENT
+    ===================================================== */
+
+    .nature-content {
+
+      width:
+        min(1220px, calc(100% - 50px));
+
+      margin: auto;
+
+      padding:
+        95px 0 115px;
+
+    }
+
+
+    .nature-section-heading {
+
+      display: flex;
+
+      align-items: flex-end;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 45px;
+
+    }
+
+
+    .nature-section-heading h2 {
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 45px;
+
+      font-weight: 400;
+
+      line-height: 1;
+
+    }
+
+
+    .nature-section-heading p {
+
+      max-width: 410px;
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 1.7;
+
+      text-align: right;
+
+    }
+
+
+    /* =====================================================
+       ARTICLE GRID
+    ===================================================== */
+
+    .nature-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+
+    }
+
+
+    /* =====================================================
+       ARTICLE CARD
+    ===================================================== */
+
+    .nature-card {
+
+      display: flex;
+
+      flex-direction: column;
+
+      min-width: 0;
+
+      background: #F7F8F4;
+
+      border:
+        1px solid rgba(41,48,43,.08);
+
+      transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+    }
+
+
+    .nature-card:hover {
+
+      transform:
+        translateY(-6px);
+
+      box-shadow:
+        0 18px 45px rgba(41,48,43,.08);
+
+    }
+
+
+    /* =====================================================
+       CARD VISUAL
+    ===================================================== */
+
+    .nature-card-visual {
+
+      position: relative;
+
+      height: 235px;
+
+      overflow: hidden;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      cursor: pointer;
+
+    }
+
+
+    .nature-card:nth-child(1)
+    .nature-card-visual {
+      background: #D6D8CA;
+    }
+
+
+    .nature-card:nth-child(2)
+    .nature-card-visual {
+      background: #CED6CC;
+    }
+
+
+    .nature-card:nth-child(3)
+    .nature-card-visual {
+      background: #D8D2C2;
+    }
+
+
+    .nature-card:nth-child(4)
+    .nature-card-visual {
+      background: #C9D2CC;
+    }
+
+
+    .nature-card:nth-child(5)
+    .nature-card-visual {
+      background: #D8D6C9;
+    }
+
+
+    .nature-card:nth-child(6)
+    .nature-card-visual {
+      background: #CDD5CF;
+    }
+
+
+    .nature-card-visual::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 145px;
+
+      height: 145px;
+
+      border:
+        1px solid rgba(41,48,43,.14);
+
+      border-radius: 50%;
+
+      transition:
+        transform .5s ease;
+
+    }
+
+
+    .nature-card-visual::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 90px;
+
+      height: 90px;
+
+      border:
+        1px solid rgba(41,48,43,.10);
+
+      border-radius: 50%;
+
+      transition:
+        transform .5s ease;
+
+    }
+
+
+    .nature-card:hover
+    .nature-card-visual::before {
+
+      transform:
+        scale(1.08);
+
+    }
+
+
+    .nature-card:hover
+    .nature-card-visual::after {
+
+      transform:
+        scale(.92);
+
+    }
+
+
+    .nature-card-number {
+
+      position: absolute;
+
+      top: 18px;
+
+      left: 19px;
+
+      z-index: 2;
+
+      color: rgba(41,48,43,.5);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+    }
+
+
+    .nature-card-category {
+
+      position: absolute;
+
+      top: 18px;
+
+      right: 18px;
+
+      z-index: 2;
+
+      color: rgba(41,48,43,.55);
+
+      font-size: 7px;
+
+      font-weight: 600;
+
+      letter-spacing: 1.8px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .nature-card-icon {
+
+      position: relative;
+
+      z-index: 2;
+
+      color: rgba(41,48,43,.42);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 28px;
+
+      font-style: italic;
+
+    }
+
+
+    /* =====================================================
+       CARD BODY
+    ===================================================== */
+
+    .nature-card-body {
+
+      min-height: 235px;
+
+      padding:
+        27px 27px 29px;
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+
+    .nature-card-title {
+
+      display: block;
+
+      margin-bottom: 13px;
+
+      color: var(--dark);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 27px;
+
+      font-weight: 400;
+
+      line-height: 1.12;
+
+      text-decoration: none;
+
+      transition:
+        color .25s ease;
+
+    }
+
+
+    .nature-card-title:hover {
+
+      color: var(--forest);
+
+    }
+
+
+    .nature-card-body p {
+
+      color: var(--body);
+
+      font-size: 11px;
+
+      line-height: 1.8;
+
+    }
+
+
+    .nature-card-link {
+
+      display: inline-block;
+
+      margin-top: auto;
+
+      padding-top: 22px;
+
+      color: var(--forest);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .nature-card-link span {
+
+      display: inline-block;
+
+      margin-left: 6px;
+
+      transition:
+        transform .25s ease;
+
+    }
+
+
+    .nature-card-link:hover span {
+
+      transform:
+        translateX(5px);
+
+    }
+
+
+    /* =====================================================
+       EDITORIAL NOTE
+    ===================================================== */
+
+    .nature-note {
+
+      margin-top: 80px;
+
+      padding:
+        55px 60px;
+
+      background: var(--ivory);
+
+      border:
+        1px solid var(--line);
+
+      text-align: center;
+
+    }
+
+
+    .nature-note-label {
+
+      margin-bottom: 17px;
+
+      color: var(--forest);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .nature-note h2 {
+
+      max-width: 720px;
+
+      margin: auto;
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(30px, 4vw, 46px);
+
+      font-weight: 400;
+
+      line-height: 1.15;
+
+    }
+
+
+    .nature-note p {
+
+      max-width: 580px;
+
+      margin: 18px auto 0;
+
+      color: var(--body);
+
+      font-size: 12px;
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .nature-hero-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding:
+          70px 0 80px;
+
+      }
+
+
+      .nature-hero-copy {
+        max-width: 700px;
+      }
+
+
+      .nature-hero-art {
+        min-height: 300px;
+      }
+
+
+      .nature-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 600px) {
+
+      .nature-hero-inner {
+
+        width:
+          calc(100% - 30px);
+
+        padding:
+          58px 0 65px;
+
+      }
+
+
+      .nature-eyebrow {
+
+        margin-bottom: 19px;
+
+      }
+
+
+      .nature-hero h1 {
+
+        font-size: 57px;
+
+        letter-spacing: -1.5px;
+
+      }
+
+
+      .nature-hero-text {
+
+        margin-top: 22px;
+
+        font-size: 13px;
+
+        line-height: 1.8;
+
+      }
+
+
+      .nature-hero-art {
+
+        min-height: 260px;
+
+      }
+
+
+      .nature-sun {
+
+        width: 250px;
+
+      }
+
+
+      .nature-leaf-word {
+
+        font-size: 38px;
+
+      }
+
+
+      .nature-floating-note {
+
+        right: 0;
+
+        bottom: 0;
+
+        width: 125px;
+
+        padding: 14px;
+
+      }
+
+
+      .nature-floating-note strong {
+
+        font-size: 16px;
+
+      }
+
+
+      .nature-content {
+
+        width:
+          calc(100% - 30px);
+
+        padding:
+          65px 0 80px;
+
+      }
+
+
+      .nature-section-heading {
+
+        display: block;
+
+        margin-bottom: 30px;
+
+      }
+
+
+      .nature-section-heading h2 {
+
+        font-size: 38px;
+
+      }
+
+
+      .nature-section-heading p {
+
+        margin-top: 14px;
+
+        text-align: left;
+
+        font-size: 10.5px;
+
+      }
+
+
+      .nature-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+      }
+
+
+      .nature-card-visual {
+
+        height: 220px;
+
+      }
+
+
+      .nature-card-body {
+
+        min-height: 215px;
+
+        padding: 24px;
+
+      }
+
+
+      .nature-card-title {
+
+        font-size: 25px;
+
+      }
+
+
+      .nature-card-body p {
+
+        font-size: 11px;
+
+      }
+
+
+      .nature-note {
+
+        margin-top: 55px;
+
+        padding:
+          40px 22px;
+
+      }
+
+
+      .nature-note h2 {
+
+        font-size: 31px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       SMALL PHONES
+    ===================================================== */
+
+    @media (max-width: 375px) {
+
+      .nature-hero-inner,
+      .nature-content {
+
+        width:
+          calc(100% - 26px);
+
+      }
+
+
+      .nature-hero h1 {
+
+        font-size: 51px;
+
+      }
+
+
+      .nature-sun {
+
+        width: 225px;
+
+      }
+
+
+      .nature-floating-note {
+
+        width: 115px;
+
+      }
+
+
+      .nature-card-body {
+
+        padding: 22px;
+
+      }
+
+
+      .nature-card-title {
+
+        font-size: 24px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       REDUCED MOTION
+    ===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .nature-card,
+      .nature-card-title,
+      .nature-card-link span,
+      .nature-card-visual::before,
+      .nature-card-visual::after {
+
+        transition: none;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
+  <div id="header"></div>
+
+  <!-- =====================================================
+       MAIN
+  ===================================================== -->
+
+  <main>
+
+
+<!-- ===================================================
+     HERO
+=================================================== -->
+
+<section class="nature-hero">
+
+  <div class="nature-hero-inner">
+
+
+    <div class="nature-hero-copy">
+
+      <div class="nature-eyebrow">
+        The Nature Journal
+      </div>
+
+
+      <h1>
+        Find your way
+        <em>back outside.</em>
+      </h1>
+
+
+      <p class="nature-hero-text">
+        Discover quiet landscapes, seasonal rhythms,
+        outdoor inspiration, and simple moments that
+        remind us how much beauty exists beyond the
+        everyday.
+      </p>
+
+    </div>
+
+
+    <div class="nature-hero-art">
+
+      <div class="nature-sun">
+
+        <span class="nature-leaf-word">
+          Wild
+        </span>
+
+      </div>
+
+
+      <div class="nature-floating-note">
+
+        <span>
+          Nature note
+        </span>
+
+        <strong>
+          There is always
+          more to notice.
+        </strong>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- ===================================================
+     ARTICLES
+=================================================== -->
+
+<section class="nature-content">
+
+
+  <div class="nature-section-heading">
+
+    <h2>
+      Out in the world
+    </h2>
+
+
+    <p>
+      Stories about landscapes, changing seasons,
+      peaceful outdoor moments, and the small
+      wonders hiding in plain sight.
+    </p>
+
+  </div>
+
+
+  <div class="nature-grid">
+
+
+    <!-- =================================================
+         ARTICLE 01
+    ================================================= -->
+
+    <article class="nature-card">
+
+      <a
+        href="quiet-morning-in-nature.html"
+        class="nature-card-visual"
+        aria-label="Read The Quiet Beauty of a Morning Outside"
+      >
+
+        <span class="nature-card-number">
+          01
+        </span>
+
+        <span class="nature-card-category">
+          Morning
+        </span>
+
+        <span class="nature-card-icon">
+          Sunrise
+        </span>
+
+      </a>
+
+
+      <div class="nature-card-body">
+
+        <a
+          href="quiet-morning-in-nature.html"
+          class="nature-card-title"
+        >
+          The Quiet Beauty of a Morning Outside
+        </a>
+
+
+        <p>
+          There is something grounding about beginning
+          the day outdoors, before the world becomes
+          busy and loud.
+        </p>
+
+
+        <a
+          href="quiet-morning-in-nature.html"
+          class="nature-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 02
+    ================================================= -->
+
+    <article class="nature-card">
+
+      <a
+        href="seasonal-nature-guide.html"
+        class="nature-card-visual"
+        aria-label="Read Learning to Notice the Seasons"
+      >
+
+        <span class="nature-card-number">
+          02
+        </span>
+
+        <span class="nature-card-category">
+          Seasons
+        </span>
+
+        <span class="nature-card-icon">
+          Changing
+        </span>
+
+      </a>
+
+
+      <div class="nature-card-body">
+
+        <a
+          href="seasonal-nature-guide.html"
+          class="nature-card-title"
+        >
+          Learning to Notice the Seasons
+        </a>
+
+
+        <p>
+          From the first warm breeze to the changing
+          colour of leaves, nature gives us countless
+          quiet signs of time passing.
+        </p>
+
+
+        <a
+          href="seasonal-nature-guide.html"
+          class="nature-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 03
+    ================================================= -->
+
+    <article class="nature-card">
+
+      <a
+        href="peaceful-forest-walks.html"
+        class="nature-card-visual"
+        aria-label="Read The Simple Pleasure of a Forest Walk"
+      >
+
+        <span class="nature-card-number">
+          03
+        </span>
+
+        <span class="nature-card-category">
+          Outdoors
+        </span>
+
+        <span class="nature-card-icon">
+          Forest
+        </span>
+
+      </a>
+
+
+      <div class="nature-card-body">
+
+        <a
+          href="peaceful-forest-walks.html"
+          class="nature-card-title"
+        >
+          The Simple Pleasure of a Forest Walk
+        </a>
+
+
+        <p>
+          A slow walk beneath trees can change the
+          rhythm of an afternoon and offer a welcome
+          pause from screens and schedules.
+        </p>
+
+
+        <a
+          href="peaceful-forest-walks.html"
+          class="nature-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 04
+    ================================================= -->
+
+    <article class="nature-card">
+
+      <a
+        href="small-natural-wonders.html"
+        class="nature-card-visual"
+        aria-label="Read Small Wonders Hiding in Plain Sight"
+      >
+
+        <span class="nature-card-number">
+          04
+        </span>
+
+        <span class="nature-card-category">
+          Discovery
+        </span>
+
+        <span class="nature-card-icon">
+          Wonder
+        </span>
+
+      </a>
+
+
+      <div class="nature-card-body">
+
+        <a
+          href="small-natural-wonders.html"
+          class="nature-card-title"
+        >
+          Small Wonders Hiding in Plain Sight
+        </a>
+
+
+        <p>
+          The natural world does not always ask us
+          to travel far. Sometimes beauty is waiting
+          beside the path we already know.
+        </p>
+
+
+        <a
+          href="small-natural-wonders.html"
+          class="nature-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 05
+    ================================================= -->
+
+    <article class="nature-card">
+
+      <a
+        href="simple-outdoor-rituals.html"
+        class="nature-card-visual"
+        aria-label="Read Simple Outdoor Rituals"
+      >
+
+        <span class="nature-card-number">
+          05
+        </span>
+
+        <span class="nature-card-category">
+          Slow Living
+        </span>
+
+        <span class="nature-card-icon">
+          Outside
+        </span>
+
+      </a>
+
+
+      <div class="nature-card-body">
+
+        <a
+          href="simple-outdoor-rituals.html"
+          class="nature-card-title"
+        >
+          Simple Outdoor Rituals
+        </a>
+
+
+        <p>
+          Small habits like an evening walk, morning
+          coffee outdoors, or a quiet garden moment
+          can make ordinary days feel different.
+        </p>
+
+
+        <a
+          href="simple-outdoor-rituals.html"
+          class="nature-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 06
+    ================================================= -->
+
+    <article class="nature-card">
+
+      <a
+        href="finding-stillness-in-nature.html"
+        class="nature-card-visual"
+        aria-label="Read Finding Stillness in Nature"
+      >
+
+        <span class="nature-card-number">
+          06
+        </span>
+
+        <span class="nature-card-category">
+          Reflection
+        </span>
+
+        <span class="nature-card-icon">
+          Stillness
+        </span>
+
+      </a>
+
+
+      <div class="nature-card-body">
+
+        <a
+          href="finding-stillness-in-nature.html"
+          class="nature-card-title"
+        >
+          Finding Stillness in Nature
+        </a>
+
+
+        <p>
+          Why spending a little unstructured time
+          outdoors can help us notice our surroundings
+          and reconnect with a slower rhythm.
+        </p>
+
+
+        <a
+          href="finding-stillness-in-nature.html"
+          class="nature-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+
+  <!-- =================================================
+       EDITORIAL NOTE
+  ================================================= -->
+
+  <div class="nature-note">
+
+    <div class="nature-note-label">
+      Evermere Perspective
+    </div>
+
+
+    <h2>
+      Nature rarely asks us
+      to hurry.
+    </h2>
+
+
+    <p>
+      A quiet path, changing light, or a few minutes
+      beneath an open sky can be enough to shift our
+      attention back to what is already around us.
+    </p>
+
+  </div>
+
+
+</section>
+
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+
+  <div id="footer"></div>
+
+  <!-- =====================================================
+       HEADER + FOOTER
+  ===================================================== -->
+
+  <script src="header.js"></script>
+
+  <script src="footer.js"></script>
+
+</body>
+</html>

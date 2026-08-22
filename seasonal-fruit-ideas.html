@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+  name="referrer"
+  content="no-referrer"
+>
+
+<title>The Beauty of Seasonal Fruit — Evermere Journal</title>
+
+<meta
+  name="description"
+  content="A closer look at fresh seasonal fruit and simple ways to make it part of everyday breakfasts, desserts, and snacks."
+>
+
+
+<style>
+
+@import url(
+  'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap'
+);
+
+
+:root{
+
+  --dark:#34332E;
+
+  --soft-dark:#55524B;
+
+  --paper:#FBFAF7;
+
+  --cream:#F4F1EA;
+
+  --sage:#7D8174;
+
+  --clay:#9B806B;
+
+  --body:#706D66;
+
+  --muted:#9A968E;
+
+  --line:rgba(52,51,46,.11);
+
+}
+
+
+/* =====================================================
+   BASE
+===================================================== */
+
+*,
+*::before,
+*::after{
+
+  box-sizing:border-box;
+
+  margin:0;
+
+  padding:0;
+
+}
+
+
+html{
+
+  scroll-behavior:smooth;
+
+  -webkit-text-size-adjust:100%;
+
+}
+
+
+body{
+
+  background:var(--paper);
+
+  color:var(--dark);
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  -webkit-font-smoothing:antialiased;
+
+  overflow-x:hidden;
+
+}
+
+
+a{
+
+  color:inherit;
+
+  text-decoration:none;
+
+}
+
+
+#header,
+#footer{
+
+  width:100%;
+
+  display:block;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.article-hero{
+
+  background:var(--cream);
+
+  border-bottom:1px solid var(--line);
+
+}
+
+
+.article-hero-inner{
+
+  width:min(1000px,calc(100% - 40px));
+
+  margin:auto;
+
+  padding:95px 0 85px;
+
+  text-align:center;
+
+}
+
+
+.article-category{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  margin-bottom:24px;
+
+  color:var(--clay);
+
+  font-size:8px;
+
+  font-weight:600;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+
+}
+
+
+.article-category::before,
+.article-category::after{
+
+  content:"";
+
+  width:25px;
+
+  height:1px;
+
+  background:var(--clay);
+
+}
+
+
+.article-hero h1{
+
+  max-width:850px;
+
+  margin:auto;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(48px,6.5vw,78px);
+
+  font-weight:400;
+
+  line-height:1.03;
+
+  letter-spacing:-1.5px;
+
+}
+
+
+.article-intro{
+
+  max-width:650px;
+
+  margin:25px auto 0;
+
+  color:var(--body);
+
+  font-size:14px;
+
+  line-height:1.9;
+
+}
+
+
+.article-meta{
+
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:18px;
+
+  margin-top:28px;
+
+  color:var(--muted);
+
+  font-size:9px;
+
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+
+}
+
+
+.article-meta span{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:18px;
+
+}
+
+
+.article-meta span:not(:last-child)::after{
+
+  content:"•";
+
+  color:var(--clay);
+
+}
+
+
+/* =====================================================
+   ARTICLE
+===================================================== */
+
+.article-wrap{
+
+  width:min(760px,calc(100% - 40px));
+
+  margin:auto;
+
+  padding:75px 0 100px;
+
+}
+
+
+.article-body{
+
+  color:var(--body);
+
+  font-size:15px;
+
+  line-height:2;
+
+}
+
+
+.article-body p{
+
+  margin-bottom:27px;
+
+}
+
+
+.article-body .lead{
+
+  color:var(--soft-dark);
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:25px;
+
+  line-height:1.55;
+
+  margin-bottom:38px;
+
+}
+
+
+.article-body h2{
+
+  margin:55px 0 20px;
+
+  color:var(--dark);
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:36px;
+
+  font-weight:400;
+
+  line-height:1.15;
+
+}
+
+
+.article-body h3{
+
+  margin:38px 0 13px;
+
+  color:var(--dark);
+
+  font-size:15px;
+
+  font-weight:600;
+
+}
+
+
+/* =====================================================
+   FRUIT LIST
+===================================================== */
+
+.fruit-list{
+
+  margin:38px 0 45px;
+
+  padding:30px 32px;
+
+  background:var(--cream);
+
+  border:1px solid var(--line);
+
+}
+
+
+.fruit-list-title{
+
+  margin-bottom:18px;
+
+  color:var(--dark);
+
+  font-size:9px;
+
+  font-weight:600;
+
+  letter-spacing:2.5px;
+
+  text-transform:uppercase;
+
+}
+
+
+.fruit-list ul{
+
+  margin:0 0 0 18px;
+
+}
+
+
+.fruit-list li{
+
+  margin-bottom:10px;
+
+  padding-left:5px;
+
+  color:var(--body);
+
+  font-size:12px;
+
+  line-height:1.8;
+
+}
+
+
+.fruit-list li:last-child{
+
+  margin-bottom:0;
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.article-cta{
+
+  position:relative;
+
+  overflow:hidden;
+
+  margin:42px 0 58px;
+
+  padding:48px 45px;
+
+  background:#34332E;
+
+  color:#F7F4EC;
+
+  text-align:center;
+
+}
+
+
+.article-cta::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:220px;
+
+  height:220px;
+
+  right:-70px;
+
+  top:-100px;
+
+  border:1px solid rgba(255,255,255,.12);
+
+  border-radius:50%;
+
+}
+
+
+.article-cta::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:140px;
+
+  height:140px;
+
+  left:-55px;
+
+  bottom:-70px;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  border-radius:50%;
+
+}
+
+
+.cta-label{
+
+  position:relative;
+
+  z-index:2;
+
+  margin-bottom:13px;
+
+  color:#B7B9AA;
+
+  font-size:8px;
+
+  font-weight:600;
+
+  letter-spacing:2.5px;
+
+  text-transform:uppercase;
+
+}
+
+
+.article-cta h2{
+
+  position:relative;
+
+  z-index:2;
+
+  max-width:600px;
+
+  margin:auto;
+
+  color:#F7F4EC;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(30px,4vw,43px);
+
+  font-weight:400;
+
+  line-height:1.15;
+
+}
+
+
+.article-cta p{
+
+  position:relative;
+
+  z-index:2;
+
+  max-width:530px;
+
+  margin:15px auto 25px;
+
+  color:#C6C4BC;
+
+  font-size:11px;
+
+  line-height:1.8;
+
+}
+
+
+.cta-button{
+
+  position:relative;
+
+  z-index:2;
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:10px;
+
+  min-height:45px;
+
+  padding:0 25px;
+
+  background:#F2EFE7;
+
+  color:#34332E;
+
+  font-size:8px;
+
+  font-weight:600;
+
+  letter-spacing:1.8px;
+
+  text-transform:uppercase;
+
+  transition:
+
+    transform .25s ease,
+
+    background .25s ease;
+
+}
+
+
+.cta-button:hover{
+
+  transform:translateY(-2px);
+
+  background:#FFFFFF;
+
+}
+
+
+.cta-button span{
+
+  font-size:14px;
+
+  line-height:1;
+
+}
+
+
+/* =====================================================
+   TIP
+===================================================== */
+
+.article-tip{
+
+  position:relative;
+
+  margin:48px 0;
+
+  padding:35px 38px 35px 45px;
+
+  background:#F0EEE7;
+
+  border-left:3px solid var(--sage);
+
+}
+
+
+.article-tip::before{
+
+  content:"“";
+
+  position:absolute;
+
+  left:14px;
+
+  top:20px;
+
+  color:rgba(125,129,116,.45);
+
+  font-family:Georgia,serif;
+
+  font-size:40px;
+
+}
+
+
+.article-tip p{
+
+  margin:0;
+
+  color:var(--soft-dark);
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:20px;
+
+  line-height:1.5;
+
+}
+
+
+/* =====================================================
+   BACK LINK
+===================================================== */
+
+.back-link{
+
+  display:flex;
+
+  justify-content:center;
+
+  margin-top:55px;
+
+}
+
+
+.back-link a{
+
+  color:var(--sage);
+
+  font-size:8px;
+
+  font-weight:600;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+}
+
+
+.back-link a:hover{
+
+  color:var(--dark);
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+
+    width:calc(100% - 30px);
+
+    padding:65px 0 58px;
+
+  }
+
+
+  .article-category{
+
+    margin-bottom:19px;
+
+  }
+
+
+  .article-hero h1{
+
+    font-size:46px;
+
+    line-height:1.04;
+
+    letter-spacing:-1px;
+
+  }
+
+
+  .article-intro{
+
+    margin-top:20px;
+
+    font-size:12.5px;
+
+    line-height:1.8;
+
+  }
+
+
+  .article-meta{
+
+    gap:8px 14px;
+
+    margin-top:22px;
+
+    font-size:8px;
+
+  }
+
+
+  .article-wrap{
+
+    width:calc(100% - 30px);
+
+    padding:55px 0 75px;
+
+  }
+
+
+  .article-body{
+
+    font-size:13px;
+
+    line-height:1.9;
+
+  }
+
+
+  .article-body .lead{
+
+    font-size:22px;
+
+    line-height:1.5;
+
+  }
+
+
+  .article-body h2{
+
+    margin-top:45px;
+
+    font-size:32px;
+
+  }
+
+
+  .fruit-list{
+
+    padding:25px 22px;
+
+  }
+
+
+  .fruit-list li{
+
+    font-size:11.5px;
+
+  }
+
+
+  .article-tip{
+
+    padding:28px 24px 28px 40px;
+
+  }
+
+
+  .article-tip p{
+
+    font-size:18px;
+
+  }
+
+
+  .article-cta{
+
+    margin:38px 0 48px;
+
+    padding:40px 22px;
+
+  }
+
+
+  .article-cta h2{
+
+    font-size:31px;
+
+  }
+
+
+  .article-cta p{
+
+    font-size:10.5px;
+
+  }
+
+
+  .cta-button{
+
+    width:100%;
+
+  }
+
+}
+
+
+@media(max-width:375px){
+
+  .article-hero h1{
+
+    font-size:41px;
+
+  }
+
+}
+
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+
+    scroll-behavior:auto;
+
+  }
+
+  .cta-button{
+
+    transition:none;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SHARED HEADER
+===================================================== -->
+
+<div id="header"></div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+
+      Food &amp; Kitchen
+
+    </div>
+
+
+    <h1>
+
+      The Beauty of
+      Seasonal Fruit
+
+    </h1>
+
+
+    <p class="article-intro">
+
+      A closer look at fresh seasonal fruit and
+      simple ways to make it part of everyday
+      breakfasts, desserts, and snacks.
+
+    </p>
+
+
+    <div class="article-meta">
+
+      <span>
+        Food
+      </span>
+
+      <span>
+        6 min read
+      </span>
+
+      <span>
+        Evermere Journal
+      </span>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     ARTICLE
+===================================================== -->
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+
+      <p class="lead">
+
+        There is something quietly satisfying about
+        eating fruit when it is naturally in season.
+        The flavour feels brighter, the texture is often
+        at its best, and even the simplest serving can
+        make an everyday meal feel a little more special.
+
+      </p>
+
+
+      <p>
+
+        Seasonal fruit does not need much preparation.
+        A ripe peach can be enjoyed exactly as it is,
+        berries can be scattered over breakfast, and
+        sliced melon can become an effortless afternoon
+        snack.
+
+      </p>
+
+
+      <p>
+
+        Beyond convenience, following the seasons gives
+        everyday eating a gentle rhythm. Instead of
+        reaching for the same ingredients throughout the
+        year, the kitchen changes naturally as different
+        fruits become available.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 01
+      ================================================== -->
+
+      <h2>
+
+        Let the season guide you
+
+      </h2>
+
+
+      <p>
+
+        One of the easiest ways to enjoy seasonal fruit
+        is simply to notice what looks freshest at the
+        market or grocery store. Colour, aroma, firmness,
+        and ripeness can all tell you something about
+        what is ready to enjoy.
+
+      </p>
+
+
+      <p>
+
+        Different seasons bring their own favourites.
+        Summer may offer berries, peaches, plums, and
+        melons, while cooler months can bring apples,
+        pears, citrus, and pomegranates to the table.
+
+      </p>
+
+
+      <div class="fruit-list">
+
+
+        <div class="fruit-list-title">
+
+          Simple seasonal ideas
+
+        </div>
+
+
+        <ul>
+
+          <li>
+            Add berries to yogurt, oats, or granola.
+          </li>
+
+          <li>
+            Slice peaches or pears over toast.
+          </li>
+
+          <li>
+            Pair citrus with simple salads.
+          </li>
+
+          <li>
+            Keep washed fruit ready for quick snacks.
+          </li>
+
+        </ul>
+
+
+      </div>
+
+
+
+      <!-- =================================================
+           SECTION 02
+      ================================================== -->
+
+      <h2>
+
+        Breakfasts that feel fresh
+
+      </h2>
+
+
+      <p>
+
+        Breakfast is one of the easiest places to add
+        more fruit without changing your routine.
+        A bowl of yogurt becomes more colourful with
+        berries and sliced fruit, while oatmeal can be
+        finished with apples, pears, or bananas.
+
+      </p>
+
+
+      <p>
+
+        Toast is another simple option. Spread it with
+        nut butter, yogurt, or soft cheese and add thin
+        slices of whatever fruit is currently at its best.
+
+      </p>
+
+
+      <p>
+
+        The important thing is to keep it uncomplicated.
+        Fresh fruit already brings natural sweetness,
+        colour, and texture, so there is rarely a need
+        to overdo the preparation.
+
+      </p>
+
+
+
+     <aside class="article-cta">
+
+  <div class="cta-label">
+    A Little Help With Dinner
+  </div>
+
+  <h2>
+    Take the effort out
+    of your next meal.
+  </h2>
+
+  <p>
+    When the day gets busy, explore convenient
+    choices for meals, snacks, and everyday dining.
+  </p>
+
+  <a
+    href="foodidea.html"
+    class="cta-button"
+    target="_blank"
+    rel="noopener noreferrer"
+    referrerpolicy="no-referrer"
+  >
+    See What's Available
+
+    <span>→</span>
+
+  </a>
+
+</aside>
+
+
+
+      <!-- =================================================
+           SECTION 03
+      ================================================== -->
+
+      <h2>
+
+        Simple desserts
+
+      </h2>
+
+
+      <p>
+
+        Seasonal fruit can also become dessert without
+        requiring a complicated recipe. Warm sliced
+        peaches or apples with a little cinnamon, or
+        serve berries alongside a spoonful of yogurt
+        or softly whipped cream.
+
+      </p>
+
+
+      <p>
+
+        For something slightly more indulgent, fruit
+        can be baked beneath a simple oat topping.
+        The result is comforting, fragrant, and easy
+        enough for an ordinary evening.
+
+      </p>
+
+
+
+      <!-- =================================================
+           TIP
+      ================================================== -->
+
+      <div class="article-tip">
+
+        <p>
+
+          Keep fruit visible and easy to reach. When
+          something is already washed, sliced, or placed
+          where you can see it, it becomes much easier
+          to turn it into a snack.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- =================================================
+           SECTION 04
+      ================================================== -->
+
+      <h2>
+
+        Fruit for everyday snacking
+
+      </h2>
+
+
+      <p>
+
+        Snacks do not have to be elaborate. An apple,
+        orange, handful of berries, or sliced melon can
+        be enough to break up a busy afternoon.
+
+      </p>
+
+
+      <p>
+
+        If you want something more filling, combine fruit
+        with another ingredient such as nuts, yogurt,
+        cheese, or nut butter. The contrast between
+        creamy, crunchy, sweet, and fresh textures makes
+        a simple snack much more satisfying.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 05
+      ================================================== -->
+
+      <h2>
+
+        Make the most of ripe fruit
+
+      </h2>
+
+
+      <p>
+
+        Fruit is often at its most enjoyable when it is
+        perfectly ripe, but that window can be short.
+        When you have more fruit than you can eat,
+        look for simple ways to use it before it becomes
+        too soft.
+
+      </p>
+
+
+      <p>
+
+        Blend ripe bananas into smoothies, turn berries
+        into a quick topping, bake apples into a simple
+        dessert, or freeze fruit for another day. A little
+        planning can help reduce waste while keeping
+        meals interesting.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 06
+      ================================================== -->
+
+      <h2>
+
+        A more seasonal way to eat
+
+      </h2>
+
+
+      <p>
+
+        Eating seasonally does not have to mean following
+        strict rules. It can simply mean paying attention
+        to what is fresh, choosing ingredients that look
+        appealing, and allowing your meals to change
+        throughout the year.
+
+      </p>
+
+
+      <p>
+
+        From a bowl of berries at breakfast to warm baked
+        fruit after dinner, these small additions can make
+        everyday food feel more connected to the season.
+
+      </p>
+
+
+
+      <!-- =================================================
+           CONCLUSION
+      ================================================== -->
+
+      <h2>
+
+        Keep it simple
+
+      </h2>
+
+
+      <p>
+
+        The beauty of seasonal fruit is that it rarely
+        needs much help. When the ingredient is fresh,
+        simple preparation is often enough.
+
+      </p>
+
+
+      <p>
+
+        Keep a few favourites nearby, try something new
+        when the season changes, and let fresh fruit find
+        its way naturally into breakfasts, snacks, and
+        desserts.
+
+      </p>
+
+
+
+      <!-- =================================================
+           BACK
+      ================================================== -->
+
+      <div class="back-link">
+
+        <a href="food.html">
+
+          ← Back to Food
+
+        </a>
+
+      </div>
+
+
+    </article>
+
+  </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     SHARED FOOTER
+===================================================== -->
+
+<div id="footer"></div>
+
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

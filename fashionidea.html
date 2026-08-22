@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>Fashion Finds &amp; Style Ideas — Evermere Journal</title>
+
+<meta
+  name="description"
+  content="Explore current fashion selections, everyday style ideas, and available fashion opportunities."
+>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap');
+
+:root{
+  --paper:#fbfaf7;
+  --surface:#ffffff;
+  --cream:#f2efe9;
+  --soft:#eeebe5;
+  --text:#34332e;
+  --soft-text:#55524b;
+  --muted:#706d66;
+  --accent:#9a806e;
+  --accent-dark:#806756;
+  --border:#dfddd7;
+  --max:720px;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  background:var(--paper);
+  color:var(--text);
+  font-family:"DM Sans",Arial,sans-serif;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page{
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:62px 22px 82px;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro{
+  text-align:center;
+  margin-bottom:34px;
+}
+
+.eyebrow{
+  display:inline-block;
+  margin-bottom:16px;
+  padding:6px 13px;
+  border:1px solid #e0dcd5;
+  border-radius:30px;
+  background:#efebe5;
+  color:var(--accent-dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.intro h1{
+  margin:0 0 15px;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(32px,5vw,43px);
+  font-weight:400;
+  line-height:1.2;
+  letter-spacing:-.4px;
+}
+
+.intro p{
+  max-width:590px;
+  margin:0 auto;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.85;
+}
+
+
+/* =====================================================
+   OFFER CARD
+===================================================== */
+
+.offer-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:36px;
+  box-shadow:0 14px 42px rgba(52,51,46,.05);
+}
+
+.card-heading{
+  text-align:center;
+  margin-bottom:29px;
+}
+
+.card-heading h2{
+  margin:0 0 10px;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:24px;
+  font-weight:400;
+  line-height:1.3;
+}
+
+.card-heading p{
+  margin:0;
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:1.75;
+}
+
+
+/* =====================================================
+   INFO BOX
+===================================================== */
+
+.info-box{
+  margin-bottom:25px;
+  padding:18px 17px;
+  background:var(--soft);
+  border:1px solid #e0ddd7;
+  border-radius:12px;
+}
+
+.info-item{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin-bottom:12px;
+  color:#59574f;
+  font-size:12px;
+  line-height:1.6;
+}
+
+.info-item:last-child{
+  margin-bottom:0;
+}
+
+.info-bullet{
+  flex:0 0 auto;
+  color:var(--accent-dark);
+  font-size:16px;
+  font-weight:600;
+  line-height:1.25;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.offer-link{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  width:100%;
+  min-height:52px;
+  padding:15px 20px;
+  border-radius:8px;
+  background:var(--accent);
+  color:#fff;
+  font-size:13px;
+  font-weight:600;
+  text-align:center;
+  box-shadow:0 5px 14px rgba(154,128,110,.20);
+
+  transition:
+    background .2s ease,
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.offer-link:hover{
+  background:var(--accent-dark);
+  transform:translateY(-1px);
+  box-shadow:0 8px 20px rgba(154,128,110,.24);
+}
+
+.offer-link svg{
+  transition:transform .2s ease;
+}
+
+.offer-link:hover svg{
+  transform:translateX(3px);
+}
+
+
+/* =====================================================
+   EXTERNAL NOTE
+===================================================== */
+
+.external-note{
+  margin:14px 0 0;
+  color:#918e86;
+  font-size:9.5px;
+  line-height:1.6;
+  text-align:center;
+}
+
+
+/* =====================================================
+   DISCLOSURE
+===================================================== */
+
+.disclosure{
+  max-width:610px;
+  margin:25px auto 0;
+  color:#918e86;
+  font-size:9.5px;
+  line-height:1.65;
+  text-align:center;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+  .page{
+    padding:40px 15px 55px;
+  }
+
+  .intro{
+    margin-bottom:27px;
+  }
+
+  .eyebrow{
+    margin-bottom:14px;
+    padding:5px 11px;
+    font-size:8px;
+  }
+
+  .intro h1{
+    font-size:clamp(29px,8vw,37px);
+    line-height:1.25;
+  }
+
+  .intro p{
+    font-size:12px;
+    line-height:1.8;
+  }
+
+  .offer-card{
+    padding:25px 20px;
+    border-radius:16px;
+  }
+
+  .card-heading{
+    margin-bottom:24px;
+  }
+
+  .card-heading h2{
+    font-size:21px;
+  }
+
+  .card-heading p{
+    font-size:11.5px;
+  }
+
+  .info-box{
+    padding:15px;
+  }
+
+  .info-item{
+    gap:9px;
+    font-size:11.5px;
+  }
+
+  .offer-link{
+    min-height:51px;
+    padding:15px 16px;
+    font-size:12px;
+  }
+
+  .external-note{
+    font-size:8.5px;
+  }
+
+  .disclosure{
+    margin-top:20px;
+    font-size:8.5px;
+  }
+
+}
+
+
+@media(max-width:375px){
+
+  .page{
+    padding-left:13px;
+    padding-right:13px;
+  }
+
+  .offer-card{
+    padding:23px 17px;
+  }
+
+}
+
+
+/* =====================================================
+   ACCESSIBILITY / REDUCED MOTION
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .offer-link,
+  .offer-link svg{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SHARED HEADER
+===================================================== -->
+
+<div id="header"></div>
+
+
+
+<main class="page">
+
+
+  <!-- ===================================================
+       INTRO
+  ==================================================== -->
+
+  <section class="intro">
+
+    <span class="eyebrow">
+      Fashion &amp; Style
+    </span>
+
+    <h1>
+      Discover Your
+      Next Style Idea
+    </h1>
+
+    <p>
+      Explore selected fashion opportunities,
+      seasonal pieces, and everyday style ideas
+      from an independent partner.
+    </p>
+
+  </section>
+
+
+
+  <!-- ===================================================
+       OFFER CARD
+  ==================================================== -->
+
+  <section class="offer-card">
+
+
+    <div class="card-heading">
+
+      <h2>
+        Looking for something new?
+      </h2>
+
+      <p>
+        Take a moment to explore the information
+        below and continue to the partner page
+        for current fashion selections.
+      </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         INFORMATION
+    ================================================== -->
+
+    <div class="info-box">
+
+
+      <div class="info-item">
+
+        <span class="info-bullet">
+          •
+        </span>
+
+        <span>
+          Explore current fashion selections,
+          everyday styles, and seasonal pieces.
+        </span>
+
+      </div>
+
+
+      <div class="info-item">
+
+        <span class="info-bullet">
+          •
+        </span>
+
+        <span>
+          Follow the steps provided on the
+          destination page to view the available
+          details and options.
+        </span>
+
+      </div>
+
+
+      <div class="info-item">
+
+        <span class="info-bullet">
+          •
+        </span>
+
+        <span>
+          Availability and eligibility may vary
+          by location, including the US, UK,
+          AU &amp; CA.
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         SHEIN CPA CTA
+    ================================================== -->
+
+    <a
+      href="https://linkthem.net/aff_c?offer_id=1229&aff_id=2281"
+      class="offer-link"
+      target="_blank"
+      rel="noopener noreferrer"
+      referrerpolicy="no-referrer"
+    >
+
+      <span>
+        Explore Fashion Selection
+      </span>
+
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+
+        <line
+          x1="5"
+          y1="12"
+          x2="19"
+          y2="12"
+        ></line>
+
+        <polyline
+          points="12 5 19 12 12 19"
+        ></polyline>
+
+      </svg>
+
+    </a>
+
+
+    <p class="external-note">
+      Notice: You are leaving Evermere Journal
+      to visit an independent external partner
+      page where additional steps may be required.
+    </p>
+
+
+  </section>
+
+
+
+  <!-- ===================================================
+       DISCLOSURE
+  ==================================================== -->
+
+  <p class="disclosure">
+    Evermere Journal is an independent lifestyle
+    publication. Availability, eligibility, pricing,
+    and promotional details are provided by third-party
+    partners and may vary by location.
+  </p>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     SHARED FOOTER
+===================================================== -->
+
+<div id="footer"></div>
+
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

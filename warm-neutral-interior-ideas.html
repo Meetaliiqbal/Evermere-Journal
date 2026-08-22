@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>The Beauty of Warm Neutral Interiors | Evermere Journal</title>
+
+<meta
+  name="description"
+  content="Soft tones and understated layers can bring warmth and depth to a room without making the space feel crowded."
+>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap');
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F2EFEA;
+  --warm:#ECE8E1;
+  --clay:#9A806E;
+  --clay-dark:#806756;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--paper);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.article-hero{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+
+.article-hero-inner{
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+
+  color:var(--clay-dark);
+
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.article-category::before,
+.article-category::after{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--clay);
+}
+
+.article-hero h1{
+  max-width:850px;
+  margin:auto;
+
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(46px,6vw,74px);
+  font-weight:400;
+  line-height:1.05;
+  letter-spacing:-1.3px;
+}
+
+.article-intro{
+  max-width:650px;
+  margin:25px auto 0;
+
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+
+  margin-top:28px;
+
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.article-meta span{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.article-meta span:not(:last-child)::after{
+  content:"•";
+  color:var(--clay);
+}
+
+
+/* =====================================================
+   ARTICLE
+===================================================== */
+
+.article-wrap{
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+}
+
+.article-body{
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+}
+
+.article-body p{
+  margin-bottom:27px;
+}
+
+.article-body .lead{
+  margin-bottom:38px;
+
+  color:var(--soft-dark);
+
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.55;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+
+  color:var(--dark);
+
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+
+/* =====================================================
+   DESIGN LIST
+===================================================== */
+
+.design-list{
+  margin:38px 0 45px;
+  padding:30px 32px;
+
+  background:var(--warm);
+  border:1px solid var(--line);
+}
+
+.design-list-title{
+  margin-bottom:18px;
+
+  color:var(--dark);
+
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.design-list ul{
+  margin-left:18px;
+}
+
+.design-list li{
+  margin-bottom:10px;
+  padding-left:5px;
+
+  color:var(--body);
+
+  font-size:12px;
+  line-height:1.8;
+}
+
+.design-list li:last-child{
+  margin-bottom:0;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.article-cta{
+  position:relative;
+  overflow:hidden;
+
+  margin:42px 0 58px;
+  padding:48px 45px;
+
+  background:#34332E;
+  color:#F7F4EC;
+
+  text-align:center;
+}
+
+.article-cta::before{
+  content:"";
+
+  position:absolute;
+
+  width:220px;
+  height:220px;
+
+  right:-70px;
+  top:-100px;
+
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.article-cta::after{
+  content:"";
+
+  position:absolute;
+
+  width:140px;
+  height:140px;
+
+  left:-55px;
+  bottom:-70px;
+
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.cta-label{
+  position:relative;
+  z-index:2;
+
+  margin-bottom:13px;
+
+  color:#C2B3A6;
+
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.article-cta h2{
+  position:relative;
+  z-index:2;
+
+  max-width:600px;
+  margin:auto;
+
+  color:#F7F4EC;
+
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(30px,4vw,43px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-cta p{
+  position:relative;
+  z-index:2;
+
+  max-width:530px;
+  margin:15px auto 25px;
+
+  color:#C6C4BC;
+
+  font-size:11px;
+  line-height:1.8;
+}
+
+.cta-button{
+  position:relative;
+  z-index:2;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:10px;
+
+  min-height:45px;
+  padding:0 25px;
+
+  background:#F2EFE7;
+  color:#34332E;
+
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  background:#fff;
+}
+
+.cta-button span{
+  font-size:14px;
+}
+
+
+/* =====================================================
+   TIP
+===================================================== */
+
+.article-tip{
+  position:relative;
+
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+
+  background:#F1EEE8;
+
+  border-left:3px solid var(--clay);
+}
+
+.article-tip::before{
+  content:"“";
+
+  position:absolute;
+  left:14px;
+  top:20px;
+
+  color:rgba(154,128,110,.45);
+
+  font-family:Georgia,serif;
+  font-size:40px;
+}
+
+.article-tip p{
+  margin:0;
+
+  color:var(--soft-dark);
+
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:20px;
+  line-height:1.5;
+}
+
+
+/* =====================================================
+   BACK LINK
+===================================================== */
+
+.back-link{
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+}
+
+.back-link a{
+  color:var(--clay-dark);
+
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.back-link a:hover{
+  color:var(--dark);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+  }
+
+  .article-category{
+    margin-bottom:19px;
+  }
+
+  .article-hero h1{
+    font-size:43px;
+    line-height:1.06;
+    letter-spacing:-1px;
+  }
+
+  .article-intro{
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .article-meta{
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+  }
+
+  .article-wrap{
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+  }
+
+  .article-body{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-body .lead{
+    font-size:22px;
+    line-height:1.5;
+  }
+
+  .article-body h2{
+    margin-top:45px;
+    font-size:32px;
+  }
+
+  .design-list{
+    padding:25px 22px;
+  }
+
+  .design-list li{
+    font-size:11.5px;
+  }
+
+  .article-tip{
+    padding:28px 24px 28px 40px;
+  }
+
+  .article-tip p{
+    font-size:18px;
+  }
+
+  .article-cta{
+    margin:38px 0 48px;
+    padding:40px 22px;
+  }
+
+  .article-cta h2{
+    font-size:31px;
+  }
+
+  .article-cta p{
+    font-size:10.5px;
+  }
+
+  .cta-button{
+    width:100%;
+  }
+
+}
+
+@media(max-width:375px){
+
+  .article-hero h1{
+    font-size:38px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta-button{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     SHARED HEADER
+===================================================== -->
+
+<div id="header"></div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Home &amp; Decor
+    </div>
+
+
+    <h1>
+      The Beauty of Warm
+      Neutral Interiors
+    </h1>
+
+
+    <p class="article-intro">
+
+      Soft tones and understated layers can bring
+      warmth and depth to a room without making
+      the space feel crowded.
+
+    </p>
+
+
+    <div class="article-meta">
+
+      <span>
+        Home Decor
+      </span>
+
+      <span>
+        7 min read
+      </span>
+
+      <span>
+        Evermere Journal
+      </span>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     ARTICLE
+===================================================== -->
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+
+      <p class="lead">
+
+        There is something naturally comforting about
+        a room built around warm neutrals. Soft beige,
+        creamy white, muted brown, natural wood, and
+        gentle earthy shades can create depth without
+        demanding attention.
+
+      </p>
+
+
+      <p>
+
+        Neutral interiors are sometimes mistaken for
+        spaces without personality. In reality, a quiet
+        palette can provide a beautiful foundation for
+        texture, natural materials, meaningful objects,
+        and the small details that make a home feel
+        personal.
+
+      </p>
+
+
+      <p>
+
+        The key is not to make everything identical.
+        Instead, warmth comes from allowing related
+        tones and textures to sit comfortably together.
+
+      </p>
+
+
+      <!-- =================================================
+           SECTION 01
+      ================================================== -->
+
+      <h2>
+        Start with a gentle foundation
+      </h2>
+
+
+      <p>
+
+        The foundation of a warm neutral room does not
+        need to be complicated. Creamy whites, soft
+        taupes, warm beige, and light stone shades can
+        create an understated backdrop.
+
+      </p>
+
+
+      <p>
+
+        These colours tend to work especially well
+        when natural light changes throughout the day.
+        Morning light may make them feel fresh, while
+        evening light can bring out their warmer side.
+
+      </p>
+
+
+      <div class="design-list">
+
+        <div class="design-list-title">
+          Warm neutral elements
+        </div>
+
+        <ul>
+
+          <li>
+            Cream and softly warmed whites for larger
+            surfaces.
+          </li>
+
+          <li>
+            Beige, sand, and taupe for subtle variation.
+          </li>
+
+          <li>
+            Natural wood for warmth and visual texture.
+          </li>
+
+          <li>
+            Linen and woven fabrics for softness.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- =================================================
+           SECTION 02
+      ================================================== -->
+
+      <h2>
+        Layer texture instead of colour
+      </h2>
+
+
+      <p>
+
+        When a room uses a restrained colour palette,
+        texture becomes one of the easiest ways to
+        introduce visual interest.
+
+      </p>
+
+
+      <p>
+
+        A linen curtain beside a smooth wall, a woven
+        basket near a wooden table, or a textured throw
+        placed over a simple chair can make a neutral
+        room feel much richer.
+
+      </p>
+
+
+      <p>
+
+        The beauty of this approach is that the room
+        remains calm even when several different
+        materials are present.
+
+      </p>
+
+
+      <!-- =================================================
+           CTA — END OF SECTION 02
+      ================================================== -->
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          Home &amp; Everyday Living
+        </div>
+
+
+        <h2>
+          Find thoughtful details
+          for a warmer space.
+        </h2>
+
+
+        <p>
+
+          Explore selected home and everyday options
+          through our independent partner page.
+          Availability and details may vary.
+
+        </p>
+
+
+        <a
+          href="homedecoride.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+
+          Explore Home Options
+
+          <span>→</span>
+
+        </a>
+
+      </aside>
+
+
+      <!-- =================================================
+           SECTION 03
+      ================================================== -->
+
+      <h2>
+        Let wood bring natural warmth
+      </h2>
+
+
+      <p>
+
+        Natural wood is one of the simplest ways to
+        prevent a neutral interior from feeling flat.
+
+      </p>
+
+
+      <p>
+
+        Pale oak can keep a room feeling light, while
+        deeper wood tones can create a more grounded
+        atmosphere. Even a small wooden stool, frame,
+        tray, or side table can introduce an organic
+        element.
+
+      </p>
+
+
+      <p>
+
+        Rather than matching every wooden piece,
+        allowing slightly different tones can make
+        the space feel more collected and natural.
+
+      </p>
+
+
+      <!-- =================================================
+           TIP
+      ================================================== -->
+
+      <div class="article-tip">
+
+        <p>
+
+          Warmth does not always come from adding more.
+          Sometimes it comes from choosing materials
+          that already feel connected to nature.
+
+        </p>
+
+      </div>
+
+
+      <!-- =================================================
+           SECTION 04
+      ================================================== -->
+
+      <h2>
+        Keep the palette connected
+      </h2>
+
+
+      <p>
+
+        A neutral palette becomes especially effective
+        when the colours share a similar warmth.
+
+      </p>
+
+
+      <p>
+
+        For example, creamy walls can sit comfortably
+        beside warm beige upholstery, muted brown
+        accents, and natural wood.
+
+      </p>
+
+
+      <p>
+
+        Small differences are welcome. The goal is not
+        perfect colour matching, but visual harmony.
+
+      </p>
+
+
+      <!-- =================================================
+           SECTION 05
+      ================================================== -->
+
+      <h2>
+        Add personality through small details
+      </h2>
+
+
+      <p>
+
+        A calm interior should still feel like someone's
+        home. Personal objects can add character without
+        disrupting the overall atmosphere.
+
+      </p>
+
+
+      <p>
+
+        A favourite book, a handmade ceramic piece,
+        a framed photograph, or an object collected
+        during a meaningful trip can become more
+        noticeable when surrounded by simplicity.
+
+      </p>
+
+
+      <p>
+
+        Instead of filling every available surface,
+        consider giving a few meaningful pieces enough
+        room to breathe.
+
+      </p>
+
+
+      <!-- =================================================
+           SECTION 06
+      ================================================== -->
+
+      <h2>
+        Balance softness with structure
+      </h2>
+
+
+      <p>
+
+        Too many soft textures can sometimes make a
+        room feel visually heavy. Introducing a few
+        clean shapes can create balance.
+
+      </p>
+
+
+      <p>
+
+        A simple table, straight-lined shelf, or
+        understated lamp can provide structure while
+        softer textiles keep the room comfortable.
+
+      </p>
+
+
+      <p>
+
+        This contrast between softness and structure
+        is what often gives neutral interiors their
+        quiet sophistication.
+
+      </p>
+
+
+      <!-- =================================================
+           CONCLUSION
+      ================================================== -->
+
+      <h2>
+        Creating warmth without clutter
+      </h2>
+
+
+      <p>
+
+        Warm neutral interiors work because they leave
+        enough room for the senses to relax. Instead of
+        relying on strong colours or excessive decoration,
+        they use subtle differences in tone, material,
+        light, and shape.
+
+      </p>
+
+
+      <p>
+
+        The result can be simple without feeling empty,
+        refined without feeling formal, and comfortable
+        without becoming visually crowded.
+
+      </p>
+
+
+      <p>
+
+        Ultimately, the most inviting neutral spaces are
+        not defined by a strict formula. They are shaped
+        by thoughtful choices and the understanding that
+        a home can feel beautiful precisely because it
+        gives us somewhere peaceful to slow down.
+
+      </p>
+
+
+      <!-- =================================================
+           BACK LINK
+      ================================================== -->
+
+      <div class="back-link">
+
+        <a href="homedecor.html">
+          ← Back to Home Decor
+        </a>
+
+      </div>
+
+
+    </article>
+
+  </div>
+
+</main>
+
+
+<!-- =====================================================
+     SHARED FOOTER
+===================================================== -->
+
+<div id="footer"></div>
+
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

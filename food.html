@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+
+  <meta
+    name="description"
+    content="Explore thoughtful food stories, seasonal ideas, kitchen inspiration, and simple ways to enjoy everyday meals with Evermere Journal."
+  >
+
+  <meta name="theme-color" content="#F5F3EE">
+
+  <title>Food — Evermere Journal</title>
+
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%23252725'/%3E%3Cpath d='M68 17C49 21 34 33 30 50c-4 17 4 28 18 34 1-16 7-30 20-42-8 11-12 22-12 37 14-7 22-19 22-37 0-10-3-19-10-25z' fill='%23e5e5dc'/%3E%3C/svg%3E"
+  >
+
+  <style>
+
+    @import url(
+      'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap'
+    );
+
+
+    /* =====================================================
+       ROOT
+    ===================================================== */
+
+    :root {
+
+      --dark: #252725;
+      --soft-dark: #3E443F;
+
+      --ivory: #F5F3EE;
+      --paper: #FCFBF8;
+
+      --sage: #78816F;
+      --soft-sage: #A4AB9E;
+
+      --body: #6F746F;
+      --muted: #969B95;
+
+      --line: rgba(37,39,37,.11);
+
+    }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: var(--paper);
+
+      color: var(--dark);
+
+      font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+      -webkit-font-smoothing: antialiased;
+
+      overflow-x: hidden;
+
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .food-hero {
+
+      position: relative;
+
+      overflow: hidden;
+
+      background: var(--ivory);
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .food-hero-inner {
+
+      width:
+        min(1220px, calc(100% - 50px));
+
+      min-height: 510px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        1.05fr .95fr;
+
+      align-items: center;
+
+      gap: 80px;
+
+      padding: 80px 0;
+
+    }
+
+
+    .food-hero-copy {
+      max-width: 650px;
+    }
+
+
+    .food-eyebrow {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin-bottom: 24px;
+
+      color: var(--sage);
+
+      font-size: 9px;
+
+      font-weight: 600;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .food-eyebrow::before {
+
+      content: "";
+
+      width: 30px;
+
+      height: 1px;
+
+      background: var(--sage);
+
+    }
+
+
+    .food-hero h1 {
+
+      max-width: 680px;
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(58px, 7vw, 92px);
+
+      font-weight: 400;
+
+      line-height: .95;
+
+      letter-spacing: -2px;
+
+    }
+
+
+    .food-hero h1 em {
+
+      color: var(--sage);
+
+      font-weight: 400;
+
+    }
+
+
+    .food-hero-text {
+
+      max-width: 540px;
+
+      margin-top: 28px;
+
+      color: var(--body);
+
+      font-size: 14px;
+
+      line-height: 1.9;
+
+    }
+
+
+    /* =====================================================
+       HERO ART
+    ===================================================== */
+
+    .food-hero-art {
+
+      position: relative;
+
+      min-height: 350px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+    .food-circle {
+
+      position: relative;
+
+      width:
+        min(330px, 75vw);
+
+      aspect-ratio: 1;
+
+      border-radius: 50%;
+
+      background: #D8D8CB;
+
+      box-shadow:
+        0 25px 70px rgba(37,39,37,.08);
+
+    }
+
+
+    .food-circle::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 70%;
+
+      height: 70%;
+
+      top: 15%;
+      left: 15%;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(37,39,37,.12);
+
+    }
+
+
+    .food-circle::after {
+
+      content: "FOOD";
+
+      position: absolute;
+
+      inset: 0;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: rgba(37,39,37,.35);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 54px;
+
+      letter-spacing: 2px;
+
+    }
+
+
+    .food-floating-note {
+
+      position: absolute;
+
+      right: 4%;
+
+      bottom: 12%;
+
+      width: 145px;
+
+      padding: 18px;
+
+      background:
+        rgba(252,251,248,.94);
+
+      border:
+        1px solid rgba(37,39,37,.08);
+
+      box-shadow:
+        0 15px 35px rgba(37,39,37,.09);
+
+    }
+
+
+    .food-floating-note span {
+
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: var(--sage);
+
+      font-size: 7px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .food-floating-note strong {
+
+      color: var(--dark);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 19px;
+
+      font-weight: 400;
+
+      line-height: 1.15;
+
+    }
+
+
+    /* =====================================================
+       CONTENT
+    ===================================================== */
+
+    .food-content {
+
+      width:
+        min(1220px, calc(100% - 50px));
+
+      margin: auto;
+
+      padding:
+        95px 0 115px;
+
+    }
+
+
+    .food-section-heading {
+
+      display: flex;
+
+      align-items: flex-end;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 45px;
+
+    }
+
+
+    .food-section-heading h2 {
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 45px;
+
+      font-weight: 400;
+
+      line-height: 1;
+
+    }
+
+
+    .food-section-heading p {
+
+      max-width: 390px;
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 1.7;
+
+      text-align: right;
+
+    }
+
+
+    /* =====================================================
+       ARTICLE GRID
+    ===================================================== */
+
+    .food-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+
+    }
+
+
+    /* =====================================================
+       ARTICLE CARD
+    ===================================================== */
+
+    .food-card {
+
+      display: flex;
+
+      flex-direction: column;
+
+      min-width: 0;
+
+      background: #F7F6F1;
+
+      border:
+        1px solid rgba(37,39,37,.08);
+
+      transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+    }
+
+
+    .food-card:hover {
+
+      transform:
+        translateY(-6px);
+
+      box-shadow:
+        0 18px 45px rgba(37,39,37,.08);
+
+    }
+
+
+    /* =====================================================
+       CARD VISUAL
+    ===================================================== */
+
+    .food-card-visual {
+
+      position: relative;
+
+      height: 235px;
+
+      overflow: hidden;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      cursor: pointer;
+
+    }
+
+
+    .food-card:nth-child(1)
+    .food-card-visual {
+      background: #D9D5C8;
+    }
+
+
+    .food-card:nth-child(2)
+    .food-card-visual {
+      background: #D4D9CE;
+    }
+
+
+    .food-card:nth-child(3)
+    .food-card-visual {
+      background: #DDD2C6;
+    }
+
+
+    .food-card:nth-child(4)
+    .food-card-visual {
+      background: #D0D5D0;
+    }
+
+
+    .food-card:nth-child(5)
+    .food-card-visual {
+      background: #DED9C9;
+    }
+
+
+    .food-card:nth-child(6)
+    .food-card-visual {
+      background: #D5D0D0;
+    }
+
+
+    .food-card-visual::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 145px;
+
+      height: 145px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(37,39,37,.13);
+
+      transition:
+        transform .5s ease;
+
+    }
+
+
+    .food-card-visual::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 95px;
+
+      height: 95px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(37,39,37,.10);
+
+      transition:
+        transform .5s ease;
+
+    }
+
+
+    .food-card:hover
+    .food-card-visual::before {
+
+      transform: scale(1.08);
+
+    }
+
+
+    .food-card:hover
+    .food-card-visual::after {
+
+      transform: scale(.92);
+
+    }
+
+
+    .food-card-number {
+
+      position: absolute;
+
+      top: 18px;
+
+      left: 19px;
+
+      z-index: 2;
+
+      color: rgba(37,39,37,.5);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+    }
+
+
+    .food-card-category {
+
+      position: absolute;
+
+      right: 18px;
+
+      top: 18px;
+
+      z-index: 2;
+
+      color: rgba(37,39,37,.55);
+
+      font-size: 7px;
+
+      font-weight: 600;
+
+      letter-spacing: 1.8px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .food-card-icon {
+
+      position: relative;
+
+      z-index: 2;
+
+      color: rgba(37,39,37,.42);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 28px;
+
+      font-style: italic;
+
+    }
+
+
+    /* =====================================================
+       CARD BODY
+    ===================================================== */
+
+    .food-card-body {
+
+      min-height: 235px;
+
+      padding:
+        27px 27px 29px;
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+
+    /* CLICKABLE ARTICLE TITLE */
+
+    .food-card-title {
+
+      display: block;
+
+      margin-bottom: 13px;
+
+      color: var(--dark);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 27px;
+
+      font-weight: 400;
+
+      line-height: 1.12;
+
+      text-decoration: none;
+
+      transition:
+        color .25s ease;
+
+    }
+
+
+    .food-card-title:hover {
+
+      color: var(--sage);
+
+    }
+
+
+    .food-card-body p {
+
+      color: var(--body);
+
+      font-size: 11px;
+
+      line-height: 1.8;
+
+    }
+
+
+    .food-card-link {
+
+      display: inline-block;
+
+      margin-top: auto;
+
+      padding-top: 22px;
+
+      color: var(--sage);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .food-card-link span {
+
+      display: inline-block;
+
+      margin-left: 6px;
+
+      transition:
+        transform .25s ease;
+
+    }
+
+
+    .food-card-link:hover span {
+
+      transform:
+        translateX(5px);
+
+    }
+
+
+    /* =====================================================
+       EDITORIAL NOTE
+    ===================================================== */
+
+    .food-note {
+
+      margin-top: 80px;
+
+      padding:
+        55px 60px;
+
+      background: var(--ivory);
+
+      border:
+        1px solid var(--line);
+
+      text-align: center;
+
+    }
+
+
+    .food-note-label {
+
+      margin-bottom: 17px;
+
+      color: var(--sage);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .food-note h2 {
+
+      max-width: 680px;
+
+      margin: auto;
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(30px, 4vw, 46px);
+
+      font-weight: 400;
+
+      line-height: 1.15;
+
+    }
+
+
+    .food-note p {
+
+      max-width: 570px;
+
+      margin: 18px auto 0;
+
+      color: var(--body);
+
+      font-size: 12px;
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .food-hero-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding:
+          70px 0 80px;
+
+      }
+
+
+      .food-hero-copy {
+        max-width: 700px;
+      }
+
+
+      .food-hero-art {
+        min-height: 300px;
+      }
+
+
+      .food-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 600px) {
+
+      .food-hero-inner {
+
+        width:
+          calc(100% - 30px);
+
+        padding:
+          58px 0 65px;
+
+      }
+
+
+      .food-eyebrow {
+
+        margin-bottom: 19px;
+
+      }
+
+
+      .food-hero h1 {
+
+        font-size: 57px;
+
+        letter-spacing: -1.5px;
+
+      }
+
+
+      .food-hero-text {
+
+        margin-top: 22px;
+
+        font-size: 13px;
+
+        line-height: 1.8;
+
+      }
+
+
+      .food-hero-art {
+
+        min-height: 260px;
+
+      }
+
+
+      .food-circle {
+
+        width: 250px;
+
+      }
+
+
+      .food-circle::after {
+
+        font-size: 40px;
+
+      }
+
+
+      .food-floating-note {
+
+        right: 0;
+
+        bottom: 0;
+
+        width: 125px;
+
+        padding: 14px;
+
+      }
+
+
+      .food-floating-note strong {
+
+        font-size: 16px;
+
+      }
+
+
+      .food-content {
+
+        width:
+          calc(100% - 30px);
+
+        padding:
+          65px 0 80px;
+
+      }
+
+
+      .food-section-heading {
+
+        display: block;
+
+        margin-bottom: 30px;
+
+      }
+
+
+      .food-section-heading h2 {
+
+        font-size: 38px;
+
+      }
+
+
+      .food-section-heading p {
+
+        margin-top: 14px;
+
+        text-align: left;
+
+        font-size: 10.5px;
+
+      }
+
+
+      .food-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+      }
+
+
+      .food-card-visual {
+
+        height: 220px;
+
+      }
+
+
+      .food-card-body {
+
+        min-height: 215px;
+
+        padding: 24px;
+
+      }
+
+
+      .food-card-title {
+
+        font-size: 25px;
+
+      }
+
+
+      .food-card-body p {
+
+        font-size: 11px;
+
+      }
+
+
+      .food-note {
+
+        margin-top: 55px;
+
+        padding:
+          40px 22px;
+
+      }
+
+
+      .food-note h2 {
+
+        font-size: 31px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       SMALL PHONES
+    ===================================================== */
+
+    @media (max-width: 375px) {
+
+      .food-hero-inner,
+      .food-content {
+
+        width:
+          calc(100% - 26px);
+
+      }
+
+
+      .food-hero h1 {
+
+        font-size: 51px;
+
+      }
+
+
+      .food-circle {
+
+        width: 225px;
+
+      }
+
+
+      .food-floating-note {
+
+        width: 115px;
+
+      }
+
+
+      .food-card-body {
+
+        padding: 22px;
+
+      }
+
+
+      .food-card-title {
+
+        font-size: 24px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       REDUCED MOTION
+    ===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .food-card,
+      .food-card-title,
+      .food-card-link span,
+      .food-card-visual::before,
+      .food-card-visual::after {
+
+        transition: none;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
+  <div id="header"></div>
+
+
+  <!-- =====================================================
+       MAIN CONTENT
+  ===================================================== -->
+
+  <main>
+
+
+    <!-- ===================================================
+         HERO
+    =================================================== -->
+
+    <section class="food-hero">
+
+      <div class="food-hero-inner">
+
+
+        <div class="food-hero-copy">
+
+          <div class="food-eyebrow">
+            The Food Journal
+          </div>
+
+
+          <h1>
+            Good food,
+            <em>beautifully</em>
+            considered.
+          </h1>
+
+
+          <p class="food-hero-text">
+            Discover thoughtful recipes, seasonal ingredients,
+            simple kitchen ideas, and stories that celebrate
+            the quiet pleasure of gathering around a good meal.
+          </p>
+
+        </div>
+
+
+        <div class="food-hero-art">
+
+          <div class="food-circle"></div>
+
+
+          <div class="food-floating-note">
+
+            <span>
+              From the table
+            </span>
+
+            <strong>
+              Simple things,
+              thoughtfully made.
+            </strong>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         ARTICLES
+    =================================================== -->
+
+    <section class="food-content">
+
+
+      <div class="food-section-heading">
+
+        <h2>
+          From the kitchen
+        </h2>
+
+
+        <p>
+          A collection of everyday food stories,
+          seasonal inspiration, and ideas worth
+          bringing to your own table.
+        </p>
+
+      </div>
+
+
+      <div class="food-grid">
+
+
+        <!-- =================================================
+             ARTICLE 01
+        ================================================= -->
+
+        <article class="food-card">
+
+
+          <a
+            href="simple-weeknight-dinners.html"
+            class="food-card-visual"
+            aria-label="Read Simple Weeknight Dinners"
+          >
+
+            <span class="food-card-number">
+              01
+            </span>
+
+            <span class="food-card-category">
+              Everyday
+            </span>
+
+            <span class="food-card-icon">
+              Weeknight
+            </span>
+
+          </a>
+
+
+          <div class="food-card-body">
+
+
+            <a
+              href="simple-weeknight-dinners.html"
+              class="food-card-title"
+            >
+              Simple Weeknight Dinners
+            </a>
+
+
+            <p>
+              Easy meal ideas for evenings when
+              you want something comforting without
+              spending hours in the kitchen.
+            </p>
+
+
+            <a
+              href="simple-weeknight-dinners.html"
+              class="food-card-link"
+            >
+              Read article
+              <span>→</span>
+            </a>
+
+
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             ARTICLE 02
+        ================================================= -->
+
+        <article class="food-card">
+
+
+          <a
+            href="seasonal-fruit-ideas.html"
+            class="food-card-visual"
+            aria-label="Read The Beauty of Seasonal Fruit"
+          >
+
+            <span class="food-card-number">
+              02
+            </span>
+
+            <span class="food-card-category">
+              Seasonal
+            </span>
+
+            <span class="food-card-icon">
+              Harvest
+            </span>
+
+          </a>
+
+
+          <div class="food-card-body">
+
+
+            <a
+              href="seasonal-fruit-ideas.html"
+              class="food-card-title"
+            >
+              The Beauty of Seasonal Fruit
+            </a>
+
+
+            <p>
+              A closer look at fresh seasonal fruit
+              and simple ways to make it part of
+              everyday breakfasts, desserts, and snacks.
+            </p>
+
+
+            <a
+              href="seasonal-fruit-ideas.html"
+              class="food-card-link"
+            >
+              Read article
+              <span>→</span>
+            </a>
+
+
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             ARTICLE 03
+        ================================================= -->
+
+        <article class="food-card">
+
+
+          <a
+            href="slow-morning-breakfasts.html"
+            class="food-card-visual"
+            aria-label="Read Slow Morning Breakfasts"
+          >
+
+            <span class="food-card-number">
+              03
+            </span>
+
+            <span class="food-card-category">
+              Morning
+            </span>
+
+            <span class="food-card-icon">
+              Breakfast
+            </span>
+
+          </a>
+
+
+          <div class="food-card-body">
+
+
+            <a
+              href="slow-morning-breakfasts.html"
+              class="food-card-title"
+            >
+              Slow Morning Breakfasts
+            </a>
+
+
+            <p>
+              Create a calmer start to the day with
+              nourishing breakfast ideas made for
+              unhurried mornings.
+            </p>
+
+
+            <a
+              href="slow-morning-breakfasts.html"
+              class="food-card-link"
+            >
+              Read article
+              <span>→</span>
+            </a>
+
+
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             ARTICLE 04
+        ================================================= -->
+
+        <article class="food-card">
+
+
+          <a
+            href="small-kitchen-essentials.html"
+            class="food-card-visual"
+            aria-label="Read Small Kitchen Essentials"
+          >
+
+            <span class="food-card-number">
+              04
+            </span>
+
+            <span class="food-card-category">
+              Kitchen
+            </span>
+
+            <span class="food-card-icon">
+              Essentials
+            </span>
+
+          </a>
+
+
+          <div class="food-card-body">
+
+
+            <a
+              href="small-kitchen-essentials.html"
+              class="food-card-title"
+            >
+              Small Kitchen Essentials
+            </a>
+
+
+            <p>
+              Thoughtful kitchen staples that make
+              preparing everyday meals easier,
+              simpler, and more enjoyable.
+            </p>
+
+
+            <a
+              href="small-kitchen-essentials.html"
+              class="food-card-link"
+            >
+              Read article
+              <span>→</span>
+            </a>
+
+
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             ARTICLE 05
+        ================================================= -->
+
+        <article class="food-card">
+
+
+          <a
+            href="cozy-comfort-foods.html"
+            class="food-card-visual"
+            aria-label="Read Comfort Foods Worth Sharing"
+          >
+
+            <span class="food-card-number">
+              05
+            </span>
+
+            <span class="food-card-category">
+              Comfort
+            </span>
+
+            <span class="food-card-icon">
+              Gather
+            </span>
+
+          </a>
+
+
+          <div class="food-card-body">
+
+
+            <a
+              href="cozy-comfort-foods.html"
+              class="food-card-title"
+            >
+              Comfort Foods Worth Sharing
+            </a>
+
+
+            <p>
+              Warm, familiar dishes and relaxed
+              table ideas made for slow evenings
+              and good company.
+            </p>
+
+
+            <a
+              href="cozy-comfort-foods.html"
+              class="food-card-link"
+            >
+              Read article
+              <span>→</span>
+            </a>
+
+
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             ARTICLE 06
+        ================================================= -->
+
+        <article class="food-card">
+
+
+          <a
+            href="mindful-eating-at-home.html"
+            class="food-card-visual"
+            aria-label="Read A More Mindful Table"
+          >
+
+            <span class="food-card-number">
+              06
+            </span>
+
+            <span class="food-card-category">
+              Lifestyle
+            </span>
+
+            <span class="food-card-icon">
+              Mindful
+            </span>
+
+          </a>
+
+
+          <div class="food-card-body">
+
+
+            <a
+              href="mindful-eating-at-home.html"
+              class="food-card-title"
+            >
+              A More Mindful Table
+            </a>
+
+
+            <p>
+              Simple ways to slow down, appreciate
+              what is on your plate, and make ordinary
+              meals feel a little more meaningful.
+            </p>
+
+
+            <a
+              href="mindful-eating-at-home.html"
+              class="food-card-link"
+            >
+              Read article
+              <span>→</span>
+            </a>
+
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+
+      <!-- =================================================
+           EDITORIAL NOTE
+      ================================================= -->
+
+      <div class="food-note">
+
+        <div class="food-note-label">
+          Evermere Perspective
+        </div>
+
+
+        <h2>
+          The best meals are often
+          the simplest ones.
+        </h2>
+
+
+        <p>
+          Food does not always need to be elaborate.
+          Sometimes a familiar recipe, fresh ingredients,
+          and a little time around the table are enough.
+        </p>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+
+  <div id="footer"></div>
+
+
+  <!-- =====================================================
+       INJECTED HEADER + FOOTER
+  ===================================================== -->
+
+  <script src="header.js"></script>
+  <script src="footer.js"></script>
+
+
+</body>
+</html>

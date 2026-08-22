@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+  name="referrer"
+  content="no-referrer"
+>
+
+<title>Food &amp; Dining Options — Evermere Journal</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+  --bg:#fbfaf7;
+  --surface:#ffffff;
+  --soft:#f1f3ed;
+  --text:#34332e;
+  --muted:#706d66;
+  --accent:#6f7964;
+  --accent-dark:#59624f;
+  --border:#e2e3dc;
+  --soft-border:#dce1d6;
+  --max:720px;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'DM Sans',Arial,sans-serif;
+  line-height:1.7;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* =====================================================
+   HEADER / FOOTER CONTAINERS
+===================================================== */
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.page{
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:58px 22px 80px;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro{
+  text-align:center;
+  margin-bottom:32px;
+}
+
+.eyebrow{
+  display:inline-block;
+  margin-bottom:16px;
+  padding:6px 13px;
+  background:#eef1ea;
+  border:1px solid var(--soft-border);
+  border-radius:30px;
+  color:var(--accent);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+.intro h1{
+  margin:0 0 15px;
+  font-family:'Libre Baskerville',Georgia,serif;
+  font-size:clamp(28px,4vw,38px);
+  line-height:1.28;
+  font-weight:400;
+  letter-spacing:-.3px;
+}
+
+.intro p{
+  max-width:585px;
+  margin:0 auto;
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.85;
+}
+
+
+/* =====================================================
+   COUNTRY ROW
+===================================================== */
+
+.countries{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:22px;
+}
+
+.country{
+  padding:6px 11px;
+  border:1px solid var(--border);
+  border-radius:30px;
+  background:#fff;
+  color:#666b62;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  box-shadow:0 12px 40px rgba(52,51,46,.045);
+  padding:35px;
+}
+
+.card-content{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.card-content h2{
+  font-family:'Libre Baskerville',Georgia,serif;
+  font-size:22px;
+  line-height:1.4;
+  font-weight:400;
+  margin:0 0 10px;
+}
+
+.card-content p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.75;
+  margin:0;
+}
+
+
+/* =====================================================
+   INFO BOX
+===================================================== */
+
+.info-box{
+  background:var(--soft);
+  border:1px solid var(--soft-border);
+  border-radius:12px;
+  padding:17px;
+  text-align:left;
+  margin-bottom:25px;
+}
+
+.info-item{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-size:12.5px;
+  color:#555a51;
+  margin-bottom:11px;
+  line-height:1.55;
+}
+
+.info-item:last-child{
+  margin-bottom:0;
+}
+
+.info-bullet{
+  color:var(--accent);
+  font-weight:700;
+  font-size:15px;
+  line-height:1;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:16px 20px;
+  background:var(--accent);
+  color:#ffffff;
+  border-radius:8px;
+  font-size:13.5px;
+  font-weight:600;
+  transition:
+    background .2s ease,
+    transform .2s ease,
+    box-shadow .2s ease;
+  box-shadow:0 4px 12px rgba(91,103,79,.18);
+}
+
+.cta:hover{
+  background:var(--accent-dark);
+  transform:translateY(-1px);
+  box-shadow:0 7px 18px rgba(91,103,79,.22);
+}
+
+.cta svg{
+  transition:transform .2s ease;
+}
+
+.cta:hover svg{
+  transform:translateX(3px);
+}
+
+
+/* =====================================================
+   EXTERNAL NOTE
+===================================================== */
+
+.external-note{
+  margin:14px 0 0;
+  text-align:center;
+  color:#858981;
+  font-size:10px;
+  line-height:1.6;
+}
+
+
+/* =====================================================
+   DISCLOSURE
+===================================================== */
+
+.disclosure{
+  max-width:600px;
+  margin:24px auto 0;
+  text-align:center;
+  color:#858981;
+  font-size:10px;
+  line-height:1.65;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+  .page{
+    padding:38px 15px 55px;
+  }
+
+  .intro{
+    margin-bottom:27px;
+  }
+
+  .eyebrow{
+    margin-bottom:14px;
+    font-size:8px;
+    letter-spacing:1.6px;
+  }
+
+  .intro h1{
+    font-size:clamp(27px,8vw,34px);
+    line-height:1.3;
+  }
+
+  .intro p{
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .countries{
+    gap:6px;
+    margin-top:18px;
+  }
+
+  .country{
+    padding:5px 9px;
+    font-size:7px;
+  }
+
+  .card{
+    padding:25px 20px;
+    border-radius:16px;
+  }
+
+  .card-content{
+    margin-bottom:25px;
+  }
+
+  .card-content h2{
+    font-size:20px;
+  }
+
+  .card-content p{
+    font-size:12px;
+  }
+
+  .info-box{
+    padding:15px;
+  }
+
+  .info-item{
+    font-size:11.5px;
+    gap:9px;
+  }
+
+  .cta{
+    min-height:51px;
+    padding:15px 16px;
+    font-size:12.5px;
+  }
+
+  .external-note{
+    font-size:9px;
+  }
+
+  .disclosure{
+    font-size:9px;
+    margin-top:20px;
+  }
+
+}
+
+@media(max-width:375px){
+
+  .page{
+    padding-left:13px;
+    padding-right:13px;
+  }
+
+  .card{
+    padding:23px 17px;
+  }
+
+  .intro h1{
+    font-size:28px;
+  }
+
+  .cta{
+    font-size:12px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta,
+  .cta svg{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SHARED HEADER
+===================================================== -->
+
+<div id="header"></div>
+
+
+<main class="page">
+
+
+  <!-- ===================================================
+       INTRO
+  ==================================================== -->
+
+  <section class="intro">
+
+    <span class="eyebrow">
+      Food &amp; Dining
+    </span>
+
+    <h1>
+      Explore Food &amp;<br>
+      Dining Options
+    </h1>
+
+    <p>
+      Discover convenient food options and explore
+      what's available when you're looking for
+      something delicious for your next meal.
+    </p>
+
+
+    
+
+  </section>
+
+
+
+  <!-- ===================================================
+       OFFER CARD
+  ==================================================== -->
+
+  <section class="card">
+
+
+    <div class="card-content">
+
+      <h2>
+        Looking for something
+        good to eat?
+      </h2>
+
+      <p>
+        Review the information below and continue
+        to the partner page to explore current food
+        and dining options.
+      </p>
+
+    </div>
+
+
+    <!-- INFO -->
+
+    <div class="info-box">
+
+
+      <div class="info-item">
+
+        <span class="info-bullet">
+          •
+        </span>
+
+        <span>
+          Explore available food and dining
+          options in your area.
+        </span>
+
+      </div>
+
+
+      <div class="info-item">
+
+        <span class="info-bullet">
+          •
+        </span>
+
+        <span>
+          Browse available choices and select
+          an option that fits your plans.
+        </span>
+
+      </div>
+
+
+      <div class="info-item">
+
+        <span class="info-bullet">
+          •
+        </span>
+
+        <span>
+          Availability and eligibility may vary
+          by location, including the US, UK,
+          AU &amp; CA.
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+    <!-- =================================================
+         CPA CTA
+    ================================================== -->
+
+    <a
+      href="https://linkthem.net/aff_c?offer_id=455&aff_id=2281"
+      class="cta"
+      target="_blank"
+      rel="noopener noreferrer"
+      referrerpolicy="no-referrer"
+    >
+
+      <span>
+        Explore Food Options
+      </span>
+
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+
+        <line
+          x1="5"
+          y1="12"
+          x2="19"
+          y2="12"
+        ></line>
+
+        <polyline
+          points="12 5 19 12 12 19"
+        ></polyline>
+
+      </svg>
+
+    </a>
+
+
+    <p class="external-note">
+      Notice: You are leaving Evermere Journal to
+      visit an independent external partner page
+      where additional steps may be required.
+    </p>
+
+  </section>
+
+
+  <!-- ===================================================
+       DISCLOSURE
+  ==================================================== -->
+
+  <p class="disclosure">
+    Evermere Journal is an independent lifestyle
+    publication. Availability, eligibility, pricing,
+    delivery areas, and promotional details may vary
+    by location and are provided by third-party
+    partners.
+  </p>
+
+
+</main>
+
+
+<!-- =====================================================
+     SHARED FOOTER
+===================================================== -->
+
+<div id="footer"></div>
+
+
+<!-- =====================================================
+     HEADER + FOOTER JS
+===================================================== -->
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

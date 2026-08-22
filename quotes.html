@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+
+<meta
+name="description"
+content="Explore thoughtful quotes, reflections, wisdom, perspective, solitude, courage, and simple ideas for living with greater intention at Evermere Journal."
+
+>
+
+  <meta name="theme-color" content="#F1F0EB">
+
+  <title>Quotes — Evermere Journal</title>
+
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%23252725'/%3E%3Cpath d='M68 17C49 21 34 33 30 50c-4 17 4 28 18 34 1-16 7-30 20-42-8 11-12 22-12 37 14-7 22-19 22-37 0-10-3-19-10-25z' fill='%23e5e5dc'/%3E%3C/svg%3E"
+  >
+
+  <style>
+
+    @import url(
+      'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap'
+    );
+
+
+    /* =====================================================
+       ROOT
+    ===================================================== */
+
+    :root {
+
+      --dark: #302F2B;
+      --soft-dark: #514F49;
+
+      --ivory: #F1F0EB;
+      --paper: #FBFAF7;
+
+      --sage: #777B6D;
+      --olive: #969887;
+
+      --body: #74736D;
+      --muted: #9A9992;
+
+      --stone: #D8D5CA;
+
+      --line: rgba(48,47,43,.11);
+
+    }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: var(--paper);
+
+      color: var(--dark);
+
+      font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+      -webkit-font-smoothing: antialiased;
+
+      overflow-x: hidden;
+
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .quote-hero {
+
+      position: relative;
+
+      overflow: hidden;
+
+      background: var(--ivory);
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .quote-hero-inner {
+
+      width:
+        min(1220px, calc(100% - 50px));
+
+      min-height: 525px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        1.05fr .95fr;
+
+      align-items: center;
+
+      gap: 75px;
+
+      padding: 80px 0;
+
+    }
+
+
+    .quote-hero-copy {
+      max-width: 670px;
+    }
+
+
+    .quote-eyebrow {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin-bottom: 24px;
+
+      color: var(--sage);
+
+      font-size: 9px;
+
+      font-weight: 600;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .quote-eyebrow::before {
+
+      content: "";
+
+      width: 30px;
+
+      height: 1px;
+
+      background: var(--sage);
+
+    }
+
+
+    .quote-hero h1 {
+
+      max-width: 720px;
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(58px, 7vw, 92px);
+
+      font-weight: 400;
+
+      line-height: .94;
+
+      letter-spacing: -2px;
+
+    }
+
+
+    .quote-hero h1 em {
+
+      color: var(--sage);
+
+      font-weight: 400;
+
+    }
+
+
+    .quote-hero-text {
+
+      max-width: 550px;
+
+      margin-top: 28px;
+
+      color: var(--body);
+
+      font-size: 14px;
+
+      line-height: 1.9;
+
+    }
+
+
+    /* =====================================================
+       HERO QUOTE ART
+    ===================================================== */
+
+    .quote-hero-art {
+
+      position: relative;
+
+      min-height: 360px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+    .quote-circle {
+
+      position: relative;
+
+      width:
+        min(340px, 75vw);
+
+      aspect-ratio: 1;
+
+      border-radius: 50%;
+
+      background: #D9D8CE;
+
+      box-shadow:
+        0 28px 70px rgba(48,47,43,.09);
+
+    }
+
+
+    .quote-circle::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 12%;
+
+      border:
+        1px solid rgba(48,47,43,.14);
+
+      border-radius: 50%;
+
+    }
+
+
+    .quote-circle::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 47%;
+
+      height: 47%;
+
+      left: 26.5%;
+
+      top: 26.5%;
+
+      border:
+        1px solid rgba(48,47,43,.11);
+
+      border-radius: 50%;
+
+    }
+
+
+    .quote-mark {
+
+      position: absolute;
+
+      inset: 0;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: rgba(48,47,43,.43);
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size: 105px;
+
+      line-height: 1;
+
+    }
+
+
+    .quote-floating-note {
+
+      position: absolute;
+
+      right: 2%;
+
+      bottom: 9%;
+
+      width: 158px;
+
+      padding: 19px;
+
+      background:
+        rgba(251,250,247,.96);
+
+      border:
+        1px solid rgba(48,47,43,.08);
+
+      box-shadow:
+        0 15px 35px rgba(48,47,43,.09);
+
+    }
+
+
+    .quote-floating-note span {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: var(--sage);
+
+      font-size: 7px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .quote-floating-note strong {
+
+      color: var(--dark);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 19px;
+
+      font-weight: 400;
+
+      line-height: 1.15;
+
+    }
+
+
+    /* =====================================================
+       CONTENT
+    ===================================================== */
+
+    .quote-content {
+
+      width:
+        min(1220px, calc(100% - 50px));
+
+      margin: auto;
+
+      padding:
+        95px 0 115px;
+
+    }
+
+
+    .quote-section-heading {
+
+      display: flex;
+
+      align-items: flex-end;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 45px;
+
+    }
+
+
+    .quote-section-heading h2 {
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 45px;
+
+      font-weight: 400;
+
+      line-height: 1;
+
+    }
+
+
+    .quote-section-heading p {
+
+      max-width: 410px;
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 1.7;
+
+      text-align: right;
+
+    }
+
+
+    /* =====================================================
+       ARTICLE GRID
+    ===================================================== */
+
+    .quote-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+
+    }
+
+
+    /* =====================================================
+       ARTICLE CARD
+    ===================================================== */
+
+    .quote-card {
+
+      display: flex;
+
+      flex-direction: column;
+
+      min-width: 0;
+
+      background: #F8F7F3;
+
+      border:
+        1px solid rgba(48,47,43,.08);
+
+      transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+    }
+
+
+    .quote-card:hover {
+
+      transform:
+        translateY(-6px);
+
+      box-shadow:
+        0 18px 45px rgba(48,47,43,.08);
+
+    }
+
+
+    /* =====================================================
+       CARD VISUAL
+    ===================================================== */
+
+    .quote-card-visual {
+
+      position: relative;
+
+      height: 235px;
+
+      overflow: hidden;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      cursor: pointer;
+
+    }
+
+
+    .quote-card:nth-child(1)
+    .quote-card-visual {
+      background: #D9D8CF;
+    }
+
+
+    .quote-card:nth-child(2)
+    .quote-card-visual {
+      background: #D5D5CD;
+    }
+
+
+    .quote-card:nth-child(3)
+    .quote-card-visual {
+      background: #DDD9CE;
+    }
+
+
+    .quote-card:nth-child(4)
+    .quote-card-visual {
+      background: #D2D5CC;
+    }
+
+
+    .quote-card:nth-child(5)
+    .quote-card-visual {
+      background: #DCD8CC;
+    }
+
+
+    .quote-card:nth-child(6)
+    .quote-card-visual {
+      background: #D5D7CF;
+    }
+
+
+    .quote-card-visual::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 145px;
+
+      height: 145px;
+
+      border:
+        1px solid rgba(48,47,43,.14);
+
+      border-radius: 50%;
+
+      transition:
+        transform .5s ease;
+
+    }
+
+
+    .quote-card-visual::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 90px;
+
+      height: 90px;
+
+      border:
+        1px solid rgba(48,47,43,.10);
+
+      border-radius: 50%;
+
+      transition:
+        transform .5s ease;
+
+    }
+
+
+    .quote-card:hover
+    .quote-card-visual::before {
+
+      transform:
+        scale(1.08);
+
+    }
+
+
+    .quote-card:hover
+    .quote-card-visual::after {
+
+      transform:
+        scale(.92);
+
+    }
+
+
+    .quote-card-number {
+
+      position: absolute;
+
+      top: 18px;
+
+      left: 19px;
+
+      z-index: 2;
+
+      color: rgba(48,47,43,.5);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+    }
+
+
+    .quote-card-category {
+
+      position: absolute;
+
+      top: 18px;
+
+      right: 18px;
+
+      z-index: 2;
+
+      color: rgba(48,47,43,.55);
+
+      font-size: 7px;
+
+      font-weight: 600;
+
+      letter-spacing: 1.8px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .quote-card-mark {
+
+      position: relative;
+
+      z-index: 2;
+
+      color: rgba(48,47,43,.40);
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size: 75px;
+
+      line-height: .7;
+
+    }
+
+
+    /* =====================================================
+       CARD BODY
+    ===================================================== */
+
+    .quote-card-body {
+
+      min-height: 235px;
+
+      padding:
+        27px 27px 29px;
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+
+    .quote-card-title {
+
+      display: block;
+
+      margin-bottom: 13px;
+
+      color: var(--dark);
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size: 27px;
+
+      font-weight: 400;
+
+      line-height: 1.12;
+
+      text-decoration: none;
+
+      transition:
+        color .25s ease;
+
+    }
+
+
+    .quote-card-title:hover {
+
+      color: var(--sage);
+
+    }
+
+
+    .quote-card-body p {
+
+      color: var(--body);
+
+      font-size: 11px;
+
+      line-height: 1.8;
+
+    }
+
+
+    .quote-card-link {
+
+      display: inline-block;
+
+      margin-top: auto;
+
+      padding-top: 22px;
+
+      color: var(--sage);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .quote-card-link span {
+
+      display: inline-block;
+
+      margin-left: 6px;
+
+      transition:
+        transform .25s ease;
+
+    }
+
+
+    .quote-card-link:hover span {
+
+      transform:
+        translateX(5px);
+
+    }
+
+
+    /* =====================================================
+       EDITORIAL NOTE
+    ===================================================== */
+
+    .quote-note {
+
+      margin-top: 80px;
+
+      padding:
+        55px 60px;
+
+      background: var(--ivory);
+
+      border:
+        1px solid var(--line);
+
+      text-align: center;
+
+    }
+
+
+    .quote-note-label {
+
+      margin-bottom: 17px;
+
+      color: var(--sage);
+
+      font-size: 8px;
+
+      font-weight: 600;
+
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .quote-note h2 {
+
+      max-width: 720px;
+
+      margin: auto;
+
+      font-family:
+        "DM Serif Display",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(30px, 4vw, 46px);
+
+      font-weight: 400;
+
+      line-height: 1.15;
+
+    }
+
+
+    .quote-note p {
+
+      max-width: 580px;
+
+      margin: 18px auto 0;
+
+      color: var(--body);
+
+      font-size: 12px;
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .quote-hero-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding:
+          70px 0 80px;
+
+      }
+
+
+      .quote-hero-copy {
+        max-width: 700px;
+      }
+
+
+      .quote-hero-art {
+        min-height: 300px;
+      }
+
+
+      .quote-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 600px) {
+
+      .quote-hero-inner {
+
+        width:
+          calc(100% - 30px);
+
+        padding:
+          58px 0 65px;
+
+      }
+
+
+      .quote-eyebrow {
+
+        margin-bottom: 19px;
+
+      }
+
+
+      .quote-hero h1 {
+
+        font-size: 57px;
+
+        letter-spacing: -1.5px;
+
+      }
+
+
+      .quote-hero-text {
+
+        margin-top: 22px;
+
+        font-size: 13px;
+
+        line-height: 1.8;
+
+      }
+
+
+      .quote-hero-art {
+
+        min-height: 260px;
+
+      }
+
+
+      .quote-circle {
+
+        width: 250px;
+
+      }
+
+
+      .quote-mark {
+
+        font-size: 80px;
+
+      }
+
+
+      .quote-floating-note {
+
+        right: 0;
+
+        bottom: 0;
+
+        width: 125px;
+
+        padding: 14px;
+
+      }
+
+
+      .quote-floating-note strong {
+
+        font-size: 16px;
+
+      }
+
+
+      .quote-content {
+
+        width:
+          calc(100% - 30px);
+
+        padding:
+          65px 0 80px;
+
+      }
+
+
+      .quote-section-heading {
+
+        display: block;
+
+        margin-bottom: 30px;
+
+      }
+
+
+      .quote-section-heading h2 {
+
+        font-size: 38px;
+
+      }
+
+
+      .quote-section-heading p {
+
+        margin-top: 14px;
+
+        text-align: left;
+
+        font-size: 10.5px;
+
+      }
+
+
+      .quote-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+      }
+
+
+      .quote-card-visual {
+
+        height: 220px;
+
+      }
+
+
+      .quote-card-body {
+
+        min-height: 215px;
+
+        padding: 24px;
+
+      }
+
+
+      .quote-card-title {
+
+        font-size: 25px;
+
+      }
+
+
+      .quote-card-body p {
+
+        font-size: 11px;
+
+      }
+
+
+      .quote-note {
+
+        margin-top: 55px;
+
+        padding:
+          40px 22px;
+
+      }
+
+
+      .quote-note h2 {
+
+        font-size: 31px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       SMALL PHONES
+    ===================================================== */
+
+    @media (max-width: 375px) {
+
+      .quote-hero-inner,
+      .quote-content {
+
+        width:
+          calc(100% - 26px);
+
+      }
+
+
+      .quote-hero h1 {
+
+        font-size: 51px;
+
+      }
+
+
+      .quote-circle {
+
+        width: 225px;
+
+      }
+
+
+      .quote-floating-note {
+
+        width: 115px;
+
+      }
+
+
+      .quote-card-body {
+
+        padding: 22px;
+
+      }
+
+
+      .quote-card-title {
+
+        font-size: 24px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       REDUCED MOTION
+    ===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .quote-card,
+      .quote-card-title,
+      .quote-card-link span,
+      .quote-card-visual::before,
+      .quote-card-visual::after {
+
+        transition: none;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
+  <div id="header"></div>
+
+  <!-- =====================================================
+       MAIN
+  ===================================================== -->
+
+  <main>
+
+
+<!-- ===================================================
+     HERO
+=================================================== -->
+
+<section class="quote-hero">
+
+  <div class="quote-hero-inner">
+
+
+    <div class="quote-hero-copy">
+
+      <div class="quote-eyebrow">
+        The Quote Journal
+      </div>
+
+
+      <h1>
+        Words worth
+        <em>keeping.</em>
+      </h1>
+
+
+      <p class="quote-hero-text">
+        Thoughtful words can change the way we see
+        an ordinary day. Explore reflections on
+        wisdom, courage, solitude, perspective,
+        and living with intention.
+      </p>
+
+    </div>
+
+
+    <div class="quote-hero-art">
+
+      <div class="quote-circle">
+
+        <span class="quote-mark">
+          “
+        </span>
+
+      </div>
+
+
+      <div class="quote-floating-note">
+
+        <span>
+          A quiet thought
+        </span>
+
+        <strong>
+          Some words stay
+          long after we read them.
+        </strong>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- ===================================================
+     ARTICLES
+=================================================== -->
+
+<section class="quote-content">
+
+
+  <div class="quote-section-heading">
+
+    <h2>
+      Words &amp; perspective
+    </h2>
+
+
+    <p>
+      Reflections and ideas about the things that
+      quietly shape a meaningful life — from wisdom
+      and solitude to courage and perspective.
+    </p>
+
+  </div>
+
+
+  <div class="quote-grid">
+
+
+    <!-- =================================================
+         ARTICLE 01
+    ================================================= -->
+
+    <article class="quote-card">
+
+      <a
+        href="wisdom-art-of-quiet-observation.html"
+        class="quote-card-visual"
+        aria-label="Read Wisdom — The Art of Quiet Observation"
+      >
+
+        <span class="quote-card-number">
+          01
+        </span>
+
+        <span class="quote-card-category">
+          Wisdom
+        </span>
+
+        <span class="quote-card-mark">
+          “
+        </span>
+
+      </a>
+
+
+      <div class="quote-card-body">
+
+        <a
+          href="wisdom-art-of-quiet-observation.html"
+          class="quote-card-title"
+        >
+          Wisdom — The Art of Quiet Observation
+        </a>
+
+
+        <p>
+          Sometimes the clearest understanding comes
+          not from speaking or searching, but from
+          slowing down enough to notice.
+        </p>
+
+
+        <a
+          href="wisdom-art-of-quiet-observation.html"
+          class="quote-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 02
+    ================================================= -->
+
+    <article class="quote-card">
+
+      <a
+        href="solitude-finding-strength-in-stillness.html"
+        class="quote-card-visual"
+        aria-label="Read Solitude — Finding Strength in Stillness"
+      >
+
+        <span class="quote-card-number">
+          02
+        </span>
+
+        <span class="quote-card-category">
+          Solitude
+        </span>
+
+        <span class="quote-card-mark">
+          “
+        </span>
+
+      </a>
+
+
+      <div class="quote-card-body">
+
+        <a
+          href="solitude-finding-strength-in-stillness.html"
+          class="quote-card-title"
+        >
+          Solitude — Finding Strength in Stillness
+        </a>
+
+
+        <p>
+          Quiet time alone can create space for
+          reflection, clarity, and a deeper understanding
+          of what actually matters.
+        </p>
+
+
+        <a
+          href="solitude-finding-strength-in-stillness.html"
+          class="quote-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 03
+    ================================================= -->
+
+    <article class="quote-card">
+
+      <a
+        href="the-value-of-slow-thinking.html"
+        class="quote-card-visual"
+        aria-label="Read The Value of Slow Thinking"
+      >
+
+        <span class="quote-card-number">
+          03
+        </span>
+
+        <span class="quote-card-category">
+          Reflection
+        </span>
+
+        <span class="quote-card-mark">
+          “
+        </span>
+
+      </a>
+
+
+      <div class="quote-card-body">
+
+        <a
+          href="the-value-of-slow-thinking.html"
+          class="quote-card-title"
+        >
+          The Value of Slow Thinking
+        </a>
+
+
+        <p>
+          In a world built around quick reactions,
+          taking time to think carefully can become
+          a quiet form of clarity.
+        </p>
+
+
+        <a
+          href="the-value-of-slow-thinking.html"
+          class="quote-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 04
+    ================================================= -->
+
+    <article class="quote-card">
+
+      <a
+        href="quiet-courage-in-everyday-life.html"
+        class="quote-card-visual"
+        aria-label="Read Quiet Courage in Everyday Life"
+      >
+
+        <span class="quote-card-number">
+          04
+        </span>
+
+        <span class="quote-card-category">
+          Courage
+        </span>
+
+        <span class="quote-card-mark">
+          “
+        </span>
+
+      </a>
+
+
+      <div class="quote-card-body">
+
+        <a
+          href="quiet-courage-in-everyday-life.html"
+          class="quote-card-title"
+        >
+          Quiet Courage in Everyday Life
+        </a>
+
+
+        <p>
+          Courage does not always look dramatic.
+          Sometimes it is simply choosing to continue,
+          begin again, or speak honestly.
+        </p>
+
+
+        <a
+          href="quiet-courage-in-everyday-life.html"
+          class="quote-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 05
+    ================================================= -->
+
+    <article class="quote-card">
+
+      <a
+        href="changing-the-way-we-see-things.html"
+        class="quote-card-visual"
+        aria-label="Read Changing the Way We See Things"
+      >
+
+        <span class="quote-card-number">
+          05
+        </span>
+
+        <span class="quote-card-category">
+          Perspective
+        </span>
+
+        <span class="quote-card-mark">
+          “
+        </span>
+
+      </a>
+
+
+      <div class="quote-card-body">
+
+        <a
+          href="changing-the-way-we-see-things.html"
+          class="quote-card-title"
+        >
+          Changing the Way We See Things
+        </a>
+
+
+        <p>
+          A different perspective can transform a
+          familiar situation without changing the
+          situation itself.
+        </p>
+
+
+        <a
+          href="changing-the-way-we-see-things.html"
+          class="quote-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- =================================================
+         ARTICLE 06
+    ================================================= -->
+
+    <article class="quote-card">
+
+      <a
+        href="small-thoughts-that-stay-with-us.html"
+        class="quote-card-visual"
+        aria-label="Read Small Thoughts That Stay With Us"
+      >
+
+        <span class="quote-card-number">
+          06
+        </span>
+
+        <span class="quote-card-category">
+          Life
+        </span>
+
+        <span class="quote-card-mark">
+          “
+        </span>
+
+      </a>
+
+
+      <div class="quote-card-body">
+
+        <a
+          href="small-thoughts-that-stay-with-us.html"
+          class="quote-card-title"
+        >
+          Small Thoughts That Stay With Us
+        </a>
+
+
+        <p>
+          Some of the most meaningful ideas are simple:
+          reminders we return to when life becomes
+          complicated or uncertain.
+        </p>
+
+
+        <a
+          href="small-thoughts-that-stay-with-us.html"
+          class="quote-card-link"
+        >
+          Read article
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+
+  <!-- =================================================
+       EDITORIAL NOTE
+  ================================================= -->
+
+  <div class="quote-note">
+
+    <div class="quote-note-label">
+      Evermere Perspective
+    </div>
+
+
+    <h2>
+      The right words can make
+      an ordinary moment feel new.
+    </h2>
+
+
+    <p>
+      Keep the thoughts that give you perspective,
+      bring you back to yourself, or simply make you
+      pause for a little longer.
+    </p>
+
+  </div>
+
+
+</section>
+
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+
+  <div id="footer"></div>
+
+  <!-- =====================================================
+       HEADER + FOOTER
+  ===================================================== -->
+
+  <script src="header.js"></script>
+
+  <script src="footer.js"></script>
+
+</body>
+</html>

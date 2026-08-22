@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>Effortless Everyday Outfit Ideas — Evermere Journal</title>
+
+<meta
+  name="description"
+  content="Simple combinations and styling thoughts for getting dressed beautifully without spending too much time thinking about it."
+>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap');
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F2EFEA;
+  --warm:#ECE8E1;
+  --clay:#9A806E;
+  --clay-dark:#806756;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--paper);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.article-hero{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+
+.article-hero-inner{
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+  color:var(--clay-dark);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.article-category::before,
+.article-category::after{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--clay);
+}
+
+.article-hero h1{
+  max-width:850px;
+  margin:auto;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(46px,6vw,74px);
+  font-weight:400;
+  line-height:1.04;
+  letter-spacing:-1.4px;
+}
+
+.article-intro{
+  max-width:650px;
+  margin:25px auto 0;
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.article-meta span{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.article-meta span:not(:last-child)::after{
+  content:"•";
+  color:var(--clay);
+}
+
+
+/* =====================================================
+   ARTICLE
+===================================================== */
+
+.article-wrap{
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+}
+
+.article-body{
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+}
+
+.article-body p{
+  margin-bottom:27px;
+}
+
+.article-body .lead{
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.55;
+  margin-bottom:38px;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+  color:var(--dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+
+/* =====================================================
+   OUTFIT IDEAS BOX
+===================================================== */
+
+.outfit-list{
+  margin:38px 0 45px;
+  padding:30px 32px;
+  background:var(--warm);
+  border:1px solid var(--line);
+}
+
+.outfit-list-title{
+  margin-bottom:18px;
+  color:var(--dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.outfit-list ul{
+  margin-left:18px;
+}
+
+.outfit-list li{
+  margin-bottom:10px;
+  padding-left:5px;
+  color:var(--body);
+  font-size:12px;
+  line-height:1.8;
+}
+
+.outfit-list li:last-child{
+  margin-bottom:0;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.article-cta{
+  position:relative;
+  overflow:hidden;
+  margin:42px 0 58px;
+  padding:48px 45px;
+  background:#34332E;
+  color:#F7F4EC;
+  text-align:center;
+}
+
+.article-cta::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-70px;
+  top:-100px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.article-cta::after{
+  content:"";
+  position:absolute;
+  width:140px;
+  height:140px;
+  left:-55px;
+  bottom:-70px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.cta-label{
+  position:relative;
+  z-index:2;
+  margin-bottom:13px;
+  color:#C2B3A6;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.article-cta h2{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+  margin:auto;
+  color:#F7F4EC;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(30px,4vw,43px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-cta p{
+  position:relative;
+  z-index:2;
+  max-width:530px;
+  margin:15px auto 25px;
+  color:#C6C4BC;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.cta-button{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:45px;
+  padding:0 25px;
+  background:#F2EFE7;
+  color:#34332E;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  background:#fff;
+}
+
+.cta-button span{
+  font-size:14px;
+}
+
+
+/* =====================================================
+   STYLE NOTE
+===================================================== */
+
+.article-tip{
+  position:relative;
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+  background:#F1EEE8;
+  border-left:3px solid var(--clay);
+}
+
+.article-tip::before{
+  content:"“";
+  position:absolute;
+  left:14px;
+  top:20px;
+  color:rgba(154,128,110,.45);
+  font-family:Georgia,serif;
+  font-size:40px;
+}
+
+.article-tip p{
+  margin:0;
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:20px;
+  line-height:1.5;
+}
+
+
+/* =====================================================
+   BACK LINK
+===================================================== */
+
+.back-link{
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+}
+
+.back-link a{
+  color:var(--clay-dark);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.back-link a:hover{
+  color:var(--dark);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+  }
+
+  .article-category{
+    margin-bottom:19px;
+  }
+
+  .article-hero h1{
+    font-size:43px;
+    line-height:1.06;
+    letter-spacing:-1px;
+  }
+
+  .article-intro{
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .article-meta{
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+  }
+
+  .article-wrap{
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+  }
+
+  .article-body{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-body .lead{
+    font-size:22px;
+    line-height:1.5;
+  }
+
+  .article-body h2{
+    margin-top:45px;
+    font-size:32px;
+  }
+
+  .outfit-list{
+    padding:25px 22px;
+  }
+
+  .outfit-list li{
+    font-size:11.5px;
+  }
+
+  .article-tip{
+    padding:28px 24px 28px 40px;
+  }
+
+  .article-tip p{
+    font-size:18px;
+  }
+
+  .article-cta{
+    margin:38px 0 48px;
+    padding:40px 22px;
+  }
+
+  .article-cta h2{
+    font-size:31px;
+  }
+
+  .article-cta p{
+    font-size:10.5px;
+  }
+
+  .cta-button{
+    width:100%;
+  }
+
+}
+
+@media(max-width:375px){
+
+  .article-hero h1{
+    font-size:38px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta-button{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SHARED HEADER
+===================================================== -->
+
+<div id="header"></div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Fashion &amp; Style
+    </div>
+
+
+    <h1>
+      Effortless Everyday
+      Outfit Ideas
+    </h1>
+
+
+    <p class="article-intro">
+
+      Simple combinations and styling thoughts for
+      getting dressed beautifully without spending
+      too much time thinking about it.
+
+    </p>
+
+
+    <div class="article-meta">
+
+      <span>
+        Fashion
+      </span>
+
+      <span>
+        7 min read
+      </span>
+
+      <span>
+        Evermere Journal
+      </span>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     ARTICLE
+===================================================== -->
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+
+      <p class="lead">
+
+        Getting dressed well does not always require
+        a carefully planned outfit. Often, the easiest
+        looks come from a few dependable pieces that
+        already work naturally together.
+
+      </p>
+
+
+      <p>
+
+        The idea of effortless style is less about
+        following a particular formula and more about
+        knowing what makes you feel comfortable. When
+        your favourite pieces are easy to combine,
+        getting ready becomes much simpler.
+
+      </p>
+
+
+      <p>
+
+        A useful everyday wardrobe gives you enough
+        flexibility to create different looks without
+        making every morning feel like a styling
+        project.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 01
+      ================================================== -->
+
+      <h2>
+        Begin with one reliable piece
+      </h2>
+
+
+      <p>
+
+        Instead of starting an outfit by thinking about
+        everything at once, choose one piece you already
+        know you enjoy wearing. It could be a favourite
+        pair of trousers, a relaxed shirt, a simple
+        dress, or a lightweight jacket.
+
+      </p>
+
+
+      <p>
+
+        Once that piece is chosen, the rest of the outfit
+        can be built around it. This small change removes
+        some of the decision-making that can make getting
+        dressed feel unnecessarily complicated.
+
+      </p>
+
+
+      <div class="outfit-list">
+
+        <div class="outfit-list-title">
+          Easy combinations to try
+        </div>
+
+        <ul>
+
+          <li>
+            Relaxed trousers with a simple fitted top.
+          </li>
+
+          <li>
+            Straight-leg denim with a soft knit or shirt.
+          </li>
+
+          <li>
+            A simple dress paired with understated shoes.
+          </li>
+
+          <li>
+            A basic outfit finished with one structured layer.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- =================================================
+           SECTION 02
+      ================================================== -->
+
+      <h2>
+        Keep the proportions interesting
+      </h2>
+
+
+      <p>
+
+        An outfit can feel considered even when the
+        individual pieces are very simple. One of the
+        easiest ways to achieve this is to play with
+        proportions.
+
+      </p>
+
+
+      <p>
+
+        Try pairing something relaxed with something
+        slightly more defined. A loose shirt can work
+        beautifully with straighter trousers, while a
+        fitted top can balance a wider-leg silhouette.
+
+      </p>
+
+
+      <p>
+
+        The goal is not to follow strict rules. It is
+        simply to create a little visual balance between
+        the pieces you choose.
+
+      </p>
+
+
+
+      <!-- =================================================
+           CTA — END OF SECTION 02
+      ================================================== -->
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          Refresh Your Everyday Style
+        </div>
+
+
+        <h2>
+          A few new pieces
+          can change the whole mood.
+        </h2>
+
+
+        <p>
+
+          Explore current fashion selections and find
+          simple pieces that can work naturally with
+          your everyday wardrobe.
+
+        </p>
+
+
+        <a
+          href="fashionidea.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+
+          Explore Fashion Finds
+
+          <span>→</span>
+
+        </a>
+
+      </aside>
+
+
+
+      <!-- =================================================
+           SECTION 03
+      ================================================== -->
+
+      <h2>
+        Let colour do some of the work
+      </h2>
+
+
+      <p>
+
+        A small, familiar colour palette can make
+        everyday styling much easier. When several
+        pieces naturally work together, you can mix
+        and match without spending much time deciding.
+
+      </p>
+
+
+      <p>
+
+        This does not mean keeping everything neutral.
+        A favourite colour can become the starting point,
+        while softer shades help create balance around it.
+
+      </p>
+
+
+
+      <!-- =================================================
+           STYLE NOTE
+      ================================================== -->
+
+      <div class="article-tip">
+
+        <p>
+
+          The easiest outfit is often the one you already
+          know works — comfortable, familiar, and quietly
+          personal.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- =================================================
+           SECTION 04
+      ================================================== -->
+
+      <h2>
+        Use one finishing detail
+      </h2>
+
+
+      <p>
+
+        Sometimes an outfit only needs one final detail
+        to feel complete. A simple bag, a pair of
+        sunglasses, a watch, a scarf, or a favourite
+        pair of earrings can change the overall feeling
+        without adding much effort.
+
+      </p>
+
+
+      <p>
+
+        Choosing just one noticeable accessory can also
+        keep an everyday look from becoming visually
+        complicated.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 05
+      ================================================== -->
+
+      <h2>
+        Repeat the combinations you love
+      </h2>
+
+
+      <p>
+
+        There is no need to create a completely new
+        outfit every day. If a particular combination
+        feels good, let it become part of your personal
+        uniform.
+
+      </p>
+
+
+      <p>
+
+        You can change one element the next time you
+        wear it — different shoes, another layer, or
+        a new accessory — while keeping the basic
+        combination familiar.
+
+      </p>
+
+
+
+      <!-- =================================================
+           SECTION 06
+      ================================================== -->
+
+      <h2>
+        Dress for your actual day
+      </h2>
+
+
+      <p>
+
+        The best everyday outfit is one that makes sense
+        for what you are actually doing. A beautiful
+        combination will not feel effortless if it
+        constantly needs adjusting or does not suit
+        your plans.
+
+      </p>
+
+
+      <p>
+
+        Consider the weather, how much walking you will
+        do, where you are going, and how comfortable
+        you want to feel. Practical choices can still
+        look polished.
+
+      </p>
+
+
+
+      <!-- =================================================
+           CONCLUSION
+      ================================================== -->
+
+      <h2>
+        Make getting dressed easier
+      </h2>
+
+
+      <p>
+
+        Effortless style is ultimately about reducing
+        unnecessary decisions. Keep a few combinations
+        you trust, understand which pieces work well
+        together, and allow your personal preferences
+        to guide the process.
+
+      </p>
+
+
+      <p>
+
+        When your wardrobe supports your everyday life,
+        getting dressed can become one of the quieter
+        parts of the day — simple, comfortable, and
+        still distinctly your own.
+
+      </p>
+
+
+
+      <!-- =================================================
+           BACK LINK
+      ================================================== -->
+
+      <div class="back-link">
+
+        <a href="fashion.html">
+          ← Back to Fashion
+        </a>
+
+      </div>
+
+
+    </article>
+
+  </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     SHARED FOOTER
+===================================================== -->
+
+<div id="footer"></div>
+
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>
