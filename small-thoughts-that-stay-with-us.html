@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>Small Thoughts That Stay With Us | Evermere Journal</title>
+
+<meta
+  name="description"
+  content="Some of the most meaningful ideas are simple: reminders we return to when life becomes complicated or uncertain."
+>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap');
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F2EFEA;
+  --warm:#ECE8E1;
+  --clay:#9A806E;
+  --clay-dark:#806756;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--paper);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+.article-hero{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+
+.article-hero-inner{
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+  color:var(--clay-dark);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.article-category::before,
+.article-category::after{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--clay);
+}
+
+.article-hero h1{
+  max-width:850px;
+  margin:auto;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(46px,6vw,74px);
+  font-weight:400;
+  line-height:1.05;
+  letter-spacing:-1.3px;
+}
+
+.article-intro{
+  max-width:650px;
+  margin:25px auto 0;
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.article-meta span{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.article-meta span:not(:last-child)::after{
+  content:"•";
+  color:var(--clay);
+}
+
+.article-wrap{
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+}
+
+.article-body{
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+}
+
+.article-body p{
+  margin-bottom:27px;
+}
+
+.article-body .lead{
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.55;
+  margin-bottom:38px;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+  color:var(--dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+.observation-list{
+  margin:38px 0 45px;
+  padding:30px 32px;
+  background:var(--warm);
+  border:1px solid var(--line);
+}
+
+.observation-list-title{
+  margin-bottom:18px;
+  color:var(--dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.observation-list ul{
+  margin-left:18px;
+}
+
+.observation-list li{
+  margin-bottom:10px;
+  padding-left:5px;
+  color:var(--body);
+  font-size:12px;
+  line-height:1.8;
+}
+
+.observation-list li:last-child{
+  margin-bottom:0;
+}
+
+.article-cta{
+  position:relative;
+  overflow:hidden;
+  margin:42px 0 58px;
+  padding:48px 45px;
+  background:#34332E;
+  color:#F7F4EC;
+  text-align:center;
+}
+
+.article-cta::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-70px;
+  top:-100px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.article-cta::after{
+  content:"";
+  position:absolute;
+  width:140px;
+  height:140px;
+  left:-55px;
+  bottom:-70px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.cta-label{
+  position:relative;
+  z-index:2;
+  margin-bottom:13px;
+  color:#C2B3A6;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.article-cta h2{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+  margin:auto;
+  color:#F7F4EC;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(30px,4vw,43px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-cta p{
+  position:relative;
+  z-index:2;
+  max-width:530px;
+  margin:15px auto 25px;
+  color:#C6C4BC;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.cta-button{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:45px;
+  padding:0 25px;
+  background:#F2EFE7;
+  color:#34332E;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  transition:transform .25s ease,background .25s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  background:#fff;
+}
+
+.cta-button span{
+  font-size:14px;
+}
+
+.article-tip{
+  position:relative;
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+  background:#F1EEE8;
+  border-left:3px solid var(--clay);
+}
+
+.article-tip::before{
+  content:"“";
+  position:absolute;
+  left:14px;
+  top:20px;
+  color:rgba(154,128,110,.45);
+  font-family:Georgia,serif;
+  font-size:40px;
+}
+
+.article-tip p{
+  margin:0;
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:20px;
+  line-height:1.5;
+}
+
+.back-link{
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+}
+
+.back-link a{
+  color:var(--clay-dark);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.back-link a:hover{
+  color:var(--dark);
+}
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+  }
+
+  .article-category{
+    margin-bottom:19px;
+  }
+
+  .article-hero h1{
+    font-size:43px;
+    line-height:1.06;
+    letter-spacing:-1px;
+  }
+
+  .article-intro{
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .article-meta{
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+  }
+
+  .article-wrap{
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+  }
+
+  .article-body{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-body .lead{
+    font-size:22px;
+    line-height:1.5;
+  }
+
+  .article-body h2{
+    margin-top:45px;
+    font-size:32px;
+  }
+
+  .observation-list{
+    padding:25px 22px;
+  }
+
+  .observation-list li{
+    font-size:11.5px;
+  }
+
+  .article-tip{
+    padding:28px 24px 28px 40px;
+  }
+
+  .article-tip p{
+    font-size:18px;
+  }
+
+  .article-cta{
+    margin:38px 0 48px;
+    padding:40px 22px;
+  }
+
+  .article-cta h2{
+    font-size:31px;
+  }
+
+  .article-cta p{
+    font-size:10.5px;
+  }
+
+  .cta-button{
+    width:100%;
+  }
+
+}
+
+@media(max-width:375px){
+
+  .article-hero h1{
+    font-size:38px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta-button{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Life
+    </div>
+
+    <h1>
+      Small Thoughts That
+      Stay With Us
+    </h1>
+
+    <p class="article-intro">
+      Some of the most meaningful ideas are simple:
+      reminders we return to when life becomes
+      complicated or uncertain.
+    </p>
+
+    <div class="article-meta">
+
+      <span>
+        Life
+      </span>
+
+      <span>
+        7 min read
+      </span>
+
+      <span>
+        Evermere Journal
+      </span>
+
+    </div>
+
+  </div>
+
+</header>
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+      <p class="lead">
+        Not every thought needs to be complicated to be
+        meaningful. Sometimes one simple idea stays with
+        us because we find ourselves returning to it again
+        and again.
+      </p>
+
+      <p>
+        Life becomes full of information, advice, plans,
+        conversations, and decisions. Among all of that
+        noise, a small reminder can sometimes feel
+        surprisingly steady.
+      </p>
+
+      <p>
+        These thoughts are rarely dramatic. They might be
+        something someone said years ago, a lesson learned
+        from experience, or a quiet observation that became
+        more meaningful with time.
+      </p>
+
+      <h2>
+        Simple ideas can have long lives
+      </h2>
+
+      <p>
+        A complicated explanation can be forgotten quickly,
+        while a short sentence can return at exactly the
+        moment we need it.
+      </p>
+
+      <p>
+        Perhaps that is because simple ideas are easy to
+        carry. They can stay in the background until a
+        familiar situation brings them forward again.
+      </p>
+
+      <div class="observation-list">
+
+        <div class="observation-list-title">
+          Thoughts worth returning to
+        </div>
+
+        <ul>
+
+          <li>
+            You do not have to solve everything today.
+          </li>
+
+          <li>
+            Small progress still counts as progress.
+          </li>
+
+          <li>
+            A pause can be more useful than an immediate answer.
+          </li>
+
+          <li>
+            Familiar does not always mean finished.
+          </li>
+
+        </ul>
+
+      </div>
+
+      <h2>
+        Meaning often grows with experience
+      </h2>
+
+      <p>
+        A piece of advice may sound ordinary when we first
+        hear it. Years later, after living through something
+        similar, the same words can suddenly make sense.
+      </p>
+
+      <p>
+        The idea itself may not have changed. We have.
+        Experience gives old thoughts new places to settle.
+      </p>
+
+      <p>
+        This is one reason certain sentences seem to become
+        more valuable as time passes.
+      </p>
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          Explore An Available Option
+        </div>
+
+        <h2>
+          Take a moment to
+          see what is available.
+        </h2>
+
+        <p>
+          If you are interested in exploring a
+           opportunity, you can review
+          the information provided on the partner page
+          and decide whether it is relevant to you.
+        </p>
+
+        <a
+          href="quoteidea.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+          View Available Details
+          <span>→</span>
+        </a>
+
+      </aside>
+
+      <h2>
+        Keep the thoughts that help
+      </h2>
+
+      <p>
+        Not every piece of advice deserves to become a
+        personal rule. Some ideas are useful for a season,
+        while others continue to make sense long after the
+        original situation has passed.
+      </p>
+
+      <p>
+        The useful part is noticing which thoughts bring
+        clarity, patience, perspective, or kindness when
+        life becomes more complicated.
+      </p>
+
+      <div class="article-tip">
+
+        <p>
+          Some thoughts stay with us not because they are
+          loud, but because they quietly become part of
+          how we move through life.
+        </p>
+
+      </div>
+
+      <h2>
+        Let reminders become habits
+      </h2>
+
+      <p>
+        A good thought becomes more meaningful when it
+        changes something small in the way we act. A reminder
+        to slow down matters more when we actually pause.
+      </p>
+
+      <p>
+        We do not need to turn every insight into a large
+        routine. Sometimes remembering one small idea at
+        the right moment is enough.
+      </p>
+
+      <h2>
+        Return when life feels crowded
+      </h2>
+
+      <p>
+        When life becomes busy, simple thoughts can provide
+        a useful point of reference. They do not remove the
+        difficult parts, but they can help us remember what
+        deserves attention.
+      </p>
+
+      <p>
+        A familiar reminder can become a quiet way of
+        returning to ourselves when everything around us
+        feels demanding.
+      </p>
+
+      <h2>
+        Some lessons need time
+      </h2>
+
+      <p>
+        We do not always recognise the lesson in the moment.
+        Sometimes understanding arrives much later, after
+        enough distance has formed around an experience.
+      </p>
+
+      <p>
+        There is no need to force that understanding.
+        Let some ideas remain unfinished until life gives
+        them a clearer shape.
+      </p>
+
+      <h2>
+        Notice what you remember
+      </h2>
+
+      <p>
+        Pay attention to the thoughts that return without
+        being invited. They may reveal something about what
+        you value, what you have learned, or what you still
+        need to consider.
+      </p>
+
+      <p>
+        A recurring thought is not always an answer, but it
+        can be a useful place to begin paying attention.
+      </p>
+
+      <h2>
+        Keep a little wisdom close
+      </h2>
+
+      <p>
+        The thoughts that stay with us do not have to be
+        profound. They only need to be useful enough to
+        return to when we need them.
+      </p>
+
+      <p>
+        Perhaps the best reminders are the ones that become
+        quieter over time but never quite disappear.
+      </p>
+
+      <p>
+        A small thought, carried for long enough, can become
+        part of the way we see the world.
+      </p>
+
+      <div class="back-link">
+
+        <a href="quote.html">
+          ← Back to Quotes
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+</body>
+</html>

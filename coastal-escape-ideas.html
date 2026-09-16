@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+  name="referrer"
+  content="no-referrer"
+>
+
+<title>A Day by the Coast — Evermere Journal</title>
+
+<meta
+  name="description"
+  content="From early walks to long lunches, simple ideas for making a coastal day feel relaxed, unhurried, and memorable."
+>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F2F0E9;
+  --sage:#7D8174;
+  --clay:#9B806B;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--paper);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+
+/* HERO */
+
+.article-hero{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+
+.article-hero-inner{
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+  color:var(--clay);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.article-category::before,
+.article-category::after{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--clay);
+}
+
+.article-hero h1{
+  max-width:850px;
+  margin:auto;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(48px,6.5vw,78px);
+  font-weight:400;
+  line-height:1.03;
+  letter-spacing:-1.5px;
+}
+
+.article-intro{
+  max-width:650px;
+  margin:25px auto 0;
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.article-meta span{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.article-meta span:not(:last-child)::after{
+  content:"•";
+  color:var(--clay);
+}
+
+
+/* ARTICLE */
+
+.article-wrap{
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+}
+
+.article-body{
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+}
+
+.article-body p{
+  margin-bottom:27px;
+}
+
+.article-body .lead{
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.55;
+  margin-bottom:38px;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+  color:var(--dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-body h3{
+  margin:38px 0 13px;
+  color:var(--dark);
+  font-size:15px;
+  font-weight:600;
+}
+
+
+/* TRAVEL IDEAS BOX */
+
+.travel-list{
+  margin:38px 0 45px;
+  padding:30px 32px;
+  background:var(--cream);
+  border:1px solid var(--line);
+}
+
+.travel-list-title{
+  margin-bottom:18px;
+  color:var(--dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.travel-list ul{
+  margin:0 0 0 18px;
+}
+
+.travel-list li{
+  margin-bottom:10px;
+  padding-left:5px;
+  color:var(--body);
+  font-size:12px;
+  line-height:1.8;
+}
+
+.travel-list li:last-child{
+  margin-bottom:0;
+}
+
+
+/* CTA */
+
+.article-cta{
+  position:relative;
+  overflow:hidden;
+  margin:42px 0 58px;
+  padding:48px 45px;
+  background:#34332E;
+  color:#F7F4EC;
+  text-align:center;
+}
+
+.article-cta::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-70px;
+  top:-100px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.article-cta::after{
+  content:"";
+  position:absolute;
+  width:140px;
+  height:140px;
+  left:-55px;
+  bottom:-70px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.cta-label{
+  position:relative;
+  z-index:2;
+  margin-bottom:13px;
+  color:#B7B9AA;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.article-cta h2{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+  margin:auto;
+  color:#F7F4EC;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(30px,4vw,43px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-cta p{
+  position:relative;
+  z-index:2;
+  max-width:530px;
+  margin:15px auto 25px;
+  color:#C6C4BC;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.cta-button{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:45px;
+  padding:0 25px;
+  background:#F2EFE7;
+  color:#34332E;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  transition:transform .25s ease,background .25s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  background:#FFFFFF;
+}
+
+.cta-button span{
+  font-size:14px;
+  line-height:1;
+}
+
+
+/* TRAVEL NOTE */
+
+.article-tip{
+  position:relative;
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+  background:#F0EEE7;
+  border-left:3px solid var(--sage);
+}
+
+.article-tip::before{
+  content:"“";
+  position:absolute;
+  left:14px;
+  top:20px;
+  color:rgba(125,129,116,.45);
+  font-family:Georgia,serif;
+  font-size:40px;
+}
+
+.article-tip p{
+  margin:0;
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:20px;
+  line-height:1.5;
+}
+
+
+/* BACK LINK */
+
+.back-link{
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+}
+
+.back-link a{
+  color:var(--sage);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.back-link a:hover{
+  color:var(--dark);
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+  }
+
+  .article-category{
+    margin-bottom:19px;
+  }
+
+  .article-hero h1{
+    font-size:46px;
+    line-height:1.04;
+    letter-spacing:-1px;
+  }
+
+  .article-intro{
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .article-meta{
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+  }
+
+  .article-wrap{
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+  }
+
+  .article-body{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-body .lead{
+    font-size:22px;
+    line-height:1.5;
+  }
+
+  .article-body h2{
+    margin-top:45px;
+    font-size:32px;
+  }
+
+  .travel-list{
+    padding:25px 22px;
+  }
+
+  .travel-list li{
+    font-size:11.5px;
+  }
+
+  .article-tip{
+    padding:28px 24px 28px 40px;
+  }
+
+  .article-tip p{
+    font-size:18px;
+  }
+
+  .article-cta{
+    margin:38px 0 48px;
+    padding:40px 22px;
+  }
+
+  .article-cta h2{
+    font-size:31px;
+  }
+
+  .article-cta p{
+    font-size:10.5px;
+  }
+
+  .cta-button{
+    width:100%;
+  }
+
+}
+
+@media(max-width:375px){
+
+  .article-hero h1{
+    font-size:41px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta-button{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Coastal
+    </div>
+
+    <h1>
+      A Day by the
+      Coast
+    </h1>
+
+    <p class="article-intro">
+      From early walks to long lunches, simple
+      ideas for making a coastal day feel relaxed
+      and memorable.
+    </p>
+
+    <div class="article-meta">
+
+      <span>Travel</span>
+
+      <span>6 min read</span>
+
+      <span>Evermere Journal</span>
+
+    </div>
+
+  </div>
+
+</header>
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+      <p class="lead">
+        A day beside the sea can feel like a small
+        holiday, even when there is no need to stay
+        overnight. The combination of open horizons,
+        fresh air, and an unhurried pace makes the
+        coast an easy place to reset.
+      </p>
+
+      <p>
+        Coastal days do not need a packed schedule.
+        Often, the simplest plan works best: arrive
+        early, walk for a while, find somewhere good
+        to eat, and leave plenty of time for the
+        landscape itself.
+      </p>
+
+      <p>
+        The appeal is partly in how little you need
+        to organise. Once you arrive, the sea provides
+        much of the atmosphere, while the rest of the
+        day can unfold naturally.
+      </p>
+
+      <h2>
+        Start with the shoreline
+      </h2>
+
+      <p>
+        If you can, begin the day with a walk near
+        the water. Early hours are often quieter,
+        giving you time to settle into the surroundings
+        before the day becomes busier.
+      </p>
+
+      <p>
+        There is no need to cover a particular distance.
+        Follow the promenade, beach, harbour, or cliff
+        path at whatever pace feels comfortable.
+      </p>
+
+      <div class="travel-list">
+
+        <div class="travel-list-title">
+          Simple coastal moments
+        </div>
+
+        <ul>
+
+          <li>
+            Take an early walk beside the water.
+          </li>
+
+          <li>
+            Stop somewhere with a view for coffee.
+          </li>
+
+          <li>
+            Explore a small harbour or nearby village.
+          </li>
+
+          <li>
+            Find time to sit and watch the changing tide.
+          </li>
+
+        </ul>
+
+      </div>
+
+      <h2>
+        Let lunch become part of the day
+      </h2>
+
+      <p>
+        A relaxed lunch can give a coastal day its
+        natural middle point. Rather than rushing from
+        one attraction to another, choose somewhere
+        comfortable and allow yourself time to stay.
+      </p>
+
+      <p>
+        A café, small restaurant, bakery, or simple
+        picnic can work equally well. The important
+        part is giving yourself permission to pause.
+      </p>
+
+      <p>
+        Afterwards, there is no need to immediately
+        move on. A slow walk through nearby streets
+        or a few quiet minutes overlooking the water
+        can be enough.
+      </p>
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          Plan A Different Day
+        </div>
+
+        <h2>
+          Find your next
+          coastal escape.
+        </h2>
+
+        <p>
+          Explore more travel ideas and discover
+          simple ways to make your next journey
+          feel relaxed and memorable.
+        </p>
+
+        <a
+          href="travelidea.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+          Explore Travel Ideas
+          <span>→</span>
+        </a>
+
+      </aside>
+
+      <h2>
+        Explore beyond the beach
+      </h2>
+
+      <p>
+        The coastline is often surrounded by more than
+        sand and water. Small streets, old buildings,
+        independent shops, gardens, and local viewpoints
+        can make the day feel more varied without
+        requiring a detailed itinerary.
+      </p>
+
+      <p>
+        Leave enough time to wander without knowing
+        exactly where you are going. A quiet side street
+        or unexpected viewpoint may become one of the
+        nicest parts of the trip.
+      </p>
+
+      <div class="article-tip">
+
+        <p>
+          You do not need to see everything by the sea.
+          Give yourself enough time to simply sit,
+          watch, and listen.
+        </p>
+
+      </div>
+
+      <h2>
+        Notice the changing light
+      </h2>
+
+      <p>
+        One of the pleasures of a coastal landscape is
+        how quickly it can change. Clouds move across
+        the water, sunlight appears between showers,
+        and the colour of the horizon shifts throughout
+        the day.
+      </p>
+
+      <p>
+        Instead of trying to capture every view, take
+        a few moments to notice how the place looks
+        different from when you first arrived.
+      </p>
+
+      <h2>
+        Keep the afternoon open
+      </h2>
+
+      <p>
+        The later part of the day is often when a
+        coastal visit becomes most relaxed. You may
+        want another walk, a quiet drink, a book, or
+        simply somewhere to sit for a while.
+      </p>
+
+      <p>
+        Keeping this part of the day unplanned means
+        you can follow the mood of the surroundings
+        rather than watching the clock.
+      </p>
+
+      <h2>
+        Leave slowly
+      </h2>
+
+      <p>
+        When it is time to head home, there is no need
+        to treat the final moments as an ending that
+        needs to be rushed. Take one last look at the
+        water or walk a little further before leaving.
+      </p>
+
+      <p>
+        A gentle departure can help the feeling of the
+        day last a little longer once the journey home
+        begins.
+      </p>
+
+      <h2>
+        Make the coast feel simple
+      </h2>
+
+      <p>
+        A memorable coastal day can be surprisingly
+        uncomplicated. Start with the water, leave
+        room for good food and quiet walks, and let
+        the landscape decide the pace.
+      </p>
+
+      <p>
+        Sometimes a single day beside the sea is enough
+        to make an ordinary week feel a little more
+        spacious.
+      </p>
+
+      <div class="back-link">
+
+        <a href="travel.html">
+          ← Back to Travel
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>A Simple Closet Refresh — Evermere Journal</title>
+
+<meta
+  name="description"
+  content="Refresh your wardrobe with a simple approach to reviewing what you own, rediscovering useful pieces, and making everyday dressing feel fresh again."
+>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap');
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F2EFEA;
+  --warm:#ECE8E1;
+  --clay:#9A806E;
+  --clay-dark:#806756;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--paper);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.article-hero{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+
+.article-hero-inner{
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+  color:var(--clay-dark);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.article-category::before,
+.article-category::after{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--clay);
+}
+
+.article-hero h1{
+  max-width:850px;
+  margin:auto;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(46px,6vw,74px);
+  font-weight:400;
+  line-height:1.04;
+  letter-spacing:-1.4px;
+}
+
+.article-intro{
+  max-width:650px;
+  margin:25px auto 0;
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.article-meta span{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.article-meta span:not(:last-child)::after{
+  content:"•";
+  color:var(--clay);
+}
+
+
+/* =====================================================
+   ARTICLE
+===================================================== */
+
+.article-wrap{
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+}
+
+.article-body{
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+}
+
+.article-body p{
+  margin-bottom:27px;
+}
+
+.article-body .lead{
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.55;
+  margin-bottom:38px;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+  color:var(--dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+
+/* =====================================================
+   CLOSET GUIDE BOX
+===================================================== */
+
+.outfit-list{
+  margin:38px 0 45px;
+  padding:30px 32px;
+  background:var(--warm);
+  border:1px solid var(--line);
+}
+
+.outfit-list-title{
+  margin-bottom:18px;
+  color:var(--dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.outfit-list ul{
+  margin-left:18px;
+}
+
+.outfit-list li{
+  margin-bottom:10px;
+  padding-left:5px;
+  color:var(--body);
+  font-size:12px;
+  line-height:1.8;
+}
+
+.outfit-list li:last-child{
+  margin-bottom:0;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.article-cta{
+  position:relative;
+  overflow:hidden;
+  margin:42px 0 58px;
+  padding:48px 45px;
+  background:#34332E;
+  color:#F7F4EC;
+  text-align:center;
+}
+
+.article-cta::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-70px;
+  top:-100px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.article-cta::after{
+  content:"";
+  position:absolute;
+  width:140px;
+  height:140px;
+  left:-55px;
+  bottom:-70px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.cta-label{
+  position:relative;
+  z-index:2;
+  margin-bottom:13px;
+  color:#C2B3A6;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.article-cta h2{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+  margin:auto;
+  color:#F7F4EC;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(30px,4vw,43px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-cta p{
+  position:relative;
+  z-index:2;
+  max-width:530px;
+  margin:15px auto 25px;
+  color:#C6C4BC;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.cta-button{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:45px;
+  padding:0 25px;
+  background:#F2EFE7;
+  color:#34332E;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  background:#fff;
+}
+
+.cta-button span{
+  font-size:14px;
+}
+
+
+/* =====================================================
+   STYLE NOTE
+===================================================== */
+
+.article-tip{
+  position:relative;
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+  background:#F1EEE8;
+  border-left:3px solid var(--clay);
+}
+
+.article-tip::before{
+  content:"“";
+  position:absolute;
+  left:14px;
+  top:20px;
+  color:rgba(154,128,110,.45);
+  font-family:Georgia,serif;
+  font-size:40px;
+}
+
+.article-tip p{
+  margin:0;
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:20px;
+  line-height:1.5;
+}
+
+
+/* =====================================================
+   BACK LINK
+===================================================== */
+
+.back-link{
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+}
+
+.back-link a{
+  color:var(--clay-dark);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.back-link a:hover{
+  color:var(--dark);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+  }
+
+  .article-category{
+    margin-bottom:19px;
+  }
+
+  .article-hero h1{
+    font-size:43px;
+    line-height:1.06;
+    letter-spacing:-1px;
+  }
+
+  .article-intro{
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .article-meta{
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+  }
+
+  .article-wrap{
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+  }
+
+  .article-body{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-body .lead{
+    font-size:22px;
+    line-height:1.5;
+  }
+
+  .article-body h2{
+    margin-top:45px;
+    font-size:32px;
+  }
+
+  .outfit-list{
+    padding:25px 22px;
+  }
+
+  .outfit-list li{
+    font-size:11.5px;
+  }
+
+  .article-tip{
+    padding:28px 24px 28px 40px;
+  }
+
+  .article-tip p{
+    font-size:18px;
+  }
+
+  .article-cta{
+    margin:38px 0 48px;
+    padding:40px 22px;
+  }
+
+  .article-cta h2{
+    font-size:31px;
+  }
+
+  .article-cta p{
+    font-size:10.5px;
+  }
+
+  .cta-button{
+    width:100%;
+  }
+
+}
+
+@media(max-width:375px){
+
+  .article-hero h1{
+    font-size:38px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta-button{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Fashion &amp; Style
+    </div>
+
+    <h1>
+      A Simple
+      Closet Refresh
+    </h1>
+
+    <p class="article-intro">
+      A calm way to rethink what you already own,
+      rediscover forgotten pieces, and make everyday
+      dressing feel fresh again.
+    </p>
+
+    <div class="article-meta">
+
+      <span>Fashion</span>
+
+      <span>7 min read</span>
+
+      <span>Evermere Journal</span>
+
+    </div>
+
+  </div>
+
+</header>
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+      <p class="lead">
+        Refreshing your wardrobe does not always mean
+        buying something new. Sometimes a little space,
+        a fresh perspective, and a closer look at what
+        you already own can change how your clothes feel.
+      </p>
+
+      <p>
+        Over time, wardrobes can become crowded with pieces
+        that no longer get worn, forgotten favourites, and
+        items that simply become hidden behind everything
+        else.
+      </p>
+
+      <p>
+        A simple closet refresh gives you an opportunity to
+        see your wardrobe differently without turning the
+        process into a major project.
+      </p>
+
+      <h2>
+        Take everything at a slower pace
+      </h2>
+
+      <p>
+        There is no need to empty an entire wardrobe in one
+        afternoon. Start with one section, drawer, shelf,
+        or category and give yourself enough time to think
+        about what you actually use.
+      </p>
+
+      <p>
+        A slower approach can make the process feel much
+        less overwhelming. It also gives you a better chance
+        of noticing pieces that have simply been overlooked.
+      </p>
+
+      <div class="outfit-list">
+
+        <div class="outfit-list-title">
+          A useful refresh checklist
+        </div>
+
+        <ul>
+
+          <li>
+            Pull forward pieces you wear regularly.
+          </li>
+
+          <li>
+            Set aside items you have completely forgotten.
+          </li>
+
+          <li>
+            Notice pieces that need repair or simple care.
+          </li>
+
+          <li>
+            Look for combinations you have not tried recently.
+          </li>
+
+        </ul>
+
+      </div>
+
+      <h2>
+        Rediscover what you already own
+      </h2>
+
+      <p>
+        One of the easiest ways to make a wardrobe feel new
+        is to combine familiar pieces differently. A shirt
+        you normally wear with one pair of trousers may look
+        completely different with another layer or accessory.
+      </p>
+
+      <p>
+        Try taking a few pieces that rarely meet and putting
+        them together. You may discover combinations that
+        were there all along.
+      </p>
+
+      <p>
+        This can also reveal which pieces are doing more work
+        than you realised. A versatile jacket or favourite
+        pair of trousers may support far more outfits than
+        expected.
+      </p>
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          Give Your Wardrobe A Fresh Start
+        </div>
+
+        <h2>
+          Sometimes one new detail
+          is enough.
+        </h2>
+
+        <p>
+          Explore fashion finds that can add a fresh layer,
+          texture, or finishing touch to combinations you
+          already enjoy.
+        </p>
+
+        <a
+          href="fashionidea.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+          Explore Fashion Finds
+          <span>→</span>
+        </a>
+
+      </aside>
+
+      <h2>
+        Create a small rotation
+      </h2>
+
+      <p>
+        You do not need every piece of clothing to be equally
+        visible or equally useful at the same time. Creating
+        a smaller everyday rotation can make getting dressed
+        much easier.
+      </p>
+
+      <p>
+        Keep the pieces that suit your current routine close
+        at hand, while less frequently worn items can have
+        their own space. This gives your wardrobe a clearer
+        rhythm without requiring you to remove everything.
+      </p>
+
+      <div class="article-tip">
+
+        <p>
+          A wardrobe can feel refreshed simply by making
+          the pieces you love easier to see.
+        </p>
+
+      </div>
+
+      <h2>
+        Pay attention to what is missing
+      </h2>
+
+      <p>
+        Once you have looked closely at what you own, it
+        becomes easier to notice genuine gaps. Perhaps you
+        have plenty of tops but very few useful layers, or
+        several statement pieces but not enough simple
+        foundations to wear with them.
+      </p>
+
+      <p>
+        Identifying these gaps is more useful than shopping
+        simply because a new season has arrived. It gives
+        you a clearer idea of what could genuinely add
+        flexibility to your wardrobe.
+      </p>
+
+      <h2>
+        Give familiar pieces another chance
+      </h2>
+
+      <p>
+        Some clothes are forgotten because they have been
+        worn in exactly the same way for too long. Before
+        deciding that something no longer works, try changing
+        the context around it.
+      </p>
+
+      <p>
+        Add a different layer, switch the footwear, alter
+        the proportions, or introduce a new accessory. A
+        small styling change can make a familiar piece feel
+        noticeably different.
+      </p>
+
+      <h2>
+        Make care part of the refresh
+      </h2>
+
+      <p>
+        A wardrobe can also feel better when the clothes
+        themselves are looked after. Folding pieces properly,
+        cleaning items according to their care instructions,
+        repairing small issues, and giving fabrics a little
+        attention can make everyday favourites feel more
+        enjoyable to wear.
+      </p>
+
+      <p>
+        This kind of maintenance is easy to overlook, but
+        it can extend the usefulness of pieces you already
+        like.
+      </p>
+
+      <h2>
+        Refresh without starting over
+      </h2>
+
+      <p>
+        The most useful closet refresh is not necessarily
+        the biggest one. A few small changes can be enough
+        to make your wardrobe feel clearer and more relevant
+        to your current life.
+      </p>
+
+      <p>
+        Rediscover old favourites, create new combinations,
+        notice genuine gaps, and make the pieces you love
+        easier to reach. The result can feel fresh without
+        losing the character that was already there.
+      </p>
+
+      <div class="back-link">
+
+        <a href="fashion.html">
+          ← Back to Fashion
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+  name="referrer"
+  content="no-referrer"
+>
+
+<title>Packing Light for Better Journeys — Evermere Journal</title>
+
+<meta
+  name="description"
+  content="A calmer approach to packing that leaves more room for movement, spontaneity, and the experience itself."
+>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F2F0E9;
+  --sage:#7D8174;
+  --clay:#9B806B;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--paper);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+.article-hero{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+
+.article-hero-inner{
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+  color:var(--clay);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.article-category::before,
+.article-category::after{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--clay);
+}
+
+.article-hero h1{
+  max-width:850px;
+  margin:auto;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(48px,6.5vw,78px);
+  font-weight:400;
+  line-height:1.03;
+  letter-spacing:-1.5px;
+}
+
+.article-intro{
+  max-width:650px;
+  margin:25px auto 0;
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.article-meta span{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.article-meta span:not(:last-child)::after{
+  content:"•";
+  color:var(--clay);
+}
+
+.article-wrap{
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+}
+
+.article-body{
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+}
+
+.article-body p{
+  margin-bottom:27px;
+}
+
+.article-body .lead{
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.55;
+  margin-bottom:38px;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+  color:var(--dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-body h3{
+  margin:38px 0 13px;
+  color:var(--dark);
+  font-size:15px;
+  font-weight:600;
+}
+
+.travel-list{
+  margin:38px 0 45px;
+  padding:30px 32px;
+  background:var(--cream);
+  border:1px solid var(--line);
+}
+
+.travel-list-title{
+  margin-bottom:18px;
+  color:var(--dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.travel-list ul{
+  margin:0 0 0 18px;
+}
+
+.travel-list li{
+  margin-bottom:10px;
+  padding-left:5px;
+  color:var(--body);
+  font-size:12px;
+  line-height:1.8;
+}
+
+.travel-list li:last-child{
+  margin-bottom:0;
+}
+
+.article-cta{
+  position:relative;
+  overflow:hidden;
+  margin:42px 0 58px;
+  padding:48px 45px;
+  background:#34332E;
+  color:#F7F4EC;
+  text-align:center;
+}
+
+.article-cta::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-70px;
+  top:-100px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.article-cta::after{
+  content:"";
+  position:absolute;
+  width:140px;
+  height:140px;
+  left:-55px;
+  bottom:-70px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.cta-label{
+  position:relative;
+  z-index:2;
+  margin-bottom:13px;
+  color:#B7B9AA;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.article-cta h2{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+  margin:auto;
+  color:#F7F4EC;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(30px,4vw,43px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-cta p{
+  position:relative;
+  z-index:2;
+  max-width:530px;
+  margin:15px auto 25px;
+  color:#C6C4BC;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.cta-button{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:45px;
+  padding:0 25px;
+  background:#F2EFE7;
+  color:#34332E;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  transition:transform .25s ease,background .25s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  background:#FFFFFF;
+}
+
+.cta-button span{
+  font-size:14px;
+  line-height:1;
+}
+
+.article-tip{
+  position:relative;
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+  background:#F0EEE7;
+  border-left:3px solid var(--sage);
+}
+
+.article-tip::before{
+  content:"“";
+  position:absolute;
+  left:14px;
+  top:20px;
+  color:rgba(125,129,116,.45);
+  font-family:Georgia,serif;
+  font-size:40px;
+}
+
+.article-tip p{
+  margin:0;
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:20px;
+  line-height:1.5;
+}
+
+.back-link{
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+}
+
+.back-link a{
+  color:var(--sage);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.back-link a:hover{
+  color:var(--dark);
+}
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+  }
+
+  .article-category{
+    margin-bottom:19px;
+  }
+
+  .article-hero h1{
+    font-size:46px;
+    line-height:1.04;
+    letter-spacing:-1px;
+  }
+
+  .article-intro{
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .article-meta{
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+  }
+
+  .article-wrap{
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+  }
+
+  .article-body{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-body .lead{
+    font-size:22px;
+    line-height:1.5;
+  }
+
+  .article-body h2{
+    margin-top:45px;
+    font-size:32px;
+  }
+
+  .travel-list{
+    padding:25px 22px;
+  }
+
+  .travel-list li{
+    font-size:11.5px;
+  }
+
+  .article-tip{
+    padding:28px 24px 28px 40px;
+  }
+
+  .article-tip p{
+    font-size:18px;
+  }
+
+  .article-cta{
+    margin:38px 0 48px;
+    padding:40px 22px;
+  }
+
+  .article-cta h2{
+    font-size:31px;
+  }
+
+  .article-cta p{
+    font-size:10.5px;
+  }
+
+  .cta-button{
+    width:100%;
+  }
+
+}
+
+@media(max-width:375px){
+
+  .article-hero h1{
+    font-size:41px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta-button{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Essentials
+    </div>
+
+    <h1>
+      Packing Light for
+      Better Journeys
+    </h1>
+
+    <p class="article-intro">
+      A calmer approach to packing that leaves
+      more room for movement, spontaneity,
+      and the experience itself.
+    </p>
+
+    <div class="article-meta">
+
+      <span>Travel</span>
+
+      <span>6 min read</span>
+
+      <span>Evermere Journal</span>
+
+    </div>
+
+  </div>
+
+</header>
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+      <p class="lead">
+        Packing can easily become one of the most
+        complicated parts of travelling. But bringing
+        less often makes a journey feel easier, leaving
+        more room for movement and fewer things to think
+        about along the way.
+      </p>
+
+      <p>
+        The goal of packing light is not to own less
+        for the sake of it. It is simply to choose what
+        you are genuinely likely to use and avoid
+        carrying things that add unnecessary weight.
+      </p>
+
+      <p>
+        A smaller bag can make train journeys easier,
+        walking through a city more comfortable, and
+        changing plans much less inconvenient.
+      </p>
+
+      <h2>
+        Start with what you need
+      </h2>
+
+      <p>
+        Before putting anything into a bag, think about
+        what the journey actually requires. Consider the
+        length of the trip, the weather, the activities
+        you have planned, and what can realistically be
+        worn more than once.
+      </p>
+
+      <p>
+        Starting with those basics helps prevent the
+        familiar habit of packing for every possible
+        situation.
+      </p>
+
+      <div class="travel-list">
+
+        <div class="travel-list-title">
+          Packing basics
+        </div>
+
+        <ul>
+
+          <li>
+            Clothes suited to the expected weather.
+          </li>
+
+          <li>
+            Comfortable shoes you can actually walk in.
+          </li>
+
+          <li>
+            Essential toiletries and personal items.
+          </li>
+
+          <li>
+            Chargers and the devices you genuinely need.
+          </li>
+
+        </ul>
+
+      </div>
+
+      <h2>
+        Choose pieces that work together
+      </h2>
+
+      <p>
+        Clothing becomes easier to manage when most
+        pieces can be combined in several ways. A small
+        collection of simple, comfortable options can
+        create more flexibility than a suitcase full of
+        individual outfits.
+      </p>
+
+      <p>
+        Think in terms of combinations rather than
+        complete looks. This makes it easier to adapt
+        when weather changes or plans shift.
+      </p>
+
+      <p>
+        The result is usually a bag that feels more
+        manageable from the moment you leave home.
+      </p>
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          Travel More Easily
+        </div>
+
+        <h2>
+          Make room for
+          the journey itself.
+        </h2>
+
+        <p>
+          Explore more thoughtful travel ideas for
+          simpler planning, relaxed escapes, and
+          journeys with less unnecessary fuss.
+        </p>
+
+        <a
+          href="travelidea.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+          Explore Travel Ideas
+          <span>→</span>
+        </a>
+
+      </aside>
+
+      <h2>
+        Leave space for the unexpected
+      </h2>
+
+      <p>
+        One advantage of travelling with less is having
+        room for something you discover along the way.
+        Whether that means a small purchase, an extra
+        layer, or simply an easier bag to carry, a little
+        spare space can be useful.
+      </p>
+
+      <p>
+        There is also something freeing about knowing
+        you are not carrying your entire home with you.
+      </p>
+
+      <div class="article-tip">
+
+        <p>
+          Pack for the journey you are taking, not every
+          imaginary journey that might happen.
+        </p>
+
+      </div>
+
+      <h2>
+        Make everyday items easier to reach
+      </h2>
+
+      <p>
+        How you organise a bag matters almost as much
+        as what goes inside it. Keep the things you use
+        most often somewhere easy to reach, especially
+        during travel days.
+      </p>
+
+      <p>
+        A simple arrangement can save time when you need
+        headphones, a charger, a layer, or something
+        small while you are on the move.
+      </p>
+
+      <h2>
+        Think about the journey between places
+      </h2>
+
+      <p>
+        A bag that feels manageable at home can feel
+        very different after several hours of carrying
+        it. Consider how often you will be moving between
+        stations, accommodation, airports, streets, or
+        different parts of a destination.
+      </p>
+
+      <p>
+        The easier your luggage is to carry, the more
+        freedom you have to explore without planning
+        everything around it.
+      </p>
+
+      <h2>
+        Resist the last-minute additions
+      </h2>
+
+      <p>
+        The final few minutes before leaving are often
+        when unnecessary items find their way into a bag.
+        Take a moment to look at everything again before
+        closing it.
+      </p>
+
+      <p>
+        If something was added only because it might be
+        useful someday, consider whether it really needs
+        to come with you.
+      </p>
+
+      <h2>
+        Let packing become simpler
+      </h2>
+
+      <p>
+        Packing light is less about following a perfect
+        formula and more about understanding what makes
+        travel comfortable for you.
+      </p>
+
+      <p>
+        Bring what you need, choose things that work
+        together, and leave enough room to move easily.
+        The less attention your luggage demands, the more
+        attention you can give to the journey.
+      </p>
+
+      <h2>
+        Make more room for the experience
+      </h2>
+
+      <p>
+        A lighter bag is only useful if it makes the
+        journey itself feel better. The real benefit is
+        the freedom to walk, pause, change direction,
+        and enjoy a destination without constantly
+        thinking about what you are carrying.
+      </p>
+
+      <p>
+        Sometimes travelling with less is simply another
+        way of making more room for where you are going.
+      </p>
+
+      <div class="back-link">
+
+        <a href="travel.html">
+          ← Back to Travel
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+  name="referrer"
+  content="no-referrer"
+>
+
+<title>Comfort Foods Worth Sharing — Evermere Journal</title>
+
+<meta
+  name="description"
+  content="Warm, familiar dishes and relaxed table ideas made for slow evenings and good company."
+>
+
+
+<style>
+
+@import url(
+  'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap'
+);
+
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F4F1EA;
+  --sage:#7D8174;
+  --clay:#9B806B;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+
+body{
+  background:var(--paper);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+
+.article-hero{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+
+
+.article-hero-inner{
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+}
+
+
+.article-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+  color:var(--clay);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+
+.article-category::before,
+.article-category::after{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--clay);
+}
+
+
+.article-hero h1{
+  max-width:850px;
+  margin:auto;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(48px,6.5vw,78px);
+  font-weight:400;
+  line-height:1.03;
+  letter-spacing:-1.5px;
+}
+
+
+.article-intro{
+  max-width:650px;
+  margin:25px auto 0;
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+
+
+.article-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+
+.article-meta span{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+
+.article-meta span:not(:last-child)::after{
+  content:"•";
+  color:var(--clay);
+}
+
+
+.article-wrap{
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+}
+
+
+.article-body{
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+}
+
+
+.article-body p{
+  margin-bottom:27px;
+}
+
+
+.article-body .lead{
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.55;
+  margin-bottom:38px;
+}
+
+
+.article-body h2{
+  margin:55px 0 20px;
+  color:var(--dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+
+.article-body h3{
+  margin:38px 0 13px;
+  color:var(--dark);
+  font-size:15px;
+  font-weight:600;
+}
+
+
+.fruit-list{
+  margin:38px 0 45px;
+  padding:30px 32px;
+  background:var(--cream);
+  border:1px solid var(--line);
+}
+
+
+.fruit-list-title{
+  margin-bottom:18px;
+  color:var(--dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+
+.fruit-list ul{
+  margin:0 0 0 18px;
+}
+
+
+.fruit-list li{
+  margin-bottom:10px;
+  padding-left:5px;
+  color:var(--body);
+  font-size:12px;
+  line-height:1.8;
+}
+
+
+.fruit-list li:last-child{
+  margin-bottom:0;
+}
+
+
+.article-cta{
+  position:relative;
+  overflow:hidden;
+  margin:42px 0 58px;
+  padding:48px 45px;
+  background:#34332E;
+  color:#F7F4EC;
+  text-align:center;
+}
+
+
+.article-cta::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-70px;
+  top:-100px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+
+.article-cta::after{
+  content:"";
+  position:absolute;
+  width:140px;
+  height:140px;
+  left:-55px;
+  bottom:-70px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+
+.cta-label{
+  position:relative;
+  z-index:2;
+  margin-bottom:13px;
+  color:#B7B9AA;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+
+.article-cta h2{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+  margin:auto;
+  color:#F7F4EC;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(30px,4vw,43px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+
+.article-cta p{
+  position:relative;
+  z-index:2;
+  max-width:530px;
+  margin:15px auto 25px;
+  color:#C6C4BC;
+  font-size:11px;
+  line-height:1.8;
+}
+
+
+.cta-button{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:45px;
+  padding:0 25px;
+  background:#F2EFE7;
+  color:#34332E;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  transition:transform .25s ease,background .25s ease;
+}
+
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  background:#FFFFFF;
+}
+
+
+.cta-button span{
+  font-size:14px;
+  line-height:1;
+}
+
+
+.article-tip{
+  position:relative;
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+  background:#F0EEE7;
+  border-left:3px solid var(--sage);
+}
+
+
+.article-tip::before{
+  content:"“";
+  position:absolute;
+  left:14px;
+  top:20px;
+  color:rgba(125,129,116,.45);
+  font-family:Georgia,serif;
+  font-size:40px;
+}
+
+
+.article-tip p{
+  margin:0;
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:20px;
+  line-height:1.5;
+}
+
+
+.back-link{
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+}
+
+
+.back-link a{
+  color:var(--sage);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+
+.back-link a:hover{
+  color:var(--dark);
+}
+
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+  }
+
+  .article-category{
+    margin-bottom:19px;
+  }
+
+  .article-hero h1{
+    font-size:46px;
+    line-height:1.04;
+    letter-spacing:-1px;
+  }
+
+  .article-intro{
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .article-meta{
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+  }
+
+  .article-wrap{
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+  }
+
+  .article-body{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-body .lead{
+    font-size:22px;
+    line-height:1.5;
+  }
+
+  .article-body h2{
+    margin-top:45px;
+    font-size:32px;
+  }
+
+  .fruit-list{
+    padding:25px 22px;
+  }
+
+  .fruit-list li{
+    font-size:11.5px;
+  }
+
+  .article-tip{
+    padding:28px 24px 28px 40px;
+  }
+
+  .article-tip p{
+    font-size:18px;
+  }
+
+  .article-cta{
+    margin:38px 0 48px;
+    padding:40px 22px;
+  }
+
+  .article-cta h2{
+    font-size:31px;
+  }
+
+  .article-cta p{
+    font-size:10.5px;
+  }
+
+  .cta-button{
+    width:100%;
+  }
+
+}
+
+
+@media(max-width:375px){
+
+  .article-hero h1{
+    font-size:41px;
+  }
+
+}
+
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta-button{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div id="header"></div>
+
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Food &amp; Kitchen
+    </div>
+
+    <h1>
+      Comfort Foods
+      Worth Sharing
+    </h1>
+
+    <p class="article-intro">
+      Warm, familiar dishes and relaxed table ideas
+      made for slow evenings and good company.
+    </p>
+
+    <div class="article-meta">
+
+      <span>
+        Food
+      </span>
+
+      <span>
+        6 min read
+      </span>
+
+      <span>
+        Evermere Journal
+      </span>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+
+      <p class="lead">
+
+        Comfort food has a way of making an ordinary
+        evening feel warmer. It does not need to be
+        complicated or elaborate; familiar flavours and
+        generous portions are often enough to bring
+        people together.
+
+      </p>
+
+
+      <p>
+
+        The dishes we return to are often connected
+        with memories, seasons, family tables, or simply
+        the feeling of having time to slow down. A warm
+        bowl of something hearty can make a busy day
+        feel a little softer.
+
+      </p>
+
+
+      <p>
+
+        Sharing that food makes the experience even
+        better. The meal becomes less about presentation
+        and more about conversation, comfort, and the
+        pleasure of eating together.
+
+      </p>
+
+
+      <h2>
+
+        Start with familiar flavours
+
+      </h2>
+
+
+      <p>
+
+        The best comfort dishes are often built around
+        ingredients people already know and enjoy.
+        Potatoes, pasta, rice, vegetables, bread, cheese,
+        and simple sauces can become the foundation
+        for countless relaxed meals.
+
+      </p>
+
+
+      <p>
+
+        Familiar flavours also make cooking for others
+        easier. There is less pressure to create something
+        unusual when the goal is simply to put a satisfying
+        meal on the table.
+
+      </p>
+
+
+      <div class="fruit-list">
+
+        <div class="fruit-list-title">
+          Easy comfort food ideas
+        </div>
+
+        <ul>
+
+          <li>
+            Creamy pasta with seasonal vegetables.
+          </li>
+
+          <li>
+            A simple baked potato with generous toppings.
+          </li>
+
+          <li>
+            Warm soup served with crusty bread.
+          </li>
+
+          <li>
+            A slow-cooked dish made for sharing.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <h2>
+
+        Make the table feel relaxed
+
+      </h2>
+
+
+      <p>
+
+        Comfort is not only about the food. A relaxed
+        table can make the whole meal feel more inviting.
+        Keep the serving pieces simple and let everyone
+        help themselves.
+
+      </p>
+
+
+      <p>
+
+        Bowls placed in the centre of the table encourage
+        sharing, while warm lighting and comfortable
+        seating can make even a weekday dinner feel
+        more intentional.
+
+      </p>
+
+
+      <p>
+
+        There is no need to wait for a special occasion.
+        The simple act of sitting down together can make
+        an ordinary meal worth remembering.
+
+      </p>
+
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          Gather Around
+        </div>
+
+        <h2>
+          Make room for a
+          more relaxed meal.
+        </h2>
+
+        <p>
+          Explore convenient food ideas and everyday
+          choices for easy meals worth sharing.
+        </p>
+
+        <a
+          href="foodidea.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+          Explore Food Ideas
+          <span>→</span>
+        </a>
+
+      </aside>
+
+
+      <h2>
+
+        Let the food do the work
+
+      </h2>
+
+
+      <p>
+
+        When cooking for company, simple dishes can be
+        surprisingly effective. A large pan of pasta,
+        a tray of roasted vegetables, or a pot of soup
+        can feed several people without requiring
+        complicated preparation.
+
+      </p>
+
+
+      <p>
+
+        Serving one generous dish also keeps the evening
+        informal. Instead of managing several courses,
+        everyone can concentrate on eating, talking,
+        and enjoying the time together.
+
+      </p>
+
+
+      <div class="article-tip">
+
+        <p>
+
+          The warmth of comfort food comes from more
+          than the recipe. Leave space for conversation,
+          serve generously, and let the meal feel easy.
+
+        </p>
+
+      </div>
+
+
+      <h2>
+
+        Add something fresh
+
+      </h2>
+
+
+      <p>
+
+        Rich and hearty dishes often benefit from a
+        fresh element. A crisp salad, seasonal fruit,
+        fresh herbs, or lightly dressed vegetables can
+        balance heavier flavours.
+
+      </p>
+
+
+      <p>
+
+        The contrast makes the meal feel more complete
+        without adding much extra work.
+
+      </p>
+
+
+      <h2>
+
+        Save room for something sweet
+
+      </h2>
+
+
+      <p>
+
+        A shared dessert can be the natural ending to
+        a comfortable evening. It does not need to be
+        elaborate. Warm fruit, a simple cake, cookies,
+        or a bowl of ice cream can all work beautifully.
+
+      </p>
+
+
+      <p>
+
+        The important part is giving everyone something
+        to linger over once the main meal is finished.
+
+      </p>
+
+
+      <h2>
+
+        Cook for the evening you want
+
+      </h2>
+
+
+      <p>
+
+        Consider the mood before choosing the meal.
+        A quiet evening might call for soup and bread,
+        while a gathering with friends could suit a
+        large dish designed for everyone to share.
+
+      </p>
+
+
+      <p>
+
+        Matching the food to the occasion helps remove
+        unnecessary pressure and makes cooking feel
+        more natural.
+
+      </p>
+
+
+      <h2>
+
+        Keep comfort close
+
+      </h2>
+
+
+      <p>
+
+        Comfort food is ultimately about creating a
+        feeling. It is the familiar recipe, the warm
+        bowl, the shared serving dish, and the people
+        gathered around the table.
+
+      </p>
+
+
+      <p>
+
+        Keep favourite dishes in rotation, cook with
+        generosity, and leave plenty of room for relaxed
+        conversation. Sometimes that is all a good
+        evening needs.
+
+      </p>
+
+
+      <div class="back-link">
+
+        <a href="food.html">
+          ← Back to Food
+        </a>
+
+      </div>
+
+
+    </article>
+
+  </div>
+
+</main>
+
+
+<div id="footer"></div>
+
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+</body>
+</html>

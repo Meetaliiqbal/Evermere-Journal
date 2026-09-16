@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="referrer" content="no-referrer">
+
+<title>The Quiet Power of Neutral Dressing — Evermere Journal</title>
+
+<meta
+  name="description"
+  content="Discover how neutral colours can create calm, flexible, and expressive outfits with simple combinations, textures, and thoughtful styling."
+>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap');
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F2EFEA;
+  --warm:#ECE8E1;
+  --clay:#9A806E;
+  --clay-dark:#806756;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--paper);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.article-hero{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+
+.article-hero-inner{
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+  color:var(--clay-dark);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.article-category::before,
+.article-category::after{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--clay);
+}
+
+.article-hero h1{
+  max-width:850px;
+  margin:auto;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(46px,6vw,74px);
+  font-weight:400;
+  line-height:1.04;
+  letter-spacing:-1.4px;
+}
+
+.article-intro{
+  max-width:650px;
+  margin:25px auto 0;
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.article-meta span{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.article-meta span:not(:last-child)::after{
+  content:"•";
+  color:var(--clay);
+}
+
+
+/* =====================================================
+   ARTICLE
+===================================================== */
+
+.article-wrap{
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+}
+
+.article-body{
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+}
+
+.article-body p{
+  margin-bottom:27px;
+}
+
+.article-body .lead{
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.55;
+  margin-bottom:38px;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+  color:var(--dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+
+/* =====================================================
+   NEUTRAL GUIDE BOX
+===================================================== */
+
+.outfit-list{
+  margin:38px 0 45px;
+  padding:30px 32px;
+  background:var(--warm);
+  border:1px solid var(--line);
+}
+
+.outfit-list-title{
+  margin-bottom:18px;
+  color:var(--dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.outfit-list ul{
+  margin-left:18px;
+}
+
+.outfit-list li{
+  margin-bottom:10px;
+  padding-left:5px;
+  color:var(--body);
+  font-size:12px;
+  line-height:1.8;
+}
+
+.outfit-list li:last-child{
+  margin-bottom:0;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.article-cta{
+  position:relative;
+  overflow:hidden;
+  margin:42px 0 58px;
+  padding:48px 45px;
+  background:#34332E;
+  color:#F7F4EC;
+  text-align:center;
+}
+
+.article-cta::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-70px;
+  top:-100px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.article-cta::after{
+  content:"";
+  position:absolute;
+  width:140px;
+  height:140px;
+  left:-55px;
+  bottom:-70px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.cta-label{
+  position:relative;
+  z-index:2;
+  margin-bottom:13px;
+  color:#C2B3A6;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.article-cta h2{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+  margin:auto;
+  color:#F7F4EC;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(30px,4vw,43px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-cta p{
+  position:relative;
+  z-index:2;
+  max-width:530px;
+  margin:15px auto 25px;
+  color:#C6C4BC;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.cta-button{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:45px;
+  padding:0 25px;
+  background:#F2EFE7;
+  color:#34332E;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  background:#fff;
+}
+
+.cta-button span{
+  font-size:14px;
+}
+
+
+/* =====================================================
+   STYLE NOTE
+===================================================== */
+
+.article-tip{
+  position:relative;
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+  background:#F1EEE8;
+  border-left:3px solid var(--clay);
+}
+
+.article-tip::before{
+  content:"“";
+  position:absolute;
+  left:14px;
+  top:20px;
+  color:rgba(154,128,110,.45);
+  font-family:Georgia,serif;
+  font-size:40px;
+}
+
+.article-tip p{
+  margin:0;
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:20px;
+  line-height:1.5;
+}
+
+
+/* =====================================================
+   BACK LINK
+===================================================== */
+
+.back-link{
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+}
+
+.back-link a{
+  color:var(--clay-dark);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.back-link a:hover{
+  color:var(--dark);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+  }
+
+  .article-category{
+    margin-bottom:19px;
+  }
+
+  .article-hero h1{
+    font-size:43px;
+    line-height:1.06;
+    letter-spacing:-1px;
+  }
+
+  .article-intro{
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .article-meta{
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+  }
+
+  .article-wrap{
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+  }
+
+  .article-body{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-body .lead{
+    font-size:22px;
+    line-height:1.5;
+  }
+
+  .article-body h2{
+    margin-top:45px;
+    font-size:32px;
+  }
+
+  .outfit-list{
+    padding:25px 22px;
+  }
+
+  .outfit-list li{
+    font-size:11.5px;
+  }
+
+  .article-tip{
+    padding:28px 24px 28px 40px;
+  }
+
+  .article-tip p{
+    font-size:18px;
+  }
+
+  .article-cta{
+    margin:38px 0 48px;
+    padding:40px 22px;
+  }
+
+  .article-cta h2{
+    font-size:31px;
+  }
+
+  .article-cta p{
+    font-size:10.5px;
+  }
+
+  .cta-button{
+    width:100%;
+  }
+
+}
+
+@media(max-width:375px){
+
+  .article-hero h1{
+    font-size:38px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta-button{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Fashion &amp; Style
+    </div>
+
+    <h1>
+      The Quiet Power
+      of Neutral Dressing
+    </h1>
+
+    <p class="article-intro">
+      Why soft neutrals can create a wardrobe that feels
+      calm, flexible, refined, and surprisingly expressive.
+    </p>
+
+    <div class="article-meta">
+
+      <span>Fashion</span>
+
+      <span>7 min read</span>
+
+      <span>Evermere Journal</span>
+
+    </div>
+
+  </div>
+
+</header>
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+      <p class="lead">
+        Neutral colours have a way of making an outfit
+        feel considered without making it feel overly
+        styled. Their simplicity leaves room for texture,
+        shape, and small personal details to stand out.
+      </p>
+
+      <p>
+        Cream, beige, taupe, grey, brown, black, and soft
+        off-white can form an incredibly flexible foundation.
+        They can be combined in subtle ways or used to give
+        a stronger piece somewhere else in the outfit more
+        space.
+      </p>
+
+      <p>
+        The appeal of a neutral wardrobe is not that every
+        outfit needs to look the same. It is that the pieces
+        tend to communicate easily with one another.
+      </p>
+
+      <h2>
+        Start with shades you already enjoy
+      </h2>
+
+      <p>
+        There is no need to adopt an entirely new palette.
+        Begin by noticing the colours you naturally reach
+        for. Perhaps you prefer warm cream and brown, or
+        cooler grey and charcoal.
+      </p>
+
+      <p>
+        Once you understand your preferred direction, it
+        becomes easier to choose pieces that complement
+        what is already in your wardrobe.
+      </p>
+
+      <div class="outfit-list">
+
+        <div class="outfit-list-title">
+          Neutral combinations to explore
+        </div>
+
+        <ul>
+
+          <li>
+            Cream with warm beige for a soft tonal look.
+          </li>
+
+          <li>
+            Charcoal with lighter grey for subtle contrast.
+          </li>
+
+          <li>
+            Brown with off-white for warmth and balance.
+          </li>
+
+          <li>
+            Black with softer neutrals for a sharper finish.
+          </li>
+
+        </ul>
+
+      </div>
+
+      <h2>
+        Mix different tones together
+      </h2>
+
+      <p>
+        Wearing several neutral shades together can create
+        more depth than using a single colour from head to
+        toe. The differences may be subtle, but that is often
+        what makes the combination feel relaxed.
+      </p>
+
+      <p>
+        Try combining lighter and darker versions of a
+        similar shade. A pale top with deeper trousers,
+        for example, can create an outfit that feels
+        balanced without relying on strong colour contrast.
+      </p>
+
+      <p>
+        The closer the shades are, the more texture and
+        silhouette begin to influence the overall look.
+      </p>
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          Refresh Your Wardrobe
+        </div>
+
+        <h2>
+          Simple colours,
+          thoughtful pieces.
+        </h2>
+
+        <p>
+          Explore fashion finds that can work naturally
+          with the neutral tones and everyday favourites
+          already in your wardrobe.
+        </p>
+
+        <a
+          href="fashionidea.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+          Explore Fashion Finds
+          <span>→</span>
+        </a>
+
+      </aside>
+
+      <h2>
+        Let texture create interest
+      </h2>
+
+      <p>
+        When an outfit uses mostly quiet colours, texture
+        becomes an easy way to introduce visual interest.
+        Soft knits, smooth cotton, structured denim, woven
+        fabrics, and textured layers can all change the
+        feeling of a neutral combination.
+      </p>
+
+      <p>
+        This is one reason neutral dressing does not have
+        to feel plain. The colour palette may be restrained,
+        while the materials create plenty of variation.
+      </p>
+
+      <div class="article-tip">
+
+        <p>
+          When colour becomes quieter, the small details
+          have more room to speak.
+        </p>
+
+      </div>
+
+      <h2>
+        Add contrast through shape
+      </h2>
+
+      <p>
+        Colour is only one part of an outfit. Proportion
+        can be just as important, particularly when working
+        with a limited palette.
+      </p>
+
+      <p>
+        Pairing a relaxed silhouette with something more
+        structured can give a simple outfit definition.
+        Similarly, balancing wider shapes with a more fitted
+        piece can keep the overall look feeling intentional.
+      </p>
+
+      <p>
+        These small contrasts allow neutral outfits to feel
+        expressive without needing brighter colours.
+      </p>
+
+      <h2>
+        Keep one personal detail
+      </h2>
+
+      <p>
+        A neutral outfit can provide the perfect background
+        for something that feels distinctly personal. It
+        could be a favourite bag, a particular piece of
+        jewellery, an interesting shoe, or simply a colour
+        that you occasionally like to bring into the mix.
+      </p>
+
+      <p>
+        Keeping one recognisable detail also prevents a
+        neutral wardrobe from feeling too uniform. The
+        foundation remains simple while the finishing
+        touch reflects your own taste.
+      </p>
+
+      <h2>
+        Make neutrals work beyond one season
+      </h2>
+
+      <p>
+        One of the practical advantages of a neutral palette
+        is how easily it can move between seasons. Lighter
+        fabrics and softer tones can create a relaxed warm
+        weather feeling, while heavier textures and deeper
+        shades can bring more depth during cooler months.
+      </p>
+
+      <p>
+        This flexibility can make it easier to build outfits
+        from pieces you already own rather than replacing
+        your wardrobe whenever the season changes.
+      </p>
+
+      <h2>
+        Let simplicity become personal
+      </h2>
+
+      <p>
+        Neutral dressing works because it leaves plenty of
+        space for personal preference. There is no single
+        correct combination, and a neutral wardrobe does not
+        need to look minimal in every sense.
+      </p>
+
+      <p>
+        Choose the shades, textures, and shapes that make
+        sense for you. The quieter palette simply gives those
+        choices a consistent foundation.
+      </p>
+
+      <div class="back-link">
+
+        <a href="fashion.html">
+          ← Back to Fashion
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+</body>
+</html>

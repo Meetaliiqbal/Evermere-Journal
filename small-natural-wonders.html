@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta name="referrer" content="no-referrer">
+
+<title>Small Wonders Hiding in Plain Sight — Evermere Journal</title>
+
+<meta
+  name="description"
+  content="The natural world does not always ask us to travel far. Sometimes beauty is waiting beside the path we already know."
+>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F0F1E9;
+  --sage:#7D8174;
+  --clay:#93846F;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--paper);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#header,
+#footer{
+  width:100%;
+  display:block;
+}
+
+.article-hero{
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+
+.article-hero-inner{
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+  color:var(--sage);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.article-category::before,
+.article-category::after{
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--sage);
+}
+
+.article-hero h1{
+  max-width:900px;
+  margin:auto;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(46px,6vw,74px);
+  font-weight:400;
+  line-height:1.04;
+  letter-spacing:-1.4px;
+}
+
+.article-intro{
+  max-width:650px;
+  margin:25px auto 0;
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+}
+
+.article-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.article-meta span{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.article-meta span:not(:last-child)::after{
+  content:"•";
+  color:var(--sage);
+}
+
+.article-wrap{
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+}
+
+.article-body{
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+}
+
+.article-body p{
+  margin-bottom:27px;
+}
+
+.article-body .lead{
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:25px;
+  line-height:1.55;
+  margin-bottom:38px;
+}
+
+.article-body h2{
+  margin:55px 0 20px;
+  color:var(--dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+}
+
+.nature-list{
+  margin:38px 0 45px;
+  padding:30px 32px;
+  background:var(--cream);
+  border:1px solid var(--line);
+}
+
+.nature-list-title{
+  margin-bottom:18px;
+  color:var(--dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.nature-list ul{
+  margin-left:18px;
+}
+
+.nature-list li{
+  margin-bottom:10px;
+  padding-left:5px;
+  color:var(--body);
+  font-size:12px;
+  line-height:1.8;
+}
+
+.nature-list li:last-child{
+  margin-bottom:0;
+}
+
+.article-cta{
+  position:relative;
+  overflow:hidden;
+  margin:42px 0 58px;
+  padding:48px 45px;
+  background:#34332E;
+  color:#F7F4EC;
+  text-align:center;
+}
+
+.article-cta::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-70px;
+  top:-100px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.article-cta::after{
+  content:"";
+  position:absolute;
+  width:140px;
+  height:140px;
+  left:-55px;
+  bottom:-70px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.cta-label{
+  position:relative;
+  z-index:2;
+  margin-bottom:13px;
+  color:#B8BCAC;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.article-cta h2{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+  margin:auto;
+  color:#F7F4EC;
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:clamp(30px,4vw,43px);
+  font-weight:400;
+  line-height:1.15;
+}
+
+.article-cta p{
+  position:relative;
+  z-index:2;
+  max-width:530px;
+  margin:15px auto 25px;
+  color:#C6C4BC;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.cta-button{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:45px;
+  padding:0 25px;
+  background:#F2EFE7;
+  color:#34332E;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  transition:transform .25s ease,background .25s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  background:#fff;
+}
+
+.cta-button span{
+  font-size:14px;
+}
+
+.article-tip{
+  position:relative;
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+  background:#EEF0E8;
+  border-left:3px solid var(--sage);
+}
+
+.article-tip::before{
+  content:"“";
+  position:absolute;
+  left:14px;
+  top:20px;
+  color:rgba(125,129,116,.45);
+  font-family:Georgia,serif;
+  font-size:40px;
+}
+
+.article-tip p{
+  margin:0;
+  color:var(--soft-dark);
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:20px;
+  line-height:1.5;
+}
+
+.back-link{
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+}
+
+.back-link a{
+  color:var(--sage);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.back-link a:hover{
+  color:var(--dark);
+}
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+  }
+
+  .article-category{
+    margin-bottom:19px;
+  }
+
+  .article-hero h1{
+    font-size:44px;
+    line-height:1.05;
+    letter-spacing:-1px;
+  }
+
+  .article-intro{
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+  }
+
+  .article-meta{
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+  }
+
+  .article-wrap{
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+  }
+
+  .article-body{
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .article-body .lead{
+    font-size:22px;
+    line-height:1.5;
+  }
+
+  .article-body h2{
+    margin-top:45px;
+    font-size:32px;
+  }
+
+  .nature-list{
+    padding:25px 22px;
+  }
+
+  .nature-list li{
+    font-size:11.5px;
+  }
+
+  .article-tip{
+    padding:28px 24px 28px 40px;
+  }
+
+  .article-tip p{
+    font-size:18px;
+  }
+
+  .article-cta{
+    margin:38px 0 48px;
+    padding:40px 22px;
+  }
+
+  .article-cta h2{
+    font-size:31px;
+  }
+
+  .article-cta p{
+    font-size:10.5px;
+  }
+
+  .cta-button{
+    width:100%;
+  }
+
+}
+
+@media(max-width:375px){
+
+  .article-hero h1{
+    font-size:39px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .cta-button{
+    transition:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Nature &amp; Outdoors
+    </div>
+
+    <h1>
+      Small Wonders
+      Hiding in Plain Sight
+    </h1>
+
+    <p class="article-intro">
+      The natural world does not always ask us to travel
+      far. Sometimes beauty is waiting beside the path
+      we already know.
+    </p>
+
+    <div class="article-meta">
+      <span>Discovery</span>
+      <span>6 min read</span>
+      <span>Evermere Journal</span>
+    </div>
+
+  </div>
+
+</header>
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+      <p class="lead">
+        Nature is full of details that are easy to miss
+        when we are moving quickly. A tiny leaf, a pattern
+        in bark, or a patch of sunlight can become
+        surprisingly beautiful when we stop long enough
+        to notice it.
+      </p>
+
+      <p>
+        We often imagine that finding something special
+        outdoors requires a distant landscape or an
+        impressive view. In reality, some of the most
+        interesting discoveries can be found close to home.
+      </p>
+
+      <p>
+        Paying attention changes the way familiar places
+        feel. The same street, garden, or path can reveal
+        something different each time we look closely.
+      </p>
+
+      <h2>
+        Look closer than usual
+      </h2>
+
+      <p>
+        Most walks are filled with things we see without
+        really observing. We recognise the trees, buildings,
+        paths, and gardens around us, then continue moving.
+      </p>
+
+      <p>
+        Slowing down changes that habit. A small patch of
+        moss may have several shades of green. Fallen leaves
+        can form unexpected patterns, while stones and bark
+        often contain textures that are easy to overlook.
+      </p>
+
+      <div class="nature-list">
+
+        <div class="nature-list-title">
+          Small details worth noticing
+        </div>
+
+        <ul>
+          <li>
+            Patterns and textures in leaves and tree bark.
+          </li>
+
+          <li>
+            Tiny flowers growing beside familiar paths.
+          </li>
+
+          <li>
+            Insects moving through grass and plants.
+          </li>
+
+          <li>
+            Reflections, shadows, and changing patches of light.
+          </li>
+        </ul>
+
+      </div>
+
+      <h2>
+        Notice the unexpected
+      </h2>
+
+      <p>
+        Nature rarely stays perfectly organised. A wild
+        flower can appear between paving stones, a bird
+        can suddenly cross an otherwise quiet garden, or
+        a fallen branch can become home to new growth.
+      </p>
+
+      <p>
+        These unexpected details are part of what makes
+        outdoor spaces interesting. They remind us that
+        even familiar surroundings are constantly changing.
+      </p>
+
+      <p>
+        You do not have to identify everything you see.
+        Curiosity is enough.
+      </p>
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          Discover More Outdoors
+        </div>
+
+        <h2>
+          There is always
+          something new to notice.
+        </h2>
+
+        <p>
+          Find more ideas for exploring nature, enjoying
+          outdoor spaces, and making room for slower
+          moments in everyday life.
+        </p>
+
+        <a
+          href="natureidea.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+          Explore Nature Ideas
+          <span>→</span>
+        </a>
+
+      </aside>
+
+      <h2>
+        Watch the light change
+      </h2>
+
+      <p>
+        Light can make an ordinary place look completely
+        different. Morning shadows, afternoon brightness,
+        and the softer light before evening each reveal
+        different shapes and colours.
+      </p>
+
+      <p>
+        Try looking at the same garden or street at different
+        times of day. Small changes in light can transform
+        details that normally disappear into the background.
+      </p>
+
+      <div class="article-tip">
+
+        <p>
+          You do not need to find a rare landscape to
+          experience wonder. Attention can make an ordinary
+          place feel new again.
+        </p>
+
+      </div>
+
+      <h2>
+        Follow the smaller paths
+      </h2>
+
+      <p>
+        When it is practical and safe, taking a slightly
+        different route can reveal parts of a familiar
+        area that you rarely see.
+      </p>
+
+      <p>
+        A side path, quieter street, community garden, or
+        open green space may contain details that never
+        appear on the usual journey.
+      </p>
+
+      <h2>
+        Give yourself time to pause
+      </h2>
+
+      <p>
+        The most interesting details are often discovered
+        when there is no pressure to keep moving. Stop for
+        a moment beneath a tree or beside an open patch of
+        grass and simply look around.
+      </p>
+
+      <p>
+        A pause can be as simple as noticing the movement
+        of leaves or listening for sounds coming from
+        different directions.
+      </p>
+
+      <h2>
+        Let curiosity lead
+      </h2>
+
+      <p>
+        There is no right way to explore the natural world.
+        You can photograph what catches your eye, keep a
+        small notebook, learn the names of local plants,
+        or simply remember what you noticed.
+      </p>
+
+      <p>
+        The point is not to turn every walk into a project.
+        Curiosity works best when it remains light and
+        enjoyable.
+      </p>
+
+      <h2>
+        Keep noticing
+      </h2>
+
+      <p>
+        Once you begin looking closely, familiar places
+        often become much richer. Seasonal changes become
+        easier to see, small signs of wildlife become more
+        noticeable, and ordinary walks can feel less routine.
+      </p>
+
+      <p>
+        Sometimes the smallest discoveries are enough to
+        remind us that there is more happening around us
+        than we usually notice.
+      </p>
+
+      <h2>
+        Wonder is often nearby
+      </h2>
+
+      <p>
+        You do not always need a new destination to find
+        something beautiful. A little patience and attention
+        can reveal details that were already there.
+      </p>
+
+      <p>
+        The next time you step outside, slow down for a
+        moment and look again. There may be something small
+        and unexpected waiting in plain sight.
+      </p>
+
+      <div class="back-link">
+        <a href="nature.html">
+          ← Back to Nature
+        </a>
+      </div>
+
+    </article>
+
+  </div>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+</body>
+</html>

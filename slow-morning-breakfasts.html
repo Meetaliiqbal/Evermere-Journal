@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+  name="referrer"
+  content="no-referrer"
+>
+
+<title>Slow Morning Breakfasts — Evermere Journal</title>
+
+<meta
+  name="description"
+  content="Create a calmer start to the day with nourishing breakfast ideas made for unhurried mornings."
+>
+
+
+<style>
+
+@import url(
+  'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap'
+);
+
+
+:root{
+
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F4F1EA;
+  --sage:#7D8174;
+  --clay:#9B806B;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+
+}
+
+
+*,
+*::before,
+*::after{
+
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+
+}
+
+
+html{
+
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+
+}
+
+
+body{
+
+  background:var(--paper);
+  color:var(--dark);
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+
+}
+
+
+a{
+
+  color:inherit;
+  text-decoration:none;
+
+}
+
+
+#header,
+#footer{
+
+  width:100%;
+  display:block;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.article-hero{
+
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+
+}
+
+
+.article-hero-inner{
+
+  width:min(1000px,calc(100% - 40px));
+  margin:auto;
+  padding:95px 0 85px;
+  text-align:center;
+
+}
+
+
+.article-category{
+
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:24px;
+
+  color:var(--clay);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+
+}
+
+
+.article-category::before,
+.article-category::after{
+
+  content:"";
+  width:25px;
+  height:1px;
+  background:var(--clay);
+
+}
+
+
+.article-hero h1{
+
+  max-width:850px;
+  margin:auto;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(48px,6.5vw,78px);
+
+  font-weight:400;
+  line-height:1.03;
+  letter-spacing:-1.5px;
+
+}
+
+
+.article-intro{
+
+  max-width:650px;
+  margin:25px auto 0;
+
+  color:var(--body);
+  font-size:14px;
+  line-height:1.9;
+
+}
+
+
+.article-meta{
+
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+
+}
+
+
+.article-meta span{
+
+  display:flex;
+  align-items:center;
+  gap:18px;
+
+}
+
+
+.article-meta span:not(:last-child)::after{
+
+  content:"•";
+  color:var(--clay);
+
+}
+
+
+/* =====================================================
+   ARTICLE
+===================================================== */
+
+.article-wrap{
+
+  width:min(760px,calc(100% - 40px));
+  margin:auto;
+  padding:75px 0 100px;
+
+}
+
+
+.article-body{
+
+  color:var(--body);
+  font-size:15px;
+  line-height:2;
+
+}
+
+
+.article-body p{
+
+  margin-bottom:27px;
+
+}
+
+
+.article-body .lead{
+
+  color:var(--soft-dark);
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:25px;
+  line-height:1.55;
+  margin-bottom:38px;
+
+}
+
+
+.article-body h2{
+
+  margin:55px 0 20px;
+
+  color:var(--dark);
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:36px;
+  font-weight:400;
+  line-height:1.15;
+
+}
+
+
+.article-body h3{
+
+  margin:38px 0 13px;
+
+  color:var(--dark);
+  font-size:15px;
+  font-weight:600;
+
+}
+
+
+/* =====================================================
+   BREAKFAST LIST
+===================================================== */
+
+.fruit-list{
+
+  margin:38px 0 45px;
+  padding:30px 32px;
+
+  background:var(--cream);
+  border:1px solid var(--line);
+
+}
+
+
+.fruit-list-title{
+
+  margin-bottom:18px;
+
+  color:var(--dark);
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+
+}
+
+
+.fruit-list ul{
+
+  margin:0 0 0 18px;
+
+}
+
+
+.fruit-list li{
+
+  margin-bottom:10px;
+  padding-left:5px;
+
+  color:var(--body);
+  font-size:12px;
+  line-height:1.8;
+
+}
+
+
+.fruit-list li:last-child{
+
+  margin-bottom:0;
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.article-cta{
+
+  position:relative;
+  overflow:hidden;
+
+  margin:42px 0 58px;
+  padding:48px 45px;
+
+  background:#34332E;
+  color:#F7F4EC;
+  text-align:center;
+
+}
+
+
+.article-cta::before{
+
+  content:"";
+  position:absolute;
+
+  width:220px;
+  height:220px;
+
+  right:-70px;
+  top:-100px;
+
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+
+}
+
+
+.article-cta::after{
+
+  content:"";
+  position:absolute;
+
+  width:140px;
+  height:140px;
+
+  left:-55px;
+  bottom:-70px;
+
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+
+}
+
+
+.cta-label{
+
+  position:relative;
+  z-index:2;
+
+  margin-bottom:13px;
+
+  color:#B7B9AA;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+
+}
+
+
+.article-cta h2{
+
+  position:relative;
+  z-index:2;
+
+  max-width:600px;
+  margin:auto;
+
+  color:#F7F4EC;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(30px,4vw,43px);
+
+  font-weight:400;
+  line-height:1.15;
+
+}
+
+
+.article-cta p{
+
+  position:relative;
+  z-index:2;
+
+  max-width:530px;
+  margin:15px auto 25px;
+
+  color:#C6C4BC;
+  font-size:11px;
+  line-height:1.8;
+
+}
+
+
+.cta-button{
+
+  position:relative;
+  z-index:2;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  min-height:45px;
+  padding:0 25px;
+
+  background:#F2EFE7;
+  color:#34332E;
+
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+
+  transition:
+    transform .25s ease,
+    background .25s ease;
+
+}
+
+
+.cta-button:hover{
+
+  transform:translateY(-2px);
+  background:#FFFFFF;
+
+}
+
+
+.cta-button span{
+
+  font-size:14px;
+  line-height:1;
+
+}
+
+
+/* =====================================================
+   TIP
+===================================================== */
+
+.article-tip{
+
+  position:relative;
+
+  margin:48px 0;
+  padding:35px 38px 35px 45px;
+
+  background:#F0EEE7;
+  border-left:3px solid var(--sage);
+
+}
+
+
+.article-tip::before{
+
+  content:"“";
+  position:absolute;
+
+  left:14px;
+  top:20px;
+
+  color:rgba(125,129,116,.45);
+
+  font-family:Georgia,serif;
+  font-size:40px;
+
+}
+
+
+.article-tip p{
+
+  margin:0;
+
+  color:var(--soft-dark);
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:20px;
+  line-height:1.5;
+
+}
+
+
+/* =====================================================
+   BACK LINK
+===================================================== */
+
+.back-link{
+
+  display:flex;
+  justify-content:center;
+  margin-top:55px;
+
+}
+
+
+.back-link a{
+
+  color:var(--sage);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+
+}
+
+
+.back-link a:hover{
+
+  color:var(--dark);
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .article-hero-inner{
+
+    width:calc(100% - 30px);
+    padding:65px 0 58px;
+
+  }
+
+
+  .article-category{
+
+    margin-bottom:19px;
+
+  }
+
+
+  .article-hero h1{
+
+    font-size:46px;
+    line-height:1.04;
+    letter-spacing:-1px;
+
+  }
+
+
+  .article-intro{
+
+    margin-top:20px;
+    font-size:12.5px;
+    line-height:1.8;
+
+  }
+
+
+  .article-meta{
+
+    gap:8px 14px;
+    margin-top:22px;
+    font-size:8px;
+
+  }
+
+
+  .article-wrap{
+
+    width:calc(100% - 30px);
+    padding:55px 0 75px;
+
+  }
+
+
+  .article-body{
+
+    font-size:13px;
+    line-height:1.9;
+
+  }
+
+
+  .article-body .lead{
+
+    font-size:22px;
+    line-height:1.5;
+
+  }
+
+
+  .article-body h2{
+
+    margin-top:45px;
+    font-size:32px;
+
+  }
+
+
+  .fruit-list{
+
+    padding:25px 22px;
+
+  }
+
+
+  .fruit-list li{
+
+    font-size:11.5px;
+
+  }
+
+
+  .article-tip{
+
+    padding:28px 24px 28px 40px;
+
+  }
+
+
+  .article-tip p{
+
+    font-size:18px;
+
+  }
+
+
+  .article-cta{
+
+    margin:38px 0 48px;
+    padding:40px 22px;
+
+  }
+
+
+  .article-cta h2{
+
+    font-size:31px;
+
+  }
+
+
+  .article-cta p{
+
+    font-size:10.5px;
+
+  }
+
+
+  .cta-button{
+
+    width:100%;
+
+  }
+
+}
+
+
+@media(max-width:375px){
+
+  .article-hero h1{
+
+    font-size:41px;
+
+  }
+
+}
+
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+
+    scroll-behavior:auto;
+
+  }
+
+  .cta-button{
+
+    transition:none;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div id="header"></div>
+
+
+<header class="article-hero">
+
+  <div class="article-hero-inner">
+
+    <div class="article-category">
+      Food &amp; Kitchen
+    </div>
+
+
+    <h1>
+      Slow Morning
+      Breakfasts
+    </h1>
+
+
+    <p class="article-intro">
+      Create a calmer start to the day with nourishing
+      breakfast ideas made for unhurried mornings.
+    </p>
+
+
+    <div class="article-meta">
+
+      <span>
+        Food
+      </span>
+
+      <span>
+        6 min read
+      </span>
+
+      <span>
+        Evermere Journal
+      </span>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<main>
+
+  <div class="article-wrap">
+
+    <article class="article-body">
+
+
+      <p class="lead">
+
+        A slow breakfast does not have to take an hour.
+        Sometimes it simply means giving yourself enough
+        time to sit down, enjoy the first meal of the day,
+        and begin the morning without rushing.
+
+      </p>
+
+
+      <p>
+
+        Simple ingredients can make a breakfast feel
+        considered. Warm oats, fresh fruit, toasted bread,
+        yogurt, eggs, or a quiet cup of coffee can all
+        become part of a routine that feels comforting
+        rather than hurried.
+
+      </p>
+
+
+      <p>
+
+        The goal is not to create an elaborate morning.
+        It is to make a little space for food, flavour,
+        and a calmer beginning before the rest of the
+        day takes over.
+
+      </p>
+
+
+      <h2>
+
+        Start with something familiar
+
+      </h2>
+
+
+      <p>
+
+        The easiest breakfast to enjoy slowly is often
+        one you already know you like. A familiar bowl
+        of oats, a favourite toast combination, or a
+        simple plate of eggs can remove the pressure
+        of deciding what to make.
+
+      </p>
+
+
+      <p>
+
+        Once the basic routine is established, small
+        changes can keep it interesting. Try different
+        fruit, change the topping, add herbs, or switch
+        between sweet and savoury options throughout
+        the week.
+
+      </p>
+
+
+      <div class="fruit-list">
+
+        <div class="fruit-list-title">
+          Easy morning combinations
+        </div>
+
+        <ul>
+
+          <li>
+            Warm oats with banana, cinnamon, and nuts.
+          </li>
+
+          <li>
+            Yogurt with berries and a little granola.
+          </li>
+
+          <li>
+            Toast with eggs, avocado, or soft cheese.
+          </li>
+
+          <li>
+            Fresh fruit with yogurt and toasted seeds.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <h2>
+
+        Give breakfast a little texture
+
+      </h2>
+
+
+      <p>
+
+        Texture can make even a very simple breakfast
+        feel more satisfying. Creamy yogurt works well
+        with crisp granola, while soft scrambled eggs
+        pair naturally with crunchy toast.
+
+      </p>
+
+
+      <p>
+
+        Fresh fruit can add another layer of texture
+        and colour. Sliced apples, berries, pears, or
+        citrus can brighten a plate without requiring
+        any complicated preparation.
+
+      </p>
+
+
+      <p>
+
+        Thinking about contrast is a useful way to make
+        everyday ingredients feel more interesting while
+        keeping the meal uncomplicated.
+
+      </p>
+
+
+      <aside class="article-cta">
+
+        <div class="cta-label">
+          A Better Start
+        </div>
+
+        <h2>
+          Make your mornings
+          feel a little easier.
+        </h2>
+
+        <p>
+          Explore convenient ideas and everyday choices
+          designed to make mealtimes simpler and more enjoyable.
+        </p>
+
+        <a
+          href="foodidea.html"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+        >
+          Explore Food Ideas
+          <span>→</span>
+        </a>
+
+      </aside>
+
+
+      <h2>
+
+        Prepare one thing ahead
+
+      </h2>
+
+
+      <p>
+
+        A relaxed breakfast becomes much easier when
+        one small part is already prepared. Overnight
+        oats can be made in advance, fruit can be washed,
+        and ingredients for toast or eggs can be kept
+        ready to use.
+
+      </p>
+
+
+      <p>
+
+        Preparing one component the evening before can
+        remove several small decisions from the morning.
+        It also leaves more time to actually enjoy the
+        food instead of assembling everything in a hurry.
+
+      </p>
+
+
+      <div class="article-tip">
+
+        <p>
+
+          A slow breakfast is more about the pace of
+          the morning than the complexity of the recipe.
+          Keep the food simple and give yourself time
+          to enjoy it.
+
+        </p>
+
+      </div>
+
+
+      <h2>
+
+        Create a small breakfast ritual
+
+      </h2>
+
+
+      <p>
+
+        Repetition can make mornings feel easier.
+        Perhaps breakfast is always served at the same
+        table, with the same favourite mug or a few
+        minutes of quiet before checking messages.
+
+      </p>
+
+
+      <p>
+
+        These small details do not need to be elaborate.
+        Their value comes from creating a familiar moment
+        that separates the beginning of the day from
+        everything that follows.
+
+      </p>
+
+
+      <h2>
+
+        Keep weekday choices simple
+
+      </h2>
+
+
+      <p>
+
+        A slow morning does not mean making a different
+        breakfast every day. Having two or three reliable
+        options can make the routine much easier to maintain.
+
+      </p>
+
+
+      <p>
+
+        Rotate between a warm bowl, a simple toast,
+        and something fresh, then save more involved
+        breakfasts for weekends or days when you have
+        extra time.
+
+      </p>
+
+
+      <h2>
+
+        Enjoy the first meal
+
+      </h2>
+
+
+      <p>
+
+        Breakfast can be one of the few moments in the
+        day when there is an opportunity to pause.
+        Even a short meal can feel different when it is
+        eaten without rushing.
+
+      </p>
+
+
+      <p>
+
+        Choose food you genuinely enjoy, keep the
+        preparation manageable, and allow the morning
+        to begin at a gentler pace whenever possible.
+
+      </p>
+
+
+      <h2>
+
+        Let the morning unfold
+
+      </h2>
+
+
+      <p>
+
+        The best breakfast routine is one that fits
+        naturally into your life. It does not need to
+        be perfect or particularly impressive.
+
+      </p>
+
+
+      <p>
+
+        A few dependable ingredients, a little preparation,
+        and enough time to sit down can turn an ordinary
+        breakfast into one of the quieter pleasures of
+        the day.
+
+      </p>
+
+
+      <div class="back-link">
+
+        <a href="food.html">
+          ← Back to Food
+        </a>
+
+      </div>
+
+
+    </article>
+
+  </div>
+
+</main>
+
+
+<div id="footer"></div>
+
+
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>
