@@ -1,1307 +1,123 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="referrer" content="no-referrer">
-
-<meta
-name="description"
-content="Explore thoughtful nature stories, peaceful landscapes, seasonal changes, outdoor inspiration, and simple ways to reconnect with the natural world."
-
->
-
-  <meta name="theme-color" content="#F1F2EC">
-
-  <title>Nature — Evermere Journal</title>
-
-  <link
-    rel="icon"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%23252725'/%3E%3Cpath d='M68 17C49 21 34 33 30 50c-4 17 4 28 18 34 1-16 7-30 20-42-8 11-12 22-12 37 14-7 22-19 22-37 0-10-3-19-10-25z' fill='%23e5e5dc'/%3E%3C/svg%3E"
-  >
-
-  <style>
-
-    @import url(
-      'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap'
-    );
-
-
-    /* =====================================================
-       ROOT
-    ===================================================== */
-
-    :root {
-
-      --dark: #29302B;
-      --soft-dark: #465047;
-
-      --ivory: #F1F2EC;
-      --paper: #FBFBF8;
-
-      --forest: #657566;
-      --moss: #879584;
-
-      --body: #707871;
-      --muted: #989F99;
-
-      --earth: #CFCBBE;
-
-      --line: rgba(41,48,43,.11);
-
-    }
-
-
-    /* =====================================================
-       RESET
-    ===================================================== */
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-
-    body {
-
-      background: var(--paper);
-
-      color: var(--dark);
-
-      font-family:
-        "DM Sans",
-        Arial,
-        sans-serif;
-
-      -webkit-font-smoothing: antialiased;
-
-      overflow-x: hidden;
-
-    }
-
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-
-    /* =====================================================
-       HERO
-    ===================================================== */
-
-    .nature-hero {
-
-      position: relative;
-
-      overflow: hidden;
-
-      background: var(--ivory);
-
-      border-bottom:
-        1px solid var(--line);
-
-    }
-
-
-    .nature-hero-inner {
-
-      width:
-        min(1220px, calc(100% - 50px));
-
-      min-height: 525px;
-
-      margin: auto;
-
-      display: grid;
-
-      grid-template-columns:
-        1.05fr .95fr;
-
-      align-items: center;
-
-      gap: 75px;
-
-      padding: 80px 0;
-
-    }
-
-
-    .nature-hero-copy {
-      max-width: 660px;
-    }
-
-
-    .nature-eyebrow {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 12px;
-
-      margin-bottom: 24px;
-
-      color: var(--forest);
-
-      font-size: 9px;
-
-      font-weight: 600;
-
-      letter-spacing: 3px;
-
-      text-transform: uppercase;
-
-    }
-
-
-    .nature-eyebrow::before {
-
-      content: "";
-
-      width: 30px;
-
-      height: 1px;
-
-      background: var(--forest);
-
-    }
-
-
-    .nature-hero h1 {
-
-      max-width: 720px;
-
-      font-family:
-        "DM Serif Display",
-        Georgia,
-        serif;
-
-      font-size:
-        clamp(58px, 7vw, 92px);
-
-      font-weight: 400;
-
-      line-height: .94;
-
-      letter-spacing: -2px;
-
-    }
-
-
-    .nature-hero h1 em {
-
-      color: var(--forest);
-
-      font-weight: 400;
-
-    }
-
-
-    .nature-hero-text {
-
-      max-width: 550px;
-
-      margin-top: 28px;
-
-      color: var(--body);
-
-      font-size: 14px;
-
-      line-height: 1.9;
-
-    }
-
-
-    /* =====================================================
-       HERO ART
-    ===================================================== */
-
-    .nature-hero-art {
-
-      position: relative;
-
-      min-height: 360px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-    }
-
-
-    .nature-sun {
-
-      position: relative;
-
-      width:
-        min(340px, 75vw);
-
-      aspect-ratio: 1;
-
-      border-radius: 50%;
-
-      background: #D6D8C9;
-
-      box-shadow:
-        0 28px 70px rgba(41,48,43,.09);
-
-    }
-
-
-    .nature-sun::before {
-
-      content: "";
-
-      position: absolute;
-
-      inset: 12%;
-
-      border:
-        1px solid rgba(41,48,43,.14);
-
-      border-radius: 50%;
-
-    }
-
-
-    .nature-sun::after {
-
-      content: "";
-
-      position: absolute;
-
-      width: 47%;
-
-      height: 47%;
-
-      left: 26.5%;
-
-      top: 26.5%;
-
-      border:
-        1px solid rgba(41,48,43,.11);
-
-      border-radius: 50%;
-
-    }
-
-
-    .nature-leaf-word {
-
-      position: absolute;
-
-      inset: 0;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      color: rgba(41,48,43,.40);
-
-      font-family:
-        "DM Serif Display",
-        Georgia,
-        serif;
-
-      font-size: 46px;
-
-      font-style: italic;
-
-    }
-
-
-    .nature-floating-note {
-
-      position: absolute;
-
-      right: 2%;
-
-      bottom: 9%;
-
-      width: 158px;
-
-      padding: 19px;
-
-      background:
-        rgba(251,251,248,.95);
-
-      border:
-        1px solid rgba(41,48,43,.08);
-
-      box-shadow:
-        0 15px 35px rgba(41,48,43,.09);
-
-    }
-
-
-    .nature-floating-note span {
-
-      display: block;
-
-      margin-bottom: 7px;
-
-      color: var(--forest);
-
-      font-size: 7px;
-
-      font-weight: 600;
-
-      letter-spacing: 2px;
-
-      text-transform: uppercase;
-
-    }
-
-
-    .nature-floating-note strong {
-
-      color: var(--dark);
-
-      font-family:
-        "DM Serif Display",
-        Georgia,
-        serif;
-
-      font-size: 19px;
-
-      font-weight: 400;
-
-      line-height: 1.15;
-
-    }
-
-
-    /* =====================================================
-       CONTENT
-    ===================================================== */
-
-    .nature-content {
-
-      width:
-        min(1220px, calc(100% - 50px));
-
-      margin: auto;
-
-      padding:
-        95px 0 115px;
-
-    }
-
-
-    .nature-section-heading {
-
-      display: flex;
-
-      align-items: flex-end;
-
-      justify-content: space-between;
-
-      gap: 30px;
-
-      margin-bottom: 45px;
-
-    }
-
-
-    .nature-section-heading h2 {
-
-      font-family:
-        "DM Serif Display",
-        Georgia,
-        serif;
-
-      font-size: 45px;
-
-      font-weight: 400;
-
-      line-height: 1;
-
-    }
-
-
-    .nature-section-heading p {
-
-      max-width: 410px;
-
-      color: var(--muted);
-
-      font-size: 11px;
-
-      line-height: 1.7;
-
-      text-align: right;
-
-    }
-
-
-    /* =====================================================
-       ARTICLE GRID
-    ===================================================== */
-
-    .nature-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 25px;
-
-    }
-
-
-    /* =====================================================
-       ARTICLE CARD
-    ===================================================== */
-
-    .nature-card {
-
-      display: flex;
-
-      flex-direction: column;
-
-      min-width: 0;
-
-      background: #F7F8F4;
-
-      border:
-        1px solid rgba(41,48,43,.08);
-
-      transition:
-        transform .35s ease,
-        box-shadow .35s ease;
-
-    }
-
-
-    .nature-card:hover {
-
-      transform:
-        translateY(-6px);
-
-      box-shadow:
-        0 18px 45px rgba(41,48,43,.08);
-
-    }
-
-
-    /* =====================================================
-       CARD VISUAL
-    ===================================================== */
-
-    .nature-card-visual {
-
-      position: relative;
-
-      height: 235px;
-
-      overflow: hidden;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      cursor: pointer;
-
-    }
-
-
-    .nature-card:nth-child(1)
-    .nature-card-visual {
-      background: #D6D8CA;
-    }
-
-
-    .nature-card:nth-child(2)
-    .nature-card-visual {
-      background: #CED6CC;
-    }
-
-
-    .nature-card:nth-child(3)
-    .nature-card-visual {
-      background: #D8D2C2;
-    }
-
-
-    .nature-card:nth-child(4)
-    .nature-card-visual {
-      background: #C9D2CC;
-    }
-
-
-    .nature-card:nth-child(5)
-    .nature-card-visual {
-      background: #D8D6C9;
-    }
-
-
-    .nature-card:nth-child(6)
-    .nature-card-visual {
-      background: #CDD5CF;
-    }
-
-
-    .nature-card-visual::before {
-
-      content: "";
-
-      position: absolute;
-
-      width: 145px;
-
-      height: 145px;
-
-      border:
-        1px solid rgba(41,48,43,.14);
-
-      border-radius: 50%;
-
-      transition:
-        transform .5s ease;
-
-    }
-
-
-    .nature-card-visual::after {
-
-      content: "";
-
-      position: absolute;
-
-      width: 90px;
-
-      height: 90px;
-
-      border:
-        1px solid rgba(41,48,43,.10);
-
-      border-radius: 50%;
-
-      transition:
-        transform .5s ease;
-
-    }
-
-
-    .nature-card:hover
-    .nature-card-visual::before {
-
-      transform:
-        scale(1.08);
-
-    }
-
-
-    .nature-card:hover
-    .nature-card-visual::after {
-
-      transform:
-        scale(.92);
-
-    }
-
-
-    .nature-card-number {
-
-      position: absolute;
-
-      top: 18px;
-
-      left: 19px;
-
-      z-index: 2;
-
-      color: rgba(41,48,43,.5);
-
-      font-size: 8px;
-
-      font-weight: 600;
-
-      letter-spacing: 2px;
-
-    }
-
-
-    .nature-card-category {
-
-      position: absolute;
-
-      top: 18px;
-
-      right: 18px;
-
-      z-index: 2;
-
-      color: rgba(41,48,43,.55);
-
-      font-size: 7px;
-
-      font-weight: 600;
-
-      letter-spacing: 1.8px;
-
-      text-transform: uppercase;
-
-    }
-
-
-    .nature-card-icon {
-
-      position: relative;
-
-      z-index: 2;
-
-      color: rgba(41,48,43,.42);
-
-      font-family:
-        "DM Serif Display",
-        Georgia,
-        serif;
-
-      font-size: 28px;
-
-      font-style: italic;
-
-    }
-
-
-    /* =====================================================
-       CARD BODY
-    ===================================================== */
-
-    .nature-card-body {
-
-      min-height: 235px;
-
-      padding:
-        27px 27px 29px;
-
-      display: flex;
-
-      flex-direction: column;
-
-    }
-
-
-    .nature-card-title {
-
-      display: block;
-
-      margin-bottom: 13px;
-
-      color: var(--dark);
-
-      font-family:
-        "DM Serif Display",
-        Georgia,
-        serif;
-
-      font-size: 27px;
-
-      font-weight: 400;
-
-      line-height: 1.12;
-
-      text-decoration: none;
-
-      transition:
-        color .25s ease;
-
-    }
-
-
-    .nature-card-title:hover {
-
-      color: var(--forest);
-
-    }
-
-
-    .nature-card-body p {
-
-      color: var(--body);
-
-      font-size: 11px;
-
-      line-height: 1.8;
-
-    }
-
-
-    .nature-card-link {
-
-      display: inline-block;
-
-      margin-top: auto;
-
-      padding-top: 22px;
-
-      color: var(--forest);
-
-      font-size: 8px;
-
-      font-weight: 600;
-
-      letter-spacing: 2px;
-
-      text-transform: uppercase;
-
-    }
-
-
-    .nature-card-link span {
-
-      display: inline-block;
-
-      margin-left: 6px;
-
-      transition:
-        transform .25s ease;
-
-    }
-
-
-    .nature-card-link:hover span {
-
-      transform:
-        translateX(5px);
-
-    }
-
-
-    /* =====================================================
-       EDITORIAL NOTE
-    ===================================================== */
-
-    .nature-note {
-
-      margin-top: 80px;
-
-      padding:
-        55px 60px;
-
-      background: var(--ivory);
-
-      border:
-        1px solid var(--line);
-
-      text-align: center;
-
-    }
-
-
-    .nature-note-label {
-
-      margin-bottom: 17px;
-
-      color: var(--forest);
-
-      font-size: 8px;
-
-      font-weight: 600;
-
-      letter-spacing: 2.5px;
-
-      text-transform: uppercase;
-
-    }
-
-
-    .nature-note h2 {
-
-      max-width: 720px;
-
-      margin: auto;
-
-      font-family:
-        "DM Serif Display",
-        Georgia,
-        serif;
-
-      font-size:
-        clamp(30px, 4vw, 46px);
-
-      font-weight: 400;
-
-      line-height: 1.15;
-
-    }
-
-
-    .nature-note p {
-
-      max-width: 580px;
-
-      margin: 18px auto 0;
-
-      color: var(--body);
-
-      font-size: 12px;
-
-      line-height: 1.8;
-
-    }
-
-
-    /* =====================================================
-       TABLET
-    ===================================================== */
-
-    @media (max-width: 900px) {
-
-      .nature-hero-inner {
-
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-
-        padding:
-          70px 0 80px;
-
-      }
-
-
-      .nature-hero-copy {
-        max-width: 700px;
-      }
-
-
-      .nature-hero-art {
-        min-height: 300px;
-      }
-
-
-      .nature-grid {
-
-        grid-template-columns:
-          repeat(2, 1fr);
-
-      }
-
-    }
-
-
-    /* =====================================================
-       MOBILE
-    ===================================================== */
-
-    @media (max-width: 600px) {
-
-      .nature-hero-inner {
-
-        width:
-          calc(100% - 30px);
-
-        padding:
-          58px 0 65px;
-
-      }
-
-
-      .nature-eyebrow {
-
-        margin-bottom: 19px;
-
-      }
-
-
-      .nature-hero h1 {
-
-        font-size: 57px;
-
-        letter-spacing: -1.5px;
-
-      }
-
-
-      .nature-hero-text {
-
-        margin-top: 22px;
-
-        font-size: 13px;
-
-        line-height: 1.8;
-
-      }
-
-
-      .nature-hero-art {
-
-        min-height: 260px;
-
-      }
-
-
-      .nature-sun {
-
-        width: 250px;
-
-      }
-
-
-      .nature-leaf-word {
-
-        font-size: 38px;
-
-      }
-
-
-      .nature-floating-note {
-
-        right: 0;
-
-        bottom: 0;
-
-        width: 125px;
-
-        padding: 14px;
-
-      }
-
-
-      .nature-floating-note strong {
-
-        font-size: 16px;
-
-      }
-
-
-      .nature-content {
-
-        width:
-          calc(100% - 30px);
-
-        padding:
-          65px 0 80px;
-
-      }
-
-
-      .nature-section-heading {
-
-        display: block;
-
-        margin-bottom: 30px;
-
-      }
-
-
-      .nature-section-heading h2 {
-
-        font-size: 38px;
-
-      }
-
-
-      .nature-section-heading p {
-
-        margin-top: 14px;
-
-        text-align: left;
-
-        font-size: 10.5px;
-
-      }
-
-
-      .nature-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-
-      }
-
-
-      .nature-card-visual {
-
-        height: 220px;
-
-      }
-
-
-      .nature-card-body {
-
-        min-height: 215px;
-
-        padding: 24px;
-
-      }
-
-
-      .nature-card-title {
-
-        font-size: 25px;
-
-      }
-
-
-      .nature-card-body p {
-
-        font-size: 11px;
-
-      }
-
-
-      .nature-note {
-
-        margin-top: 55px;
-
-        padding:
-          40px 22px;
-
-      }
-
-
-      .nature-note h2 {
-
-        font-size: 31px;
-
-      }
-
-    }
-
-
-    /* =====================================================
-       SMALL PHONES
-    ===================================================== */
-
-    @media (max-width: 375px) {
-
-      .nature-hero-inner,
-      .nature-content {
-
-        width:
-          calc(100% - 26px);
-
-      }
-
-
-      .nature-hero h1 {
-
-        font-size: 51px;
-
-      }
-
-
-      .nature-sun {
-
-        width: 225px;
-
-      }
-
-
-      .nature-floating-note {
-
-        width: 115px;
-
-      }
-
-
-      .nature-card-body {
-
-        padding: 22px;
-
-      }
-
-
-      .nature-card-title {
-
-        font-size: 24px;
-
-      }
-
-    }
-
-
-    /* =====================================================
-       REDUCED MOTION
-    ===================================================== */
-
-    @media (prefers-reduced-motion: reduce) {
-
-      html {
-        scroll-behavior: auto;
-      }
-
-      .nature-card,
-      .nature-card-title,
-      .nature-card-link span,
-      .nature-card-visual::before,
-      .nature-card-visual::after {
-
-        transition: none;
-
-      }
-
-    }
-
-  </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>The Simple Pleasure of a Forest Walk | Evermere Journal</title>
+<meta name="description" content="Step away from the rush of everyday life and rediscover the quiet clarity, sensory richness, and calm of a simple walk through the woods.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap');
+
+:root{
+  --dark:#34332E;
+  --soft-dark:#55524B;
+  --paper:#FBFAF7;
+  --cream:#F2EFEA;
+  --warm:#ECE8E1;
+  --clay:#9A806E;
+  --clay-dark:#806756;
+  --body:#706D66;
+  --muted:#9A968E;
+  --line:rgba(52,51,46,.11);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--dark);font-family:"DM Sans",Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+#header,#footer{width:100%;display:block}
+
+.article-hero{background:var(--cream);border-bottom:1px solid var(--line)}
+.article-hero-inner{width:min(1000px,calc(100% - 40px));margin:auto;padding:95px 0 85px;text-align:center}
+.article-category{display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;color:var(--clay-dark);font-size:8px;font-weight:600;letter-spacing:3px;text-transform:uppercase}
+.article-category::before,.article-category::after{content:"";width:25px;height:1px;background:var(--clay)}
+.article-hero h1{max-width:850px;margin:auto;font-family:"DM Serif Display",Georgia,serif;font-size:clamp(46px,6vw,74px);font-weight:400;line-height:1.05;letter-spacing:-1.3px}
+.article-intro{max-width:650px;margin:25px auto 0;color:var(--body);font-size:14px;line-height:1.9}
+.article-meta{display:flex;justify-content:center;flex-wrap:wrap;gap:18px;margin-top:28px;color:var(--muted);font-size:9px;letter-spacing:1px;text-transform:uppercase}
+.article-meta span{display:flex;align-items:center;gap:18px}
+.article-meta span:not(:last-child)::after{content:"•";color:var(--clay)}
+
+.article-wrap{width:min(760px,calc(100% - 40px));margin:auto;padding:75px 0 100px}
+.article-body{color:var(--body);font-size:15px;line-height:2}
+.article-body p{margin-bottom:27px}
+.article-body .lead{margin-bottom:38px;color:var(--soft-dark);font-family:"DM Serif Display",Georgia,serif;font-size:25px;line-height:1.55}
+.article-body h2{margin:55px 0 20px;color:var(--dark);font-family:"DM Serif Display",Georgia,serif;font-size:36px;font-weight:400;line-height:1.15}
+
+.design-list{margin:38px 0 45px;padding:30px 32px;background:var(--warm);border:1px solid var(--line)}
+.design-list-title{margin-bottom:18px;color:var(--dark);font-size:9px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase}
+.design-list ul{margin-left:18px}
+.design-list li{margin-bottom:10px;padding-left:5px;color:var(--body);font-size:12px;line-height:1.8}
+.design-list li:last-child{margin-bottom:0}
+
+.article-cta{position:relative;overflow:hidden;margin:42px 0 58px;padding:48px 45px;background:#34332E;color:#F7F4EC;text-align:center}
+.article-cta::before{content:"";position:absolute;width:220px;height:220px;right:-70px;top:-100px;border:1px solid rgba(255,255,255,.12);border-radius:50%}
+.article-cta::after{content:"";position:absolute;width:140px;height:140px;left:-55px;bottom:-70px;border:1px solid rgba(255,255,255,.08);border-radius:50%}
+.cta-label{position:relative;z-index:2;margin-bottom:13px;color:#C2B3A6;font-size:8px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase}
+.article-cta h2{position:relative;z-index:2;max-width:600px;margin:auto;color:#F7F4EC;font-family:"DM Serif Display",Georgia,serif;font-size:clamp(30px,4vw,43px);font-weight:400;line-height:1.15}
+.article-cta p{position:relative;z-index:2;max-width:530px;margin:15px auto 25px;color:#C6C4BC;font-size:11px;line-height:1.8}
+.cta-button{position:relative;z-index:2;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:45px;padding:0 25px;background:#F2EFE7;color:#34332E;font-size:8px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;transition:transform .25s ease,background .25s ease}
+.cta-button:hover{transform:translateY(-2px);background:#fff}
+.cta-button span{font-size:14px}
+
+.article-tip{position:relative;margin:48px 0;padding:35px 38px 35px 45px;background:#F1EEE8;border-left:3px solid var(--clay)}
+.article-tip::before{content:"“";position:absolute;left:14px;top:20px;color:rgba(154,128,110,.45);font-family:Georgia,serif;font-size:40px}
+.article-tip p{margin:0;color:var(--soft-dark);font-family:"DM Serif Display",Georgia,serif;font-size:20px;line-height:1.5}
+
+.back-link{display:flex;justify-content:center;margin-top:55px}
+.back-link a{color:var(--clay-dark);font-size:8px;font-weight:600;letter-spacing:2px;text-transform:uppercase}
+.back-link a:hover{color:var(--dark)}
+
+@media(max-width:600px){
+.article-hero-inner{width:calc(100% - 30px);padding:65px 0 58px}
+.article-category{margin-bottom:19px}
+.article-hero h1{font-size:43px;line-height:1.06;letter-spacing:-1px}
+.article-intro{margin-top:20px;font-size:12.5px;line-height:1.8}
+.article-meta{gap:8px 14px;margin-top:22px;font-size:8px}
+.article-wrap{width:calc(100% - 30px);padding:55px 0 75px}
+.article-body{font-size:13px;line-height:1.9}
+.article-body .lead{font-size:22px;line-height:1.5}
+.article-body h2{margin-top:45px;font-size:32px}
+.design-list{padding:25px 22px}
+.design-list li{font-size:11.5px}
+.article-tip{padding:28px 24px 28px 40px}
+.article-tip p{font-size:18px}
+.article-cta{margin:38px 0 48px;padding:40px 22px}
+.article-cta h2{font-size:31px}
+.article-cta p{font-size:10.5px}
+.cta-button{width:100%}
+}
+@media(max-width:375px){.article-hero h1{font-size:38px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta-button{transition:none}}
+</style>
 </head>
 
 <body>
+<div id="header"></div>
 
-  <!-- =====================================================
-       HEADER
-  ===================================================== -->
-
-  <div id="header"></div>
-
-  <!-- =====================================================
-       MAIN
-  ===================================================== -->
-
-  <main>
-
-
-<!-- ===================================================
-     HERO
-=================================================== -->
-
-<section class="nature-hero">
-
-  <div class="nature-hero-inner">
-
-
-    <div class="nature-hero-copy">
-
-      <div class="nature-eyebrow">
-        The Nature Journal
-      </div>
-
-
-      <h1>
-        Find your way
-        <em>back outside.</em>
-      </h1>
-
-
-      <p class="nature-hero-text">
-        Discover quiet landscapes, seasonal rhythms,
-        outdoor inspiration, and simple moments that
-        remind us how much beauty exists beyond the
-        everyday.
-      </p>
-
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <div class="article-category">Slow Living</div>
+    <h1>The Simple Pleasure of a Forest Walk</h1>
+    <p class="article-intro">Step away from the rush of everyday life and rediscover the quiet clarity, sensory richness, and calm of a simple walk through the woods.</p>
+    <div class="article-meta">
+      <span>Slow Living</span>
+      <span>6 min read</span>
+      <span>Evermere Journal</span>
     </div>
-
-
-    <div class="nature-hero-art">
-
-      <div class="nature-sun">
-
-        <span class="nature-leaf-word">
-          Wild
-        </span>
-
-      </div>
-
-
-      <div class="nature-floating-note">
-
-        <span>
-          Nature note
-        </span>
-
-        <strong>
-          There is always
-          more to notice.
-        </strong>
-
-      </div>
-
-    </div>
-
-
   </div>
+</header>
 
-</section>
+<main>
+<div class="article-wrap">
+<article class="article-body">
 
+<p class="lead">In a world shaped by constant notifications, glowing screens, and tight schedules, finding a moment of genuine stillness can feel surprisingly rare. Yet just beyond the edges of busy towns lies one of the oldest, most restorative sanctuaries available to us: the forest.</p>
 
-<!-- ===================================================
-     ARTICLES
-=================================================== -->
+<p>Walking among trees is far more than a form of gentle exercise. It is an unhurried sensory reset—an invitation to step off the pace of modern routines and match your breathing to the quieter rhythm of the natural world.</p>
 
-<section class="nature-content">
-
-
-  <div class="nature-section-heading">
-
-    <h2>
-      Out in the world
-    </h2>
-
-
-    <p>
-      Stories about landscapes, changing seasons,
-      peaceful outdoor moments, and the small
-      wonders hiding in plain sight.
-    </p>
-
-  </div>
-
-
-  <div class="nature-grid">
-
-
-    <!-- =================================================
-         ARTICLE 01
-    ================================================= -->
-
-    <article class="nature-card">
-
-      <a
-        href="quiet-morning-in-nature.html"
-        class="nature-card-visual"
-        aria-label="Read The Quiet Beauty of a Morning Outside"
-      >
-
-        <span class="nature-card-number">
-          01
-        </span>
-
-        <span class="nature-card-category">
-          Morning
-        </span>
-
-        <span class="nature-card-icon">
-          Sunrise
-        </span>
-
-      </a>
-
-
-      <div class="nature-card-body">
-
-        <a
-          href="quiet-morning-in-nature.html"
-          class="nature-card-title"
-        >
-          The Quiet Beauty of a Morning Outside
-        </a>
-
-
-        <p>
-          There is something grounding about beginning
-          the day outdoors, before the world becomes
-          busy and loud.
-        </p>
+<p>You do not need rugged trails or a packed expedition to feel its effect. Even a modest woodland path can soften the noise of a crowded mind.</p>
 
 
 <style>
@@ -1361,352 +177,73 @@ content="Explore thoughtful nature stories, peaceful landscapes, seasonal change
 
 
 
+<h2>Notice the quiet symphony of the woods</h2>
 
-        <a
-          href="quiet-morning-in-nature.html"
-          class="nature-card-link"
-        >
-          Read article
-          <span>→</span>
-        </a>
+<p>The moment you step beneath a canopy of trees, the atmosphere changes. Harsh traffic and mechanical hums fade into the background, replaced by softer, layered details that ask nothing of your attention.</p>
 
-      </div>
+<p>Dappled sunlight filters through leaves and shifts across mossy ground, giving tired eyes a break from flat, artificial screens. Underneath your boots, damp earth and fallen twigs create a steady, grounding cadence.</p>
 
-    </article>
+<div class="design-list">
+  <div class="design-list-title">Sensory details to take in</div>
+  <ul>
+    <li>Filtered light shifting gently across bark, moss, and fern.</li>
+    <li>The layered sound of wind moving through high branches and birdsong.</li>
+    <li>The crisp, earthy scent of damp soil, pine needles, and fresh foliage.</li>
+    <li>Cooler, shaded air that naturally slows down your breathing.</li>
+  </ul>
+</div>
 
+<h2>Move without a destination in mind</h2>
 
-    <!-- =================================================
-         ARTICLE 02
-    ================================================= -->
+<p>One of the quietest luxuries of a forest walk is the absence of metrics. There are no lap times to beat, no notifications demanding a reply, and no finish line waiting at the end of the path.</p>
 
-    <article class="nature-card">
+<p>Instead of treating the walk like another task to complete, allow yourself to wander without urgency. Pause to trace the rough grain of an old oak, watch water move over smooth stones in a stream, or simply stand still when a breeze passes overhead.</p>
 
-      <a
-        href="seasonal-nature-guide.html"
-        class="nature-card-visual"
-        aria-label="Read Learning to Notice the Seasons"
-      >
+<p>When you stop measuring distance, your focus shifts naturally from doing to simply being present.</p>
 
-        <span class="nature-card-number">
-          02
-        </span>
+<aside class="article-cta">
+  <div class="cta-label">Embrace Slow Living</div>
+  <h2>Bring unhurried moments into your everyday routine.</h2>
+  <p>Explore thoughtful reflections, seasonal rituals, and quiet inspirations designed to help you slow down and reconnect.</p>
+  <a href="slowliving.html" class="cta-button" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Explore More Stories <span>→</span></a>
+</aside>
 
-        <span class="nature-card-category">
-          Seasons
-        </span>
+<h2>Let nature restore mental clarity</h2>
 
-        <span class="nature-card-icon">
-          Changing
-        </span>
+<p>Modern life demands constant, directed focus—the kind that leaves the mind feeling scattered by late afternoon. The forest offers a gentler form of attention, often called soft fascination.</p>
 
-      </a>
+<p>Because nothing in the woods demands an immediate decision, your thoughts are free to untangle on their own. Ideas settle, minor worries lose their urgency, and perspective returns without effort.</p>
 
+<p>Long before wellness trends gave this practice modern names, writers and thinkers walked the woods simply to hear themselves think again.</p>
 
-      <div class="nature-card-body">
+<div class="article-tip">
+  <p>The forest never rushes, yet everything within it grows in its own season. Walking among trees reminds us that we are allowed to slow down too.</p>
+</div>
 
-        <a
-          href="seasonal-nature-guide.html"
-          class="nature-card-title"
-        >
-          Learning to Notice the Seasons
-        </a>
+<h2>Make space for small, regular visits</h2>
 
+<p>You do not need an entire weekend away to experience the calm of the woods. A twenty-minute walk along a tree-lined trail before work or a quiet stroll at dusk can carry that stillness back into your home.</p>
 
-        <p>
-          From the first warm breeze to the changing
-          colour of leaves, nature gives us countless
-          quiet signs of time passing.
-        </p>
+<p>Leave your phone tucked inside your pocket on silent. Notice how the same path changes subtly from week to week—new shoots in spring, dense shade in summer, fallen leaves in autumn, and bare, sculptural branches in winter.</p>
 
+<p>Returning to the same stretch of trees turns an ordinary walk into a familiar ritual.</p>
 
-        <a
-          href="seasonal-nature-guide.html"
-          class="nature-card-link"
-        >
-          Read article
-          <span>→</span>
-        </a>
+<h2>Carry the stillness back with you</h2>
 
-      </div>
+<p>The real gift of a forest walk stays with you long after you step back onto paved streets. Your shoulders sit a little lower, your pace feels less hurried, and the noise of the day feels easier to manage.</p>
 
-    </article>
+<p>In the steady, patient company of trees, we are reminded that peace rarely comes from adding more to our lives. More often, it is found by stepping outside, breathing deeply, and walking slowly for a while.</p>
 
+<div class="back-link">
+  <a href="slowliving.html">← Back to Slow Living</a>
+</div>
 
-    <!-- =================================================
-         ARTICLE 03
-    ================================================= -->
+</article>
+</div>
+</main>
 
-    <article class="nature-card">
-
-      <a
-        href="peaceful-forest-walks.html"
-        class="nature-card-visual"
-        aria-label="Read The Simple Pleasure of a Forest Walk"
-      >
-
-        <span class="nature-card-number">
-          03
-        </span>
-
-        <span class="nature-card-category">
-          Outdoors
-        </span>
-
-        <span class="nature-card-icon">
-          Forest
-        </span>
-
-      </a>
-
-
-      <div class="nature-card-body">
-
-        <a
-          href="peaceful-forest-walks.html"
-          class="nature-card-title"
-        >
-          The Simple Pleasure of a Forest Walk
-        </a>
-
-
-        <p>
-          A slow walk beneath trees can change the
-          rhythm of an afternoon and offer a welcome
-          pause from screens and schedules.
-        </p>
-
-
-        <a
-          href="peaceful-forest-walks.html"
-          class="nature-card-link"
-        >
-          Read article
-          <span>→</span>
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- =================================================
-         ARTICLE 04
-    ================================================= -->
-
-    <article class="nature-card">
-
-      <a
-        href="small-natural-wonders.html"
-        class="nature-card-visual"
-        aria-label="Read Small Wonders Hiding in Plain Sight"
-      >
-
-        <span class="nature-card-number">
-          04
-        </span>
-
-        <span class="nature-card-category">
-          Discovery
-        </span>
-
-        <span class="nature-card-icon">
-          Wonder
-        </span>
-
-      </a>
-
-
-      <div class="nature-card-body">
-
-        <a
-          href="small-natural-wonders.html"
-          class="nature-card-title"
-        >
-          Small Wonders Hiding in Plain Sight
-        </a>
-
-
-        <p>
-          The natural world does not always ask us
-          to travel far. Sometimes beauty is waiting
-          beside the path we already know.
-        </p>
-
-
-        <a
-          href="small-natural-wonders.html"
-          class="nature-card-link"
-        >
-          Read article
-          <span>→</span>
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- =================================================
-         ARTICLE 05
-    ================================================= -->
-
-    <article class="nature-card">
-
-      <a
-        href="simple-outdoor-rituals.html"
-        class="nature-card-visual"
-        aria-label="Read Simple Outdoor Rituals"
-      >
-
-        <span class="nature-card-number">
-          05
-        </span>
-
-        <span class="nature-card-category">
-          Slow Living
-        </span>
-
-        <span class="nature-card-icon">
-          Outside
-        </span>
-
-      </a>
-
-
-      <div class="nature-card-body">
-
-        <a
-          href="simple-outdoor-rituals.html"
-          class="nature-card-title"
-        >
-          Simple Outdoor Rituals
-        </a>
-
-
-        <p>
-          Small habits like an evening walk, morning
-          coffee outdoors, or a quiet garden moment
-          can make ordinary days feel different.
-        </p>
-
-
-        <a
-          href="simple-outdoor-rituals.html"
-          class="nature-card-link"
-        >
-          Read article
-          <span>→</span>
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- =================================================
-         ARTICLE 06
-    ================================================= -->
-
-    <article class="nature-card">
-
-      <a
-        href="finding-stillness-in-nature.html"
-        class="nature-card-visual"
-        aria-label="Read Finding Stillness in Nature"
-      >
-
-        <span class="nature-card-number">
-          06
-        </span>
-
-        <span class="nature-card-category">
-          Reflection
-        </span>
-
-        <span class="nature-card-icon">
-          Stillness
-        </span>
-
-      </a>
-
-
-      <div class="nature-card-body">
-
-        <a
-          href="finding-stillness-in-nature.html"
-          class="nature-card-title"
-        >
-          Finding Stillness in Nature
-        </a>
-
-
-        <p>
-          Why spending a little unstructured time
-          outdoors can help us notice our surroundings
-          and reconnect with a slower rhythm.
-        </p>
-
-
-        <a
-          href="finding-stillness-in-nature.html"
-          class="nature-card-link"
-        >
-          Read article
-          <span>→</span>
-        </a>
-
-      </div>
-
-    </article>
-
-
-  </div>
-
-
-  <!-- =================================================
-       EDITORIAL NOTE
-  ================================================= -->
-
-  <div class="nature-note">
-
-    <div class="nature-note-label">
-      Evermere Perspective
-    </div>
-
-
-    <h2>
-      Nature rarely asks us
-      to hurry.
-    </h2>
-
-
-    <p>
-      A quiet path, changing light, or a few minutes
-      beneath an open sky can be enough to shift our
-      attention back to what is already around us.
-    </p>
-
-  </div>
-
-
-</section>
-
-
-  </main>
-
-  <!-- =====================================================
-       FOOTER
-  ===================================================== -->
-
-  <div id="footer"></div>
-
-  <!-- =====================================================
-       HEADER + FOOTER
-  ===================================================== -->
-
-  <script src="header.js"></script>
-
-  <script src="footer.js"></script>
-
+<div id="footer"></div>
+<script src="header.js" defer></script>
+<script src="footer.js" defer></script>
 </body>
 </html>
